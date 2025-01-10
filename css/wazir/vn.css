@@ -1,0 +1,6 @@
+	/* vitnamese special style */
+	@media screen and (max-width: 600px) {
+	    #transferLog {
+	        padding-top: 0;
+	    }
+	}
