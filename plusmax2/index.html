@@ -1,0 +1,423 @@
+<!-- 2020-02-07 -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Core CSS -->
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+<!-- Main stylesheet -->
+<link href="./css/hallooou.css" rel="stylesheet">
+<!-- Plugin stylesheets -->
+<link href="./css/owl.carousel.min.css" rel="stylesheet">
+<link href="./css/owl.theme.css" rel="stylesheet">
+<link href="./css/owl.transitions.css" rel="stylesheet">
+<link href="./css/animate.css" rel="stylesheet">
+<link href="./css/magnific-popup.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="http://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css" />
+
+<!-- 影片 -->
+<link href="./css/jquery.mb.YTPlayer.min.css" rel="stylesheet" type="text/css">
+
+<script>
+    $('link[rel=stylesheet][href~="./css/plusmax2.scss"]').remove();
+</script>
+
+<style>
+    .hidden {
+        display: none;
+    }
+
+    .navbar-brand>img {
+        max-height: unset;
+        max-width: unset;
+        height: unset;
+    }
+
+    header {
+        display: none;
+    }
+
+    #bgndVideo {
+        padding-bottom: 0px !important;
+        height: inherit !important;
+    }
+
+    .carousel-inner {
+        background-image: url('img/poster.jpg');
+        background-size: cover;
+    }
+
+    .mb_YTPBar .buttonBar {
+        display: none;
+    }
+
+    .mb_YTPBar .mb_YTPseekbar {
+        display: none;
+    }
+
+    .mb_YTPBar .inlinePlayer {
+        display: none;
+    }
+
+    .inlinePlayButton {
+        display: none !important;
+    }
+
+    .mb_YTPProgress {
+        display: none;
+    }
+
+    #controlBar_bgndVideo {
+        display: none;
+    }
+</style>
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header pull-left">
+            <a class="navbar-brand page-scroll" href="#intro-carousel">
+                <span class="brand-logo"><img src="img/logo.png"></span>
+            </a>
+        </div>
+        <div class="web-menu">
+            <ul>
+                <!-- <li><a href="#intro-carousel">首页</a></li> -->
+                <li><a href="#about">關於我們</a></li>
+                <li><a href="#">媒體報導</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#terms">免責聲明</a></li>
+                <li class="{unauth}"><a href="./login.html" class="btn btn-overcolor no-bottom-line">用戶登入</a></li>
+                <li class="{unauth}"><a href="./register.html" class="btn btn-overcolor no-bottom-line">立即建立</a></li>
+                <li class="{auth}"><a href="./member_center.html" class="btn btn-overcolor no-bottom-line">用戶中心</a></li>
+                <img src="img/logotw.png" style="width:3.5%;">
+            </ul>
+        </div>
+        <div class="main-nav pull-right">
+            <div class="button_container toggle">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+            </div>
+        </div>
+        <div class="overlay" id="overlay">
+            <nav class="overlay-menu">
+                <ul>
+                    <img src="img/logo-white.png" style="max-width:120px;margin-bottom:20px">
+                    <li><a href="#intro-carousel">首页</a></li>
+                    <li><a href="#about">關於我們</a></li>
+                    <li><a href="#">媒體報導</a></li>
+                    <li><a href="#">聯絡我們</a></li>
+                    <li><a href="#terms">免責聲明</a></li>
+                    <li class="{unauth}" style="text-align: -webkit-center;margin-bottom:10px"><a href="./login.html"
+                            class="btn btn-overcolor no-bottom-line" style="font-size:15px;width:80%;">用戶登入</a></li>
+                    <li class="{unauth}" style="text-align: -webkit-center;margin-bottom:10px"><a href="./register.html"
+                            class="btn btn-overcolor no-bottom-line" style="font-size:15px;width:80%;">立即建立</a></li>
+                    <li class="{auth}" style="text-align: -webkit-center;margin-bottom:10px"><a href="./member_center.html"
+                            class="btn btn-overcolor no-bottom-line" style="font-size:15px;width:80%;">用戶中心</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</nav>
+
+
+
+<div id="intro-carousel" class="carouselx slidex">
+    <div class="carousel-inner" id="bgndVideo"
+        data-property="{videoURL:'https://youtu.be/DSpCKbwKIZE',containment:'#bgndVideo',autoPlay:true, mute:true, startAt:0, opacity:1, realfullscreen:true}">
+        <div class="item html5-video-container active"></div>
+    </div>
+    <div class="carousel-caption">
+        <!-- <img src="img/logo-white.png" data-aos="fade-up" class="carousel-logo"> -->
+        <h2>PlusMax2 加密資產交易鏈</h2>
+        <h4>帶給您透明且開放的科技新體驗</h4>
+    </div>
+</div>
+
+
+<section id="about" class="about">
+
+    <div class="container" style="padding:80px 0">
+        <div class="row text-center" data-aos="fade-up">
+
+            <div class="col-12 col-md-12">
+                <div class="about-content">
+                    <div class="about-txt">
+                        <h1>
+                            全力保障您的資產安全
+                        </h1>
+                        <h3>
+                            全力保障您的資產安全，創始團隊成員來自互聯網安全領域，風控團隊每周加強後端安全功能建設
+                        </h3>
+
+                        <h5>
+                            全球網絡科技興起，以「客戶為中心」的理念發展，形塑出金融服務業的新面貌，如何在在線投資，將科技金融創新理念導入服務流程，並且將提供產品的公司與購買的投資人，透過創新科技的網絡平台將兩者相互結合，達到市場共贏的效果，是未來網絡平台發展的最大挑戰，
+                            營運方式即是以開放平台為架構，符合金融科技創新及市場通路多元化服務需求，結合智能理財服務與大數據行銷，並結合社區分享讓投資人的理財更加融入生活，符合未來最具影響力的金融創新經營方式。
+                        </h5>
+                    </div>
+                    <div class="about-txt-img">
+                        <a href='https://.pngtree.com/so/業務合作握手業務說明' class="hidden">業務合作握手業務說明 png來自 .pngtree.com/</a>
+                    </div>
+                </div>
+                <div class="about-wrap">
+                    <div class="about-item" data-aos="fade-up">
+                        <div class="about-img index-img-1">
+                        </div>
+                        <div class="bottom-block">
+                            <h2>透明開放</h2>
+                            <h5>運用區塊鏈與智能合約的特性，將交易績效真實上鏈，並使用智能合約保障投資人資產安全。</h5>
+                        </div>
+                    </div>
+                    <div class="about-item" data-aos="fade-up">
+                        <div class="about-img index-img-2">
+                        </div>
+                        <div class="bottom-block">
+                            <h2>風險分級</h2>
+                            <h5>依據各式投資人不同風險與資產管理偏好設計出多元化的投資產品，有效消弭投資門檻。</h5>
+                        </div>
+                    </div>
+                    <div class="about-item" data-aos="fade-up">
+                        <div class="about-img index-img-3">
+                        </div>
+                        <div class="bottom-block">
+                            <h2>產品多元</h2>
+                            <h5>提供貼近各種類型用戶投資需求及彈性的平台機制，持續產出優於市場的創新金融服務。</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<section id="counter" class="counter-section">
+    <div class="container" style="padding: 80px 0;">
+        <div class="row text-center">
+            <div class="col-12 col-md-12">
+                <h1>
+                    強大優勢
+                </h1>
+                <div class="counter-wrap">
+                    <div class="counter-item" data-aos="fade-up">
+                        <div class="counter-img counter-img-01"></div>
+                        <div class="count-description">
+                            <h2>30分鐘</h2>
+                            <p>每天投資理財時間</p>
+                        </div>
+                    </div>
+                    <div class="counter-item" data-aos="fade-down">
+                        <div class="counter-img counter-img-02"></div>
+                        <div class="count-description">
+                            <h2>100,000</h2>
+                            <p>月入最大收益</p>
+                        </div>
+                    </div>
+                    <div class="counter-item" data-aos="fade-up">
+                        <div class="counter-img counter-img-03"></div>
+                        <div class="count-description">
+                            <h2>90%</h2>
+                            <p>超高收益機率</p>
+                        </div>
+                    </div>
+                    <div class="counter-item" data-aos="fade-down">
+                        <div class="counter-img counter-img-04"></div>
+                        <div class="count-description">
+                            <h2>59,831</h2>
+                            <p>投資獲利用戶人數</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="control" class="control">
+    <div class="container" style="padding:80px 0">
+        <div class="row text-center">
+            <div class="col-12 col-md-12">
+                <h1>
+                    監管機構
+                </h1>
+                <div class="control-wrap" data-aos="fade-up">
+                    <div class="control-img counter-img-sec"></div>
+                    <h6 class="control-description">美國證券交易委員會 SEC</h6>
+                </div>
+
+                <div class="control-wrap" data-aos="fade-down">
+                    <div class="control-img counter-img-lch"></div>
+                    <h6 class="control-description">倫敦交易結算所 LCH</h6>
+                </div>
+
+                <div class="control-wrap" data-aos="fade-up">
+                    <div class="control-img counter-img-moex"></div>
+                    <h6 class="control-description">俄羅斯證券交易所 MOEX</h6>
+                </div>
+
+                <div class="control-wrap" data-aos="fade-down">
+                    <div class="control-img counter-img-amf"></div>
+                    <h6 class="control-description">法國金融市場管理局 AMF</h6>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="content-section bargain" style="background-image:url('img/poster.jpg')">
+    <div class="container" style="padding:80px 0">
+        <div class="row text-center">
+            <div class="col-12 col-md-12">
+                <h1>
+                    隨時隨地多平台交易<br>
+                </h1>
+
+                <h3>
+                    支持iOS、Android、Windows、Mac...等多種設備
+                </h3>
+
+                <div data-aos="fade-up">
+                    <img src="img/app.png" style="max-width:600px">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services">
+    <div class="container" style="padding:80px 0">
+        <div class="row text-center">
+            <div class="col-12 col-md-12">
+                <h1>
+                    服務項目
+                </h1>
+                <h3 style="color: #ffffff;">我們努力不懈，為客戶的實質利益、用戶的良好體驗及合作夥伴的核心事業發展，創造多贏局面。</h3>
+                <div class="services-wrap">
+                    <div class="service-item" data-aos="fade-up">
+                        <div class="service-img counter-img-staff1"></div>
+                        <h4 class="service-description">金融投資</h4>
+                    </div>
+
+                    <div class="service-item" data-aos="fade-down">
+                        <div class="service-img counter-img-staff2"></div>
+                        <h4 class="service-description">房產交易</h4>
+                    </div>
+
+                    <div class="service-item" data-aos="fade-up">
+                        <div class="service-img counter-img-staff3"></div>
+                        <h4 class="service-description">渡假飯店</h4>
+                    </div>
+
+                    <div class="service-item" data-aos="fade-down">
+                        <div class="service-img counter-img-staff4"></div>
+                        <h4 class="service-description">娛樂郵輪</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<section id="terms" class="terms content-section">
+    <div class="container" style="padding:60px 0 20px">
+        <div class="row text-center">
+            <div class="col-12 col-md-12">
+                <h2>免責聲明</h2>
+                <div class="term-content">
+                    <p>一、公司及其數據提供者、合作廠商與相關業者網絡系統因硬件設備之故障、失靈或人為操作上之疏失導致傳輸無法使用、遲延、或造成任何數據內容（包括文本、數字、圖片、聲音、影像）遺失中斷、暫時、缺漏、更新延誤或存儲上之錯誤，公司均不負任何責任。
+                    </p>
+                    <p>二、網站上所提供之投資建議及參考數據內容，不得作為任何交易行為之依據，用戶依建議或數據內容進行任何投資行為所產生之風險及盈虧，均需完全自行負擔，公司不對用戶之投資決策負任何責任。</p>
+                    <p>三、網站內所有著作及數據，包括文本、圖片、聲音、影像、軟件等，其著作權、專利權、商標專用權、營業秘密、及其他知識產權、所有權或其他權利均受著作權法與知識產權相關條文保護，屬於本公司及其權利人所有，未經本公司或其權利人合法授權，不得擅自重製、修改、編輯、轉載、或以其他任何形式、基於任何目的使用，否則將追究用戶所有法律相關責任。
+                    </p>
+                    <p>四、以上信息僅供參考，用戶應依相關主管機關所公佈之信息使用規定使用，並自負投資盈虧之責。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="copynote">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                  Copyright © 2023 PlusMax2 Corporation. All rights reserved.
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- jQuery -->
+<!-- <script src="js/jquery.min.js"></script> -->
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/wow.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.parallax-1.1.3.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.countTo.js"></script>
+<script src="js/jquery.inview.min.js"></script>
+<script src="js/pace.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/additional-methods.min.js"></script>
+
+
+
+<!-- 影片 -->
+<script src="js/jquery.mb.YTPlayer.js"></script>
+
+
+<!-- 语言选项 -->
+<script type="text/javascript">
+    function optionCheck() {
+        var option = document.getElementById("options").value;
+        if (option == "zh_CN") {
+            window.location = "./?lang=zh_CN";
+        }
+        if (option == "en_US") {
+            window.location = "./?lang=en_US";
+        }
+    }
+
+    function optionCheck2() {
+        var option = document.getElementById("options2").value;
+        if (option == "zh_CN") {
+            window.location = "./?lang=zh_CN";
+        }
+        if (option == "en_US") {
+            window.location = "./?lang=en_US";
+        }
+    }
+</script>
+
+<script>
+    // var myPlayer;
+    // jQuery(function () {
+    //     myPlayer = jQuery("#bgndVideo").YTPlayer({
+    //         useOnMobile: true,
+    //     });
+    // });
+</script>
+
+
+<script src="js/hallooou.js"></script>

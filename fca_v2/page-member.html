@@ -1,0 +1,101 @@
+<section id="secHeader">
+	<img src="/img/fca_v2/favicon.ico">
+	<li><a href="/member_center" class="active {auth}"><img src="/img/fca_v2/icon-07.png" alt="about">會員中心</a></li>
+	<li><a href="/member" class="{auth}"><img src="/img/fca_v2/icon-11.png" alt="editfile">修改資料</a></li>
+	<li><a href="/store" class="{auth}"><img src="/img/fca_v2/icon-07.png" alt="verify">存入資金</a></li>
+	<li><a href="/transfer" class="{auth}"><img src="/img/fca_v2/icon-08.png" alt="transfer">資產轉移</a></li>
+	<li><a href="/withdraw" class="{auth}"><img src="/img/fca_v2/icon-09.png" alt="withdraw">提取資金</a></li>
+	<li><a href="/record_store" class="{auth}"><img src="/img/fca_v2/icon-10.png" alt="account">交易紀錄</a></li>
+	<li><a href="/message" class="{auth}"><img src="/img/fca_v2/icon-12.png" alt="message">客服訊息</a></li>
+
+</section>
+
+<section id="mobileSecHeader">
+
+	<li><a href="/store" class="{auth}"><img src="images/icon-07.png" alt="verify"></a></li>
+	<li><a href="/transfer" class="{auth}"><img src="images/icon-08.png" alt="transfer"></a></li>
+	<li><a href="/withdraw" class="{auth}"><img src="images/icon-09.png" alt="withdraw"></a></li>
+	<li class="active"><a href="/member" class="active {auth}"><img src="images/icon-10.png" alt="editfile"></a></li>
+	<li><a href="/historymessage" class="{auth}"><img src="images/icon-11.png" alt="message"></a></li>
+	<li><a href="/accountLog" class="{auth}"><img src="images/icon-12.png" alt="account"></a></li>
+
+</section>
+
+<div class="wrapper style2" id="mainWrap">
+	<div id="memTitle">
+		<h1><img src="images/icon-05.png" alt="editfile">修改資料</h1>
+	</div>
+
+	<div id="editList">
+		<div id="typeAccount">
+			<h2>登入帳號</h2>
+			<input type="text" required="" disabled value="{user-account}">
+		</div>
+
+		<div id="memName">
+			<h2>會員姓名</h2>
+			<input type="text" required="">
+		</div>
+
+		<div id="memCell">
+			<h2>行動電話</h2>
+			<input type="text" required="">
+			<div class="verifyFalse">
+				<span>
+					待驗證
+				</span>
+			</div>
+			<div class="verifyTrue">
+				<span>
+					已驗證
+				</span>
+			</div>
+		</div>
+
+		<div id="password">
+			<h2>修改密碼</h2>
+			<input type="password" required="" placeholder="輸入新密碼">
+		</div>
+
+		<div id="check">
+			<h2>再次確認密碼</h2>
+			<input type="password" required="" placeholder="再次輸入新密碼">
+		</div>
+
+		<div id="saveChange">
+			<button type="button" class="submit btn">
+				儲存
+			</button>
+		</div>
+	</div>
+
+	<div id="warning">
+		<strong>注意事項:<br>如遇不可抗拒因素，需要變更銀行資料，請洽詢銀行人員！</strong>
+	</div>
+	</section>
+</div>
+
+
+<script>
+	$(function () {
+		$('.member_form').find('.submit').onClick(function (data) {
+			if (data.code) {
+				// fail
+				swal({
+					title: data.text, html: true,
+					customClass: 'swalPopup'
+				});
+			} else {
+				swal({
+					title: data.text, html: true,
+					customClass: 'swalPopup'
+				}, function () {
+					location.reload();
+				});
+			}
+			$(this).find('.submit').button('reset');
+		}, function () {
+			$(this).find('.submit').button('loading');
+		});
+	});
+</script>

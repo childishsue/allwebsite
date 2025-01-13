@@ -1,0 +1,124 @@
+<section id="secHeader">
+	<a href="/index" class="goBack"><img src="../img//logo-white.png"></a>
+	<li class="active {auth}">
+		<span class="top"></span>
+		<span class="bottom"></span>
+		<a href="/member_center"><img src="../img//icon-13.png" alt="about">用戶中心</a>
+	</li>
+	<li class="{auth}"><a href="/member"><img src="../img//icon-11.png" alt="editfile">用戶資料</a></li>
+	<li class="{auth} "><a href="/store"><img src="../img//icon-07.png" alt="verify">買進資產</a></li>
+	<li class="{auth}"><a href="/transfer"><img src="../img//icon-08.png" alt="transfer">資產轉移</a></li>
+	<li class="{auth} "><a href="/withdraw"><img src="../img//icon-09.png" alt="withdraw">賣出資產</a></li>
+	<li class="{auth}"><a href="/record_store"><img src="../img//icon-10.png" alt="account">交易紀錄</a></li>
+	<li class="{auth}"><a href="{url-chat}" target="_blank"><img src="../img//icon-12.png" alt="message">客服中心</a></li>
+	<a href="/logout">
+		<button class="Signout-button outline-btn">
+			登出
+		</button>
+	</a>
+</section>
+
+<section id="mobileSecHeader">
+	<li class="active {auth}"><a href="/member_center"><img src="../img//icon-13.png" alt="about"></a></li>
+	<li class="{auth}"><a href="/member"><img src="../img//icon-11.png" alt="editfile"></a></li>
+	<li class="{auth}"><a href="/store"><img src="../img//icon-07.png" alt="verify"></a></li>
+	<li class="{auth}"><a href="/transfer"><img src="../img//icon-08.png" alt="transfer"></a></li>
+	<li class="{auth} "><a href="/withdraw"><img src="../img//icon-09.png" alt="withdraw"></a></li>
+	<li class="{auth}"><a href="/record_store"><img src="../img//icon-10.png" alt="account"></a></li>
+	<li class="{auth}"><a href="{url-chat}" target="_blank"><img src="../img//icon-12.png" alt="message"></a></li>
+</section>
+
+<div class="wrapper style2" id="mainWrap">
+	<div class="secWrap-1">
+		<div id="memTitle">
+			<div class="title">
+				<img src="../img//icon-14.png" alt="">
+				<h1>理財項目</h1>
+			</div>
+			<div class="Signout">
+				<a href="/logout">
+					<button class="Signout-button outline-btn">
+						登出
+					</button>
+				</a>
+			</div>
+		</div>
+
+		<div id="editList">
+			<div class="display col-md-10">
+				<div class="col-md-6">
+					<div class="agileinfo-grap-2  product-item">
+						<div class="product-item-img">
+							<img src="../img//game_02.jpg" alt="" class="lazy" src-hover="undefined" alt
+								width="100%" style="display: inline;">
+						</div>
+						<div class="product-item-intro">
+							<div class="product-item-intro-title">現貨指數</div>
+							<div class="product-item-intro-text">
+								<p>
+									「現貨指數」用以反映每分鐘匯率變動程度，測量市場預期的變動，通常用來評估未來風險，因此也有人稱作恐慌指數。指數雖然是反映變動程度，卻是以年化百分比表示，並且以常態分佈的機率出現。
+								</p>
+							</div>
+						</div>
+						<div class="game-introduction-content01">
+							<button class="Signout-button"
+								onclick="window.open('/game/vvgame2',  '_blank');">開始買賣</button>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="col-md-6">
+					<div class="agileinfo-grap-2  product-item">
+						<div class="product-item-img">
+							<img src="../img//game_01.jpg" alt="" class="lazy" src-hover="undefined" alt width="100%"
+								style="display: inline;">
+						</div>
+						<div class="product-item-intro">
+							<div class="product-item-intro-title">VV LOTTERY</div>
+							<div class="product-item-intro-text">
+								<p>
+									VV
+									LOTTERY是最丰富的彩票平台，各式彩种一应具全，北京赛车、幸运飞艇、时时彩与经典轮盘，并提供各式新颖的投注方式，能满足您以小博大的快感，也有高胜率的稳定获利。现在马上加入，开启您的双赢人生。
+								</p>
+							</div>
+						</div>
+						<div class="game-introduction-content01">
+							<button class="Signout-button" onclick="location.href='/game/vvgame'">開始買賣</button>
+						</div>
+					</div>
+				</div> -->
+			</div>
+		</div>
+		<div class="footer">
+			<div class="wthree-copyright">
+				<p>{web-foot}</p>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script>
+	$(function () {
+		$('.member_form').find('.submit').onClick(function (data) {
+			if (data.code) {
+				// fail
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				});
+			} else {
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				}, function () {
+					location.reload();
+				});
+			}
+			$(this).find('.submit').button('reset');
+		}, function () {
+			$(this).find('.submit').button('loading');
+		});
+	});
+</script>

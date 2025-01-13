@@ -1,0 +1,573 @@
+/* 基本設定 */
+:root {
+    --primary: #223B51;
+    --secondary: #334756;
+    --light: #BACDD3;
+    --linkHoverColor: #DBBD78;
+    --btnColor-light: #3e3e8a;
+    --btnColor-middle: #33338f;
+    --btnColor-dark: #25258E;
+
+    --placeholderColor: #BCBBB6;
+
+    --lightText: #E4EAF4;
+    --darkBg: #1B334D;
+}
+
+body {
+    font-family: 'Noto Sans TC', 'UlmGrotesk-Bold', 'source-han-sans-japanese', sans-serif;
+    background-color: #211829;
+    color: #333;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: color .5s ease-in-out;
+}
+
+a:hover,
+a:active,
+a.active {
+    color: var(--linkHoverColor);
+    text-decoration: none;
+}
+
+input,
+select,
+textarea,
+.userphone,
+#bankSelect,
+#bank-account,
+#bank-name {
+    height: 40px;
+    padding: 0 8px;
+    background-color: #E8E8E8;
+    border: none;
+    color: #333;
+    border-radius: 5px;
+    border-bottom: 1px solid #F25233;
+    border-top: 1px solid #E8E8E8;
+    border-right: 1px solid #E8E8E8;
+    border-left: 1px solid #E8E8E8;
+}
+
+input,
+select {
+    width: 100%;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 300px;
+    width: calc(100% - 19px);
+    overflow-y: scroll;
+    padding: 8px;
+}
+
+option {
+    width: 50px;
+}
+
+input[placeholder],
+[placeholder],
+*[placeholder] {
+    font: 400 15px 'Noto Sans TC', 'UlmGrotesk-Bold', sans-serif;
+
+}
+
+input::placeholder {
+    color: #666;
+    opacity: .8;
+    transition: opacity 300ms;
+}
+
+input:focus::placeholder {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+input[type="file"] {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    height: 40px;
+    padding: 7px 0px;
+    box-sizing: border-box;
+}
+
+.input-block {
+    margin-bottom: 16px;
+}
+
+label {
+    color: #000;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+
+/* 輸入框點擊後外框顏色 */
+
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline-offset: 0px;
+    outline: none;
+}
+
+
+span {
+    font-size: 13px;
+    color: #F25233;
+    letter-spacing: 1px;
+}
+
+button:focus {
+    outline: none;
+}
+
+.btn {
+    padding: 10px 30px;
+    background-color: #f39900;
+    border: none;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #58c9ff;
+}
+
+
+.btn1 {
+    padding: 15px 35px;
+    background-color: #F3EEE4;
+    color: #a68b62;
+    font-weight: bold;
+    border: 2px solid rgba(166, 139, 98, .5);
+    transition: all .5s cubic-bezier(.4, .8, .74, 1) 0s;
+    cursor: pointer;
+    border-radius: 99px;
+    line-height: 1;
+    font-weight: 700;
+    white-space: nowrap;
+    position: relative;
+}
+
+.btn1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border-radius: 99px;
+    transform: scaleX(0);
+    transform-origin: 100% 0;
+    transition: .4s cubic-bezier(.32, .95, .6, 1);
+}
+
+.btn1:hover,
+.btn1:active {
+    border: 2px solid rgba(166, 139, 98, .5);
+    background-color: #a68b62;
+    color: #fff;
+}
+
+.btn1:hover::before {
+    transform: scaleX(1);
+    background-color: #a68b62;
+}
+
+.btn2 {
+    padding: 10px 25px;
+    background-color: transparent;
+    border: 1px solid #f39900;
+    color: #f39900;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.btn2:hover,
+.btn2:active {
+    background-color: #f39900;
+    color: #fff;
+}
+
+.btn1 span.txt {
+    z-index: 10;
+    position: relative;
+    color: #a68b62;
+    transition: .5s cubic-bezier(.32, .95, .6, 1);
+    font-size: 1rem;
+}
+
+.btn1:hover span.txt {
+    color: #fff;
+}
+
+/*=============new btn===============*/
+
+.btn-costom {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    color: #f5f5f5;
+    line-height: 1;
+    font-size: 16px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transition: transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1), color 600ms 800ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1), color 600ms 800ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transition: transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1), color 600ms 800ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transition: -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1), color 600ms 800ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1), color 600ms 800ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.btn-costom:hover {
+    color: #fff;
+    transition: color 200ms 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.btn-costom span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--btnColor-light);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: -1;
+    transition: all 600ms cubic-bezier(0.155, 0.61, 0.355, 1);
+    -webkit-transition: all 600ms cubic-bezier(0.155, 0.61, 0.355, 1);
+}
+
+.btn-costom span::before,
+.btn-costom span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.btn-costom span::before {
+    background-color: var(--btnColor-middle);
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transition: 600ms cubic-bezier(0.155, 0.61, 0.355, 1);
+    -webkit-transition: 600ms cubic-bezier(0.155, 0.61, 0.355, 1);
+}
+
+.btn-costom span::after {
+    background-color: var(--btnColor-dark);
+    transform: translateY(120%);
+    -webkit-transform: translateY(120%);
+    transition: 800ms cubic-bezier(0.155, 0.61, 0.355, 1);
+    -webkit-transition: 800ms cubic-bezier(0.155, 0.61, 0.355, 1);
+}
+
+.btn-costom:hover span::before {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+}
+
+.btn-costom:hover span::after {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    transition-delay: .1s;
+}
+
+
+.submit {
+    width: 100%;
+}
+
+.btn-store {
+    margin-top: 10px;
+}
+
+/* 文字顏色 */
+.font-green {
+    color: #068485;
+}
+
+/* 顯示排列 */
+.display-flex {
+    display: flex;
+}
+
+/* 圖片顯示 */
+img {
+    width: auto;
+}
+
+/* 登入登出的判斷 */
+.hidden {
+    display: none;
+}
+
+/*================================================*/
+/* 所有共同使用 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.member-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 15px;
+    min-height: calc(100vh - 80px -88px);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    color: #333333;
+}
+
+/*================================================*/
+/* login + register */
+.login-form {
+    margin-top: 20px;
+    padding: 0 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.login-form .full-page {
+    background-color: #fff;
+    box-shadow: 0 0 30px #060606;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.web-left-block,
+.web-right-block {
+    padding: 0 15px;
+}
+
+.web-left-block {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    background-color: #000000b6;
+    background-image: url(../img/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.web-left-block .logo {
+    width: 175px;
+}
+
+.web-left-block h1 {
+    color: #00235a;
+    margin: 0;
+}
+
+.web-right-block {
+    padding: 30px;
+}
+
+.login-btn {
+    margin-top: 30px;
+}
+
+form .link-area {
+    max-width: 400px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-evenly;
+    color: #666;
+}
+
+form .forget-password {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    color: #666;
+}
+
+
+form .link-area a {
+    color: #666;
+}
+
+form .link-area a:hover {
+    color: #F25233;
+}
+
+/*progress state*/
+#progress-triangle {
+    display: none;
+}
+
+/*================================================*/
+/* register */
+.communication-software {
+    margin: 0;
+}
+
+.register_form .img-block {
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    color: #666;
+}
+
+.change {
+    background-image: url(../img/icon_change.png);
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.input-verification-code-block .display-flex .img-block {
+    margin-right: 10px;
+}
+
+[type="checkbox"] {
+    width: 21px;
+    height: 21px;
+    margin-right: 5px;
+    margin-top: 0;
+}
+
+#register .policy-style {
+    color: #D9534F;
+}
+
+#register .input-block .communication-software:last-child {
+    margin-top: 10px;
+}
+
+#register .text-block {
+    color: #666;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1024px) {
+
+    /*================================================*/
+    /* login + register */
+    .full-page {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .web-right-block {
+        padding: 0 50px;
+    }
+
+    .web-left-block {
+        padding: 0 50px;
+    }
+
+    /*progress state*/
+    #progress-triangle {
+        display: block;
+        width: 0px;
+        height: 0px;
+        border-top: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid #25258E;
+        margin-left: -15px;
+        position: relative;
+        top: 55px;
+    }
+
+
+    /*================================================*/
+    /* login */
+    .login-form {
+        padding-top: 18vh;
+    }
+
+    .login-form .full-page {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .login-form .web-left-block {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-form .web-right-block {
+        width: calc(100% - 230px);
+        padding: 50px;
+        box-sizing: border-box;
+    }
+
+    /*================================================*/
+    /* register */
+    .input-block-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .input-block-area .input-block {
+        width: calc(50% - 5px);
+    }
+
+    .input-verification-code-block {
+        padding: 20px 0;
+    }
+
+    .verification {
+        display: flex;
+        align-items: center;
+    }
+
+    .register_form .img-block {
+        margin-left: 15px;
+    }
+
+    #register .web-left-block {
+        width: 370px;
+    }
+
+    #register .web-right-block {
+        width: calc(100% - 370px);
+    }
+
+    #register .input-block .communication-software:last-child {
+        margin-top: 0;
+    }
+
+}

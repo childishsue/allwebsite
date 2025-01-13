@@ -1,0 +1,132 @@
+<head>
+	<link rel="stylesheet" href="/css/eumax/stylelogin.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+
+<style>
+	#toTop {
+		display: none !important;
+	}
+</style>
+
+<!-- static style -->
+<nav class="nav-custom">
+	<div class="wrapper">
+		<div class="nav-content">
+			<a class="navbar-brand" href="index.html">
+				<img src="/img/eumax/logo.png" alt="" class="logo">
+			</a>
+			<div class="menuToggle">
+				<input type="checkbox" name="menu" id="menu">
+				<span></span>
+				<span></span>
+				<span></span>
+				<div class="menuGroup">
+					<ul class="navbar-list">
+						<li class="nav-item {unauth} "><a href="/register" class="nav-link">交易服務</a></li>
+						<li class="nav-item {unauth} "><a href="https://hk.investing.com" target="888"
+								class="nav-link">媒體報導</a>
+						</li>
+						<li class="nav-item {unauth} "><a href="/login" class="nav-link">近期活動</a></li>
+						<li class="nav-item {unauth} "><a href="/page-aboutus" class="nav-link">關於我們</a></li>
+						<li class="nav-item {unauth} "><a href="/policy" class="nav-link">法律聲明</a></li>
+						<!-- login state-->
+						<li class="nav-item {auth} "><a href="/game/vvgame2" class="nav-link">交易服務</a></li>
+						<li class="nav-item {auth} "><a href="https://hk.investing.com" target="888"
+								class="nav-link">媒體報導</a>
+						</li>
+						<li class="nav-item {auth} "><a href="/bulletin" class="nav-link">近期活動</a></li>
+						<li class="nav-item {auth} "><a href="/page-aboutus" class="nav-link">關於我們</a></li>
+						<li class="nav-item {auth} "><a href="{url-chat}" target="_blank" class="nav-link">聯繫客服</a></li>
+					</ul>
+					<ul class="navbar-state">
+						<li class="nav-item {auth} "><a href="/member_center" class="nav-link btn-reg">用戶中心</a></li>
+						<li class="nav-item {auth} "><a href="/logout" class="nav-link btn-log">登出</a></li>
+						<li class="nav-item {unauth} "><a href="/login" class="nav-link btn-log">用戶登入</a></li>
+						<li class="nav-item {unauth} "><a href="/register" class="nav-link btn-reg">馬上註冊</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="webMenuGroup">
+				<ul class="navbar-list">
+					<li class="nav-item {unauth} "><a href="/register" class="nav-link">交易服務</a></li>
+					<li class="nav-item {unauth} "><a href="https://hk.investing.com" target="888"
+							class="nav-link">媒體報導</a>
+					</li>
+					<li class="nav-item {unauth} "><a href="/login" class="nav-link">近期活動</a></li>
+					<li class="nav-item {unauth} "><a href="/page-aboutus" class="nav-link">關於我們</a></li>
+					<li class="nav-item {unauth} "><a href="/policy" class="nav-link">法律聲明</a></li>
+					<!-- login state-->
+					<li class="nav-item {auth} "><a href="/game/vvgame2" class="nav-link">交易服務</a></li>
+					<li class="nav-item {auth} "><a href="https://hk.investing.com" target="888"
+							class="nav-link">媒體報導</a>
+					</li>
+					<li class="nav-item {auth} "><a href="/bulletin" class="nav-link">近期活動</a></li>
+					<li class="nav-item {auth} "><a href="/page-aboutus" class="nav-link">關於我們</a></li>
+					<li class="nav-item {auth} "><a href="{url-chat}" target="_blank" class="nav-link">聯繫客服</a></li>
+				</ul>
+				<ul class="navbar-state">
+					<li class="nav-item {auth} "><a href="/member_center" class="nav-link btn-reg">用戶中心</a></li>
+					<li class="nav-item {auth} "><a href="/logout" class="nav-link btn-log">登出</a></li>
+					<li class="nav-item {unauth} "><a href="/login" class="nav-link btn-log">用戶登入</a></li>
+					<li class="nav-item {unauth} "><a href="/register" class="nav-link btn-reg">馬上註冊</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<!-- static style -->
+
+
+<div class="container login_form login-form">
+	<div class="full-page">
+		<div class="section-form">
+			<div class="form-title">
+				<h1>登入</h1>
+			</div>
+			<div class="form-content">
+				<form action="/ajax/login" method="POST">
+					<div class="input-block">
+						<label for="" class="title"><i class="fas fa-user"></i></label>
+						<input type="text" class="input-content" placeholder="帳號" name="account">
+					</div>
+					<div class="input-block">
+						<label for="" class="title"><i class="fas fa-lock"></i></label>
+						<input type="password" class="input-content" placeholder="密碼" name="password">
+					</div>
+					<div class="precaution">
+						<p>本頁面受 reCAPTCHA 機制保護，並遵守 Google 的 <a href="https://policies.google.com/privacy">隱私權政策</a> 及 <a
+								href="https://policies.google.com/terms">服務條款</a>。</p>
+					</div>
+					<div class="btnGroup">
+						<button class="btn login-btn" type="reset" value=""
+							data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 處理中...">
+							取消
+						</button>
+						<button class="btn login-btn submit" type="button" value=""
+							data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 處理中...">
+							登入
+						</button>
+					</div>
+				</form>
+				<div class="form-reminder">
+					<p><i class="fas fa-info-circle"></i>請將您用來登入 EuMax-II
+						的手機設定兩步驟驗證，這可以保護您的帳戶安全，使其不致於因為密碼外洩而遭盜用，即使密碼遭盜用，盜用者也無法成功登入您的帳戶。</p>
+				</div>
+				<div class="form-link">
+					<div class="reg">
+						<span>還沒有帳號嗎?</span><a href="/register">註冊</a>
+					</div>
+					<div class="forget-psd">
+						<a href="{url-chat}" target="_blank">忘記密碼</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<script src="/js/jquery-ui.min.js"></script>

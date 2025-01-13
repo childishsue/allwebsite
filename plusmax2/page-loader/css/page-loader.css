@@ -1,0 +1,77 @@
+body {
+	display: none;
+	background-color: #000;
+}
+
+.page-loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: rgb(230, 230, 230);
+	/* background: -moz-linear-gradient(top, rgb(58, 79, 110) 0%, rgb(52, 56, 65) 100%);
+  background: -webkit-linear-gradient(top, rgb(58, 79, 110) 0%, rgb(52, 56, 65) 100%);
+  background: linear-gradient(to bottom, rgb(58, 79, 110) 0%, rgb(52, 56, 65) 100%); */
+/* 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#201a29', endColorstr='#0c090f',GradientType=0 ); */
+}
+
+.page-loader:before{
+	position: absolute;
+	background-blend-mode: screen;
+	top: 50%;
+	left: 50%;
+	content: "";
+	width: 90px;
+	height: 90px;
+	-webkit-transform: translate(-50%,-50%);
+	   -moz-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	     -o-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
+	background-image: url('../../../img/pbpb/loading.gif');
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+}
+
+/* .page-loader:after{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	content: "";
+	width: 80px;
+	height: 80px;
+	margin-left: -40px;
+	margin-top: -40px;
+	background-image: url('../img/yellow.svg');
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	 animation-name: scale;
+	  animation-duration: 0.8s;
+	  animation-iteration-count: infinite;
+} */
+
+@keyframes scale {
+  from {
+  	opacity: 0;
+    -webkit-transform: scale(0.8) ;
+       -moz-transform: scale(0.8) ;
+        -ms-transform: scale(0.8) ;
+         -o-transform: scale(0.8) ;
+            transform: scale(0.8) ;
+  }
+	10%{
+		opacity: 1;
+	}
+  100% {
+  	opacity: 0;
+    -webkit-transform: scale(1.05) ;
+       -moz-transform: scale(1.05) ;
+        -ms-transform: scale(1.05) ;
+         -o-transform: scale(1.05) ;
+            transform: scale(1.05) ;
+  }
+}

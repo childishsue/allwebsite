@@ -1,0 +1,79 @@
+<script>
+	// 移除首頁使用的CSS
+	$('link[rel=stylesheet][href~="./css/fca_v2.scss?20190114"]').remove();
+</script>
+
+<link rel="stylesheet" href="./css/stylelogin.css">
+
+<style>
+	body {
+		background-color: #000000b6;
+		background-image: url(/img/fca_v2/image_4.jpg);
+		background-size: cover;
+		background-position: right;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+
+	#toTop {
+		display: none !important;
+	}
+</style>
+
+
+<div class="container login_form login-form">
+	<div class="full-page">
+		<div class="web-left-block">
+			<img src="./img/logo.png" alt="" class="logo">
+		</div>
+		<div class="web-right-block">
+			<!-- 要有form才會傳資料 -->
+			<!-- input要加上name,才會認得這是甚麼 -->
+			<!-- button class要調整,請看other.html寫的 -->
+			<form action="/ajax/login" method="POST">
+				<div id="progress-triangle"></div>
+				<div class="input-block">
+					<label for="account" class="title">登入帳號</label>
+					<input type="text" class="input-content" placeholder="輸入帳號" name="account" id="account">
+				</div>
+				<div class="input-block">
+					<label for="password" class="title">輸入密碼</label>
+					<input type="password" class="input-content" placeholder="輸入密碼" name="password" id="password">
+					<!-- <a href="{url-chat}" target="_blank" class="forget-password">忘記密碼?</a> -->
+				</div>
+				<button class="btn-costom login-btn submit" type="button" value=""
+					data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 處理中...">
+					<span></span>
+					登入
+				</button>
+				<div class="link-area">
+					<!-- <a href="{url-chat}" target="_blank">忘記密碼</a> -->
+					<a href="register.html">立即註冊</a>
+					<div>|</div>
+					<a href="index.html">回到首頁</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<script src="./js/jquery-ui.min.js"></script>
+<script>
+	$(document).ready(function () {
+		$('#account').focus();
+
+		var progressTriangle = $('#progress-triangle');
+
+		$('#account').focus(function () {
+			progressTriangle.animate({
+				top: "56px"
+			});
+		});
+		$('#password').focus(function () {
+			progressTriangle.animate({
+				top: "142px"
+			});
+		});
+	});
+</script>

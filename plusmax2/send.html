@@ -1,0 +1,110 @@
+<section id="secHeader">
+    <a href="/index"><img src="../img//logo-white.png" style="margin-bottom:20px"></a>
+    <li class="{auth}"><a href="/member_center"><img src="../img//icon-13.png" alt="about">用戶中心</a></li>
+    <li class="{auth}"><a href="/member"><img src="../img//icon-11.png" alt="editfile">用戶資料</a></li>
+    <li class="{auth}"><a href="/store"><img src="../img//icon-07.png" alt="verify">買進資產</a></li>
+    <li class="{auth}"><a href="/transfer"><img src="../img//icon-08.png" alt="transfer">資產轉移</a></li>
+    <li class="{auth} "><a href="/withdraw"><img src="../img//icon-09.png" alt="withdraw">賣出資產</a></li>
+    <li class="{auth}"><a href="/record_store"><img src="../img//icon-10.png" alt="account">交易紀錄</a></li>
+    <li class="{auth}"><a href="{url-chat}" target="_blank"><img src="../img//icon-12.png" alt="message">客服中心</a></li>
+</section>
+
+<section id="mobileSecHeader">
+    <li class="{auth}"><a href="/member_center"><img src="../img//icon-13.png" alt="about"></a></li>
+    <li class="{auth}"><a href="/member"><img src="../img//icon-11.png" alt="editfile"></a></li>
+    <li class="{auth}"><a href="/store"><img src="../img//icon-07.png" alt="verify"></a></li>
+    <li class="{auth}"><a href="/transfer"><img src="../img//icon-08.png" alt="transfer"></a></li>
+    <li class="{auth} "><a href="/withdraw"><img src="../img//icon-09.png" alt="withdraw"></a></li>
+    <li class="{auth}"><a href="/record_store"><img src="../img//icon-10.png" alt="account"></a></li>
+    <li class="{auth}"><a href="{url-chat}" target="_blank"><img src="../img//icon-12.png" alt="message"></a></li>
+</section>
+<section id="mainWrap" class="wrapper style2" style="margin-bottom:0;">
+    <div class="secWrap-2">
+        <!-- 上半部 -->
+        <div id="memTitle">
+            <div class="title">
+                <img src="../img//icon-12.png" alt="">
+                <h1>客服消息</h1>
+            </div>
+            <div class="Signout">
+                <a href="/logout">
+                    <button class="Signout-button outline-btn">
+                        登出
+                    </button>
+                </a>
+            </div>
+        </div>
+        <!-- 下半部 -->
+        <div id="editList">
+            <div class="col-md-12 margin-top-bottom-15px">
+                <div id="messageItem">
+                    <div id="sentMessage" class="active">
+                        <a href="/send">
+                            <h4>发送消息</h4>
+                        </a>
+                    </div>
+                    <div id="history">
+                        <a href="/message">
+                            <h4>历史消息</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="agileinfo-grap-2 background-white margin-top-2">
+                    <div class="col-md-7">
+                        <div id="sentList">
+                            <form class="send_form" action="/ajax/send" method="POST">
+                                <div id="sentTitle">
+                                    <h2>消息标题</h2>
+                                    <input type="text" name="title">
+                                </div>
+                                <div id="contentArea">
+                                    <h2>内容详述</h2>
+                                    <textarea name="content" rows="8"
+                                        style="width:100%;resize : none;border-radius: 10px;"></textarea>
+                                </div>
+
+                                <div id="saveChange">
+                                    <button type="button" class="submit btn-send Signout-button"
+                                        data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 处理中...">
+                                        送出
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="wthree-copyright">
+                <p>{web-foot}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(function () {
+        $('.send_form').find('.submit').onClick(function (data) {
+            if (data.code) {
+                // fail
+                swal({
+                    title: data.text,
+                    html: true,
+                    customClass: 'swalPopup'
+                });
+            } else {
+                swal({
+                    title: data.text,
+                    html: true,
+                    customClass: 'swalPopup'
+                }, function () {
+                    window.location = 'message';
+                });
+            }
+            $(this).button('reset');
+        }, function () {
+            $(this).button('loading');
+        });
+    });
+</script>

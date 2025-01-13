@@ -1,0 +1,91 @@
+<!-- fontawesome -->
+<script src="/js/6603bd9dd4.js"></script>
+<!-- 會員中心使用CSS -->
+<link rel="stylesheet" href="/css/fca_v2/style_membercenter.css">
+
+<body>
+	<nav>
+		<div class="content">
+			<div class="mobile-menu">
+				<i class="fas fa-bars"></i>
+			</div>
+			<div class="web-user-icon">
+				<i class="fas fa-user-circle fa-2x"></i>
+				<i class="fas fa-angle-down"></i>
+			</div>
+			<a href="/index" class="logo">
+				<img src="/img/fca_v2/logo.png" alt="">
+			</a>
+			<div class="web-pagination-block">
+				<a href="/index">首頁</a>
+				<a href="/event" class="active">文章分享</a>
+				<a class="{auth}" href="/member_center">會員中心</a>
+				<a class="{auth}" href="/logout">登出</a>
+				<a class="{unauth}" href="/login">會員登入</a>
+				<a class="{unauth}" href="/register">馬上註冊</a>
+			</div>
+
+		</div>
+	</nav>
+
+	<div class="mobile-link-block">
+		<div class="close-icon">
+			<i class="fas fa-times"></i>
+		</div>
+		<div class="link-block">
+			<img src="/img/fca_v2/logo.png" class="mobile-logo">
+			<a href="/index">首頁</a>
+			<a href="/event">文章分享</a>
+			<a class="{auth}" href="/member_center">會員中心</a>
+			<a class="{unauth}" href="/login">會員登入</a>
+			<a class="{unauth}" href="/register">馬上註冊</a>
+			<a class="{auth}" href="/member">修改資料</a>
+			<a class="{auth}" href="/store">存入資金</a>
+			<a class="{auth}" href="/transfer">資產轉移</a>
+			<a class="{auth}" href="/withdraw">賣出資產</a>
+			<a class="{auth}" href="/record_store">交易紀錄</a>
+			<a href="/customer_service">客服中心</a>
+			<a class="{auth}" href="/logout" class="Signout-button btn">登出</a>
+		</div>
+	</div>
+
+
+
+	<!-- 主要區域 -->
+	<div class="redditList">
+		<div class="content">
+
+			<div class="main-block">
+				<div class="block">
+					<div class="title-block">
+						<p>文章分享</p>
+					</div>
+					<section id="event">
+						<div class="content-title-block">
+							<div class="w-1">標題</div>
+							<div class="w-2">日期</div>
+						</div>
+						<!-- @event-item -->
+						<div class="article">
+							<div class="click-block">
+								<div class="w-1">
+									{content}
+								</div>
+								<div class="w-2">{cdate}</div>
+							</div>
+						</div>
+						<!-- @event-item -->
+						<div>{page}</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p>{web-foot}</p>
+	</div>
+</body>
+
+<!-- 會員中心共同使用js -->
+<script src="/js/fca_v2/all.js"></script>

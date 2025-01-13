@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="./css/stylelogin.css">
+<style>
+	@media screen and (max-width:414px) {
+		body {
+			background-repeat: no-repeat;
+			background-position-y: 10%;
+		}
+
+		.login {
+			margin-top: 5%;
+		}
+	}
+
+	html {
+		background-image: unset;
+	}
+
+	#header {
+		display: none;
+	}
+
+	#company {
+		display: none;
+	}
+
+	#footer {
+		display: none;
+	}
+</style>
+
+<div class="login">
+	<div class="main-w3l" style="margin-top:5%;">
+
+		<div class="w3layouts-main">
+			<h1><a href="index.html" class="login-logo">plusmax2</a></h1>
+			<h2>用戶登入</h2>
+			<form class="login_form" action="/ajax/login" method="POST">
+				<div class="input-block account">
+					<label for="account" class="input-img">account</label>
+					<input placeholder="輸入帳號" name="account" type="text" id="account" required="">
+					<span class="highlight"></span>
+					<span class="bar"></span>
+				</div>
+				<div class="input-block password">
+					<label for="pwd" class="input-img">pwd</label>
+					<input placeholder="輸入密碼" name="password" type="password" id="pwd" required="">
+					<span class="highlight"></span>
+					<span class="bar"></span>
+				</div>
+				<button class="submit btn-login" type="button" value="">登入</button>
+				<!-- <input type="button" value="登录" name="login" style="width: 75%;"> -->
+			</form>
+			<h6><a href="/register">立即建立</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">回到首頁</a></h6>
+			<br>
+			<!-- <a href="/customer_service" target="_blank" target="_black">忘记密码</a> -->
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function () {
+		$('.inner p').html($('.copyright').html());
+	});
+</script>

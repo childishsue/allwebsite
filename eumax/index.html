@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="./css/aos.css">
+  <link rel="stylesheet" href="./css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="./css/jquery.timepicker.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <script src="/js/6603bd9dd4.js"></script>
+  <!-- 影片 -->
+  <link href="./css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+
+  <style>
+      .navbar-brand>img {
+          max-width: 180px;
+          filter: drop-shadow(0 2px 5px #000000ab);
+      }
+
+      header,
+      footer {
+          display: none;
+      }
+
+      .label-13XFthDT.bottom-21EGGcaf,
+      .tradingview-widget-copyright {
+          display: none;
+      }
+
+      .animate-number {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          margin: 20px auto;
+          width: 120px;
+          height: 120px;
+          background: white;
+          border-radius: 75px;
+          font-family: microsoft jhenghei;
+          font-size: 34px;
+          font-weight: lighter;
+          letter-spacing: 2px;
+          transition: 1s box-shadow;
+          border: 1px solid #bebebe;
+          transition: all .3s;
+      }
+
+      .animate-number:hover {
+          box-shadow: 0 5px 35px 0px rgba(0, 0, 0, .1);
+          background: -webkit-linear-gradient(151deg, #ffffff, #d6d6d6);
+          background: linear-gradient(151deg, #ffffff, #d6d6d6);
+          transition: all .3s;
+          border: 1px solid #ffffff;
+
+      }
+
+      .animate-number:hover::before,
+      .animate-number:hover::after {
+          display: block;
+          content: '';
+          position: absolute;
+          width: 120px;
+          height: 120px;
+          background: #ff53da;
+          border-radius: 75px;
+          z-index: -1;
+          animation: 1s clockwise infinite;
+      }
+
+      .animate-number:hover:after {
+          background: #34a4ff;
+          animation: 2s counterclockwise infinite;
+      }
+
+      @keyframes clockwise {
+          0% {
+              top: -5px;
+              left: 0;
+          }
+
+          12% {
+              top: -2px;
+              left: 2px;
+          }
+
+          25% {
+              top: 0;
+              left: 5px;
+          }
+
+          37% {
+              top: 2px;
+              left: 2px;
+          }
+
+          50% {
+              top: 5px;
+              left: 0;
+          }
+
+          62% {
+              top: 2px;
+              left: -2px;
+          }
+
+          75% {
+              top: 0;
+              left: -5px;
+          }
+
+          87% {
+              top: -2px;
+              left: -2px;
+          }
+
+          100% {
+              top: -5px;
+              left: 0;
+          }
+      }
+
+      @keyframes counterclockwise {
+          0% {
+              top: -5px;
+              right: 0;
+          }
+
+          12% {
+              top: -2px;
+              right: 2px;
+          }
+
+          25% {
+              top: 0;
+              right: 5px;
+          }
+
+          37% {
+              top: 2px;
+              right: 2px;
+          }
+
+          50% {
+              top: 5px;
+              right: 0;
+          }
+
+          62% {
+              top: 2px;
+              right: -2px;
+          }
+
+          75% {
+              top: 0;
+              right: -5px;
+          }
+
+          87% {
+              top: -2px;
+              right: -2px;
+          }
+
+          100% {
+              top: -5px;
+              right: 0;
+          }
+      }
+
+      .mb_YTPBar .buttonBar {
+          display: none;
+      }
+
+      .mb_YTPBar .mb_YTPseekbar {
+          display: none;
+      }
+
+      .mb_YTPBar .inlinePlayer {
+          display: none;
+      }
+
+      .inlinePlayButton {
+          display: none !important;
+      }
+
+      .mb_YTPProgress {
+          display: none;
+      }
+
+      #controlBar_bgndVideo {
+          display: none !important;
+      }
+
+      .large-header {
+          position: relative;
+          width: 100%;
+          background: #111;
+          overflow: hidden;
+          background-size: cover;
+          background-position: center center;
+          z-index: 1;
+      }
+  </style>
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <!-- static style -->
+    <nav class="nav-custom">
+        <div class="wrapper">
+            <div class="nav-content">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./img/logo.png" alt="" class="logo">
+                </a>
+                <div class="menuToggle">
+                    <input type="checkbox" name="menu" id="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="menuGroup">
+                        <ul class="navbar-list">
+                            <li class="nav-item {unauth} "><a href="register.html" class="nav-link">交易服務</a></li>
+                            <li class="nav-item {unauth} "><a href="#" target="888"
+                                    class="nav-link">媒體報導</a>
+                            </li>
+                            <li class="nav-item {unauth} "><a href="login.html" class="nav-link">近期活動</a></li>
+                            <li class="nav-item {unauth} "><a href="page-aboutus.html" class="nav-link">關於我們</a></li>
+                            <li class="nav-item {unauth} "><a href="policy.html" class="nav-link">法律聲明</a></li>
+                        </ul>
+                        <ul class="navbar-state">
+                            <li class="nav-item {unauth} "><a href="login.html" class="nav-link btn-log">用戶登入</a></li>
+                            <li class="nav-item {unauth} "><a href="register.html" class="nav-link btn-reg">馬上註冊</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="webMenuGroup">
+                    <ul class="navbar-list">
+                        <li class="nav-item {unauth} "><a href="register.html" class="nav-link">交易服務</a></li>
+                        <li class="nav-item {unauth} "><a href="#" target="888"
+                                class="nav-link">媒體報導</a>
+                        </li>
+                        <li class="nav-item {unauth} "><a href="login.html" class="nav-link">近期活動</a></li>
+                        <li class="nav-item {unauth} "><a href="page-aboutus.html" class="nav-link">關於我們</a></li>
+                        <li class="nav-item {unauth} "><a href="policy.html" class="nav-link">法律聲明</a></li>
+                    </ul>
+                    <ul class="navbar-state">
+                        <li class="nav-item {unauth} "><a href="login.html" class="nav-link btn-log">用戶登入</a></li>
+                        <li class="nav-item {unauth} "><a href="register.html" class="nav-link btn-reg">馬上註冊</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- static style -->
+
+    <section class="section-intro">
+        <div class="wrapper">
+            <div class="intro-wrap">
+                <div class="intro-block">
+                    <div class="intro-title">
+                        <h2>僅需一周即可擁有你專屬的數字貨幣業務</h2>
+                        <h3>一站式數字貨幣交易所白標開發服務</h3>
+                    </div>
+                    <div class="intro-txt">
+                        <ul>
+                            <li>超高性價比</li>
+                            <li>高網絡吞吐性能</li>
+                            <li>流動性支持服務</li>
+                            <li>最快兩週上線</li>
+                            <li>銀行級的安全保障</li>
+                            <li>經驗豐富</li>
+                            <li>全網共享的訂單簿</li>
+                            <li>7*24後端運維支持</li>
+                        </ul>
+                    </div>
+                    <!-- <div class="intro-link">
+                        <a href="/login" class="btn btn-primary py-3 px-4 {unauth}">用戶登入</a>
+                        <a href="/member_center" class="btn btn-primary py-3 px-4 {auth}">資產管理</a>
+                    </div> -->
+                </div>
+                <div class="intro-digitGroup">
+                    <ul>
+                        <li>
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <div class="tradingview-widget-copyright"><a
+                                        href="https://www.tradingview.com/symbols/GBPUSD/?exchange=FX" rel="noopener"
+                                        target="_blank"><span class="blue-text">GBPUSD Rates</span></a>
+                                    by TradingView</div>
+                                <script type="text/javascript"
+                                    src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                                    async>
+                                        {
+                                            "symbol": "BITSTAMP:GBPUSD",
+                                                "width": "100%",
+                                                    "height": "100%",
+                                                        "locale": "en",
+                                                            "dateRange": "12M",
+                                                                "colorTheme": "light",
+                                                                    "trendLineColor": "rgba(41, 98, 255, 1)",
+                                                                        "underLineColor": "rgba(41, 98, 255, 0.3)",
+                                                                            "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                                                                                "isTransparent": false,
+                                                                                    "autosize": true,
+                                                                                        "largeChartUrl": ""
+                                        }
+                                    </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </li>
+                        <li>
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <div class="tradingview-widget-copyright"><a
+                                        href="https://www.tradingview.com/symbols/EURUSD/?exchange=FX" rel="noopener"
+                                        target="_blank"><span class="blue-text">EURUSD Rates</span></a> by TradingView
+                                </div>
+                                <script type="text/javascript"
+                                    src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                                    async>
+                                        {
+                                            "symbol": "FTX:EURUSD",
+                                                "width": "100%",
+                                                    "height": "100%",
+                                                        "locale": "en",
+                                                            "dateRange": "12M",
+                                                                "colorTheme": "light",
+                                                                    "trendLineColor": "rgba(41, 98, 255, 1)",
+                                                                        "underLineColor": "rgba(41, 98, 255, 0.3)",
+                                                                            "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                                                                                "isTransparent": false,
+                                                                                    "autosize": true,
+                                                                                        "largeChartUrl": ""
+                                        }
+                                    </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </li>
+                        <li>
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <div class="tradingview-widget-copyright"><a
+                                        href="https://www.tradingview.com/symbols/AUDUSD/?exchange=OANDA" rel="noopener"
+                                        target="_blank"><span class="blue-text">AUDUSD Rates</span></a> by TradingView
+                                </div>
+                                <script type="text/javascript"
+                                    src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                                    async>
+                                        {
+                                            "symbol": "OANDA:AUDUSD",
+                                                "width": "100%",
+                                                    "height": "100%",
+                                                        "locale": "en",
+                                                            "dateRange": "12M",
+                                                                "colorTheme": "light",
+                                                                    "trendLineColor": "rgba(41, 98, 255, 1)",
+                                                                        "underLineColor": "rgba(41, 98, 255, 0.3)",
+                                                                            "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                                                                                "isTransparent": false,
+                                                                                    "autosize": true,
+                                                                                        "largeChartUrl": ""
+                                        }
+                                    </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </li>
+                        <li>
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <div class="tradingview-widget-copyright"><a
+                                        href="https://www.tradingview.com/symbols/ETHUSD/?exchange=BITSTAMP"
+                                        rel="noopener" target="_blank"><span class="blue-text">ETHUSD Rates</span></a>
+                                    by TradingView</div>
+                                <script type="text/javascript"
+                                    src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                                    async>
+                                        {
+                                            "symbol": "BITSTAMP:ETHUSD",
+                                                "width": "100%",
+                                                    "height": "100%",
+                                                        "locale": "en",
+                                                            "dateRange": "12M",
+                                                                "colorTheme": "light",
+                                                                    "trendLineColor": "rgba(41, 98, 255, 1)",
+                                                                        "underLineColor": "rgba(41, 98, 255, 0.3)",
+                                                                            "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                                                                                "isTransparent": false,
+                                                                                    "autosize": true,
+                                                                                        "largeChartUrl": ""
+                                        }
+                                    </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </li>
+                        <li>
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <div class="tradingview-widget-copyright"><a
+                                        href="https://www.tradingview.com/symbols/BTCUSD/?exchange=BITSTAMP"
+                                        rel="noopener" target="_blank"><span class="blue-text">BTCUSD Rates</span></a>
+                                    by TradingView</div>
+                                <script type="text/javascript"
+                                    src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                                    async>
+                                        {
+                                            "symbol": "BITSTAMP:BTCUSD",
+                                                "width": "100%",
+                                                    "height": "100%",
+                                                        "locale": "en",
+                                                            "dateRange": "12M",
+                                                                "colorTheme": "light",
+                                                                    "trendLineColor": "rgba(41, 98, 255, 1)",
+                                                                        "underLineColor": "rgba(41, 98, 255, 0.3)",
+                                                                            "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                                                                                "isTransparent": false,
+                                                                                    "autosize": true,
+                                                                                        "largeChartUrl": ""
+                                        }
+                                    </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </li>
+                        <li>
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <div class="tradingview-widget-copyright"><a
+                                        href="https://www.tradingview.com/symbols/USDCAD/?exchange=KRAKEN"
+                                        rel="noopener" target="_blank"><span class="blue-text">USDCAD Rates</span></a>
+                                    by TradingView</div>
+                                <script type="text/javascript"
+                                    src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                                    async>
+                                        {
+                                            "symbol": "KRAKEN:USDCAD",
+                                                "width": "100%",
+                                                    "height": "100%",
+                                                        "locale": "en",
+                                                            "dateRange": "12M",
+                                                                "colorTheme": "light",
+                                                                    "trendLineColor": "rgba(41, 98, 255, 1)",
+                                                                        "underLineColor": "rgba(41, 98, 255, 0.3)",
+                                                                            "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                                                                                "isTransparent": false,
+                                                                                    "autosize": true,
+                                                                                        "largeChartUrl": ""
+                                        }
+                                    </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <div class="wrapper">
+            <div class="card-wrap">
+                <div class="card-block owl-carousel owl-theme owl-loaded owl-drag">
+                    <div class="item">
+                        <img src="./img/img-1.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./img/img-2.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./img/img-3.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./img/img-4.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-about">
+        <div class="wrapper">
+            <div class="about-wrap">
+                <div class="about-block">
+                    <div class="about-title">
+                        <h2>為什麼你需要 EuMax-II 數字貨幣交易所白標開發服務？</h2>
+                    </div>
+                    <div class="about-txt">
+                        <ul>
+                            <li>啟動一個數字貨幣交易所是非常艱鉅的工作，而我們在這個領域擁有豐富的開發經驗與成熟的產品，所以我們推出了turnkey解決方案。</li>
+                            <li>我們擁有獨立研發的高性能公鏈網絡，並將它開發給合作夥伴，讓他們能夠在一周內上線自己的數字貨幣交易所，並且無需開發經驗。所有基於這條公鏈的交易所聯盟，都將共享統一的訂單簿和流動性。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <img src="./img/about.png" alt="about us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-safety">
+        <div class="wrapper">
+            <div class="safety-wrap">
+                <div class="safety-block">
+                    <div class="safety-title">
+                        <h2>全力保障您的資產安全</h2>
+                    </div>
+                    <div class="safety-txt">
+                        <p>全力保障您的資產安全，創始團隊成員來自互聯網安全領域，風控團隊每周加強後端安全功能建設</p>
+                    </div>
+                    <div class="safety-form">
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com"
+                                    rel="noopener" target="_blank"><span class="blue-text">Quotes</span></a> by
+                                TradingView</div>
+                            <script type="text/javascript"
+                                src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+                                    {
+                                        "symbols": [
+                                            {
+                                                "proName": "FOREXCOM:SPXUSD",
+                                                "title": "S&P 500"
+                                            },
+                                            {
+                                                "proName": "FOREXCOM:NSXUSD",
+                                                "title": "Nasdaq 100"
+                                            },
+                                            {
+                                                "proName": "FX_IDC:EURUSD",
+                                                "title": "EUR/USD"
+                                            },
+                                            {
+                                                "proName": "BITSTAMP:BTCUSD",
+                                                "title": "BTC/USD"
+                                            },
+                                            {
+                                                "proName": "BITSTAMP:ETHUSD",
+                                                "title": "ETH/USD"
+                                            }
+                                        ],
+                                            "colorTheme": "light",
+                                                "isTransparent": false,
+                                                    "showSymbolLogo": true,
+                                                        "locale": "en"
+                                    }
+                                </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <div class="tradingview-widget-copyright"><a
+                                    href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/"
+                                    rel="noopener" target="_blank"><span class="blue-text">Cryptocurrency
+                                        Markets</span></a> by TradingView</div>
+                            <script type="text/javascript"
+                                src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+                                    {
+                                        "defaultColumn": "overview",
+                                            "screener_type": "crypto_mkt",
+                                                "displayCurrency": "USD",
+                                                    "colorTheme": "light",
+                                                        "locale": "en"
+                                    }
+                                </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 調整RWD，有些不同 -->
+    <section class="section-trading">
+        <div class="wrapper">
+            <div class="trading-wrap">
+                <div class="trading-block">
+                    <div class="trading-title">
+                        <h2>世界級交易平台</h2>
+                    </div>
+                    <div class="trading-txt">
+                        <p>進一步了解我們的功能</p>
+                    </div>
+                    <div class="trading-content">
+                        <div class="trading-item">
+                            <div class="item-img">
+                                <img src="./img/icon-s01.png" alt="">
+                            </div>
+                            <div class="item-txt">
+                                <div class="item-title">
+                                    <h3>兌換交易</h3>
+                                </div>
+                                <div class="item-descr">
+                                    <p>提供最高流動性的掛單簿，讓用戶能以最小的滑動，輕易地進行比特幣、以太幣、EOS、萊特幣、瑞波幣、NEO及更多其他加密貨幣的兌換交易。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trading-item">
+                            <div class="item-img">
+                                <img src="./img/icon-s02.png" alt="">
+                            </div>
+                            <div class="item-txt">
+                                <div class="item-title">
+                                    <h3>保證金融資交易</h3>
+                                </div>
+                                <div class="item-descr">
+                                    <p>融資提供者能提供資金給槓桿交易者，進而賺取利息。融資簿上提供不同的期間與利率之交易。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trading-item">
+                            <div class="item-img">
+                                <img src="./img/icon-s03.png" alt="">
+                            </div>
+                            <div class="item-txt">
+                                <div class="item-title">
+                                    <h3>安全</h3>
+                                </div>
+                                <div class="item-descr">
+                                    <p>我們高度重視用戶的個人資料與資產安全。瞭解更多關於我們的安全功能與整合。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-collaborate">
+        <div class="wrapper">
+            <div class="collaborate-wrap">
+                <div class="collaborate-block">
+                    <div class="collaborate-title">
+                        <h2>合作夥伴</h2>
+                    </div>
+                    <div class="collaborate-content">
+                        <div class="collaborate-item"><img src="./img/fourth-1.svg" alt=""></div>
+                        <div class="collaborate-item"><img src="./img/fourth-2.png" alt=""></div>
+                        <div class="collaborate-item"><img src="./img/fourth-3.png" alt=""></div>
+                        <div class="collaborate-item"><img src="./img/fourth-4.png" alt=""></div>
+                        <div class="collaborate-item"><img src="./img/fourth-5.png" alt=""></div>
+                        <div class="collaborate-item"><img src="./img/fourth-6.png" alt=""></div>
+                        <div class="collaborate-item"><img src="./img/fourth-7.png" alt=""></div>
+                        <div class="collaborate-item"><img src="./img/fourth-8.svg" alt=""></div>
+                        <div class="collaborate-item"><img src="./img/fourth-9.png" alt=""></div>
+                        <div class="collaborate-item"><img src="./img/fourth-10.png" alt=""></div>
+                        <div class="collaborate-item"><img src="./img/fourth-11.png" alt=""></div>
+                        <!-- <div class="collaborate-item"><img src="./img/fourth-12.png" alt=""></div> -->
+                        <div class="collaborate-item"><img src="./img/fourth-13.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-lowest">
+        <div class="wrapper">
+            <div class="lowest-wrap">
+                <div class="lowest-block">
+                    <div class="lowest-title">
+                        <h2>立即加入EuMax-II並開始交易</h2>
+                    </div>
+                    <div class="lowest-content">
+                        <a href="login.html" class="btn btn-primary {unauth}">立即開始</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="ftco-footer ftco-section" style="display: block;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="#" disabled>關於我們</a></li>
+                            <li><a href="page-aboutus.html">關於我們</a></li>
+                            <li class="{auth}"><a href="game/vvgame2.html">交易服務</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#" disabled>最新消息</a></li>
+                            <li><a href="#">媒體報導</a></li>
+                            <li class="{auth}"><a href="bulletin.html">近期活動</a></li>
+                        </ul>
+                        <ul class="{unauth}">
+                            <li><a href="#" disabled>支援中心</a></li>
+                            <li><a href="policy.html">法律聲明</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#" disabled>聯絡我們</a></li>
+                            <li><a href="#">聯繫客服</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <p>Copyright © 2023 eumax Corporation. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+	</body>
+  <!-- <script src="/js/eumax/jquery.min.js"></script> -->
+  <script src="./js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/jquery.easing.1.3.js"></script>
+  <script src="./js/jquery.waypoints.min.js"></script>
+  <script src="./js/jquery.stellar.min.js"></script>
+  <script src="./js/owl.carousel.min.js"></script>
+  <script src="./js/jquery.magnific-popup.min.js"></script>
+  <script src="./js/aos.js"></script>
+  <script src="./js/jquery.animateNumber.min.js"></script>
+  <script src="./js/bootstrap-datepicker.js"></script>
+  <script src="./js/jquery.timepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <!-- 影片 -->
+  <script src="./js/jquery.mb.YTPlayer.js"></script>
+
+  <script>
+      AOS.init();
+  </script>
+</html>
+    <script>
+        var myPlayer;
+        jQuery(function () {
+            myPlayer = jQuery("#bgndVideo").YTPlayer({
+                useOnMobile: true,
+                mobileFallbackImage: "assets/mask-4.png"
+            });
+
+            myPlayer = jQuery("#bgndVideo2").YTPlayer({
+                useOnMobile: true,
+                mobileFallbackImage: "assets/mask-4.png"
+            });
+
+        });
+
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                items: 3,
+                loop: false,
+                dots: false,
+                margin: 35,
+                nav: true,
+                autoplay: true,
+                rewind: true,
+                autoplayHoverPause: false,
+                autoHeight: false,
+                navText: ['<i class="far fa-arrow-alt-circle-left"></i>', '<i class="far fa-arrow-alt-circle-right"></i>'],
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    768: {
+                        items: 2,
+                        nav: false
+                    },
+                    1024: {
+                        items: 3,
+                        nav: true
+                    }
+                }
+            });
+        });
+
+
+    </script>

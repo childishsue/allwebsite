@@ -1,0 +1,81 @@
+<!-- fontawesome -->
+<script src="/js/6603bd9dd4.js"></script>
+<!-- 會員中心使用CSS -->
+<link rel="stylesheet" href="/css/fca_v2/style_membercenter.css">
+
+
+<body>
+	<nav>
+		<div class="content">
+			<div class="mobile-menu">
+				<i class="fas fa-bars"></i>
+			</div>
+			<div class="web-user-icon">
+				<i class="fas fa-user-circle fa-2x"></i>
+				<i class="fas fa-angle-down"></i>
+			</div>
+			<div class="web-pagination-block">
+				<a href="/member_center" class="active">會員中心</a>
+				<a href="/member">修改資料</a>
+				<a href="/store">存入資金</a>
+				<a href="/transfer">資產轉移</a>
+				<a href="/withdraw">賣出資產</a>
+				<a href="/record_store">交易紀錄</a>
+				<a href="/customer_service">客服中心</a>
+				<a href="/logout">登出</a>
+			</div>
+			<a href="/index" class="logo">
+				<img src="/img/fca_v2/logo.png" alt="">
+			</a>
+		</div>
+	</nav>
+
+	<div class="mobile-link-block">
+		<div class="close-icon">
+			<i class="fas fa-times"></i>
+		</div>
+		<div class="link-block">
+			<img src="/img/fca_v2/logo.png" class="mobile-logo">
+			<a href="/member_center">會員中心</a>
+			<a href="/member">修改資料</a>
+			<a href="/store">存入資金</a>
+			<a href="/transfer">資產轉移</a>
+			<a href="/withdraw">賣出資產</a>
+			<a href="/record_store">交易紀錄</a>
+			<a href="/customer_service">客服中心</a>
+			<a href="/logout" class="Signout-button btn-costom"><span></span>登出</a>
+		</div>
+	</div>
+
+
+
+	<!-- 主要區域 -->
+	<div class="redditList">
+		<div class="content">
+
+			<div class="main-block">
+				<div class="block">
+					<div class="title-block">
+						<p>最新消息</p>
+					</div>
+					<section id="content">
+						<!-- @bulletin-item -->
+						<div class="bullet">
+							<div onclick="$(this).next().slideToggle()">【系統公告】{date} {title}</div>
+							<div class="bullet-content" style="display: none">{content}</div>
+						</div>
+						<!-- @bulletin-item -->
+						<div>{page}</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p>{web-foot}</p>
+	</div>
+</body>
+
+<!-- 會員中心共同使用js -->
+<script src="/js/fca_v2/all.js"></script>
