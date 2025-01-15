@@ -1,0 +1,235 @@
+<section id="secHeader">
+		<img src="../../img/lbc/favicon-01.png">
+		<li class="active {auth}"><a href="/member_center"><img src="../../img/lbc/icon-13.png" alt="about">會員中心</a></li>
+		<li class="{auth}"><a href="/member"><img src="../../img/lbc/icon-11.png" alt="editfile">修改資料</a></li>
+		<li class="{auth}"><a href="/store"><img src="../../img/lbc/icon-07.png" alt="verify">買進P點</a></li>
+		<li class="{auth}"><a href="/transfer"><img src="../../img/lbc/icon-08.png" alt="transfer">資產轉移</a></li>
+		<li class="{auth}"><a href="/withdraw"><img src="../../img/lbc/icon-09.png" alt="withdraw">賣出P點</a></li>
+		<li class="{auth}"><a href="/record_store"><img src="../../img/lbc/icon-10.png" alt="account">交易紀錄</a></li>
+		<!--<li class="{auth}"><a href="/customer_service"><img src="../../img/lbc/icon-12.png" alt="message">客服中心</a></li>-->
+	</section>
+
+<section id="mobileSecHeader">
+		<li class="active {auth}"><a href="/member_center"><img src="../../img/lbc/icon-13.png" alt="about"></a></li>
+		<li class="{auth}"><a href="/member"><img src="../../img/lbc/icon-11.png" alt="editfile"></a></li>
+		<li class="{auth}"><a href="/store"><img src="../../img/lbc/icon-07.png" alt="verify"></a></li>
+		<li class="{auth}"><a href="/transfer"><img src="../../img/lbc/icon-08.png" alt="transfer"></a></li>
+		<li class="{auth}"><a href="/withdraw"><img src="../../img/lbc/icon-09.png" alt="withdraw"></a></li>
+		<li class="{auth}"><a href="/record_store"><img src="../../img/lbc/icon-10.png" alt="account"></a></li>
+		<!--<li class="{auth}"><a href="/customer_service"><img src="../../img/lbc/icon-12.png" alt="message"></a></li>-->
+	</section>
+
+<section class="wrapper style2" id="mainWrap">
+	<div class="secWrap">
+		<div id="memTitle">
+			<div class="title">
+				<img src="../../img/lbc/icon-13.png" alt="">
+				<h1>會員中心</h1>
+			</div>
+			<div class="Signout">
+				<a href="/logout">
+					<button class="Signout-button">
+						登出
+					</button>
+				</a>
+			</div>
+		</div>
+
+		<!-- 下半部 -->
+		<div id="editList">
+			<div class="market-updates">
+				<div class="col-md-4 market-update-gd">
+					<div class="market-update-block clr-block-1">
+						<div class="market-update-right">
+							<img src="../../img/lbc/icon-1.png" alt="" class="icon">
+						</div>
+						<div class="col-md-6 market-update-left counter-section">
+							<h4>今日成交量</h4>
+							<h1 class="timer num">13500</h1>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="col-md-4 market-update-gd">
+					<div class="market-update-block clr-block-2">
+						<div class="market-update-right">
+							<img src="../../img/lbc/icon-2.png" alt="" class="icon">
+						</div>
+						<div class="col-md-6 market-update-left counter-section">
+							<h4>漲升指數</h4>
+							<h1 class="timer percent">30%</h1>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="col-md-4 market-update-gd">
+					<div class="market-update-block clr-block-1">
+						<div class="market-update-right">
+							<img src="../../img/lbc/icon-3.png" alt="" class="icon">
+						</div>
+						<div class="col-md-6 market-update-left counter-section">
+							<h4>降跌指數</h4>
+							<h1 class="timer percent">50%</h1>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="agileits-w3layouts-stats">
+				<div class="col-md-12 w3ls-graph margin-top-bottom-15px">
+					<div class="agileinfo-grap">
+						<div class="news-block">
+							<div class="news-left">
+								<img src="../../img/lbc/promotion.png" alt="">
+								<h4>最新消息</h4>
+							</div>
+							<div class="news-right">
+								<marquee class="marquee-text">
+									<!-- @bulletin-item -->
+									<a style="text-decoration:none;color: inherit;"
+										href="/bulletin">{title}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</a>
+									<!-- @bulletin-item -->
+								</marquee>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="agileits-w3layouts-stats">
+				<div class="col-md-5 stats-info widget" style="min-width:30%">
+					<div class="stats-info-agileits">
+						<div class="member-top">
+							<div class="member-image">
+								<img src="../../img/lbc/member-image.png" alt="">
+							</div>
+							<div class="member-top-block">
+								<div class="member-data">
+									<p style="font-weight: bold;">登入帳號：</p>
+									<p>{user-account}</p>
+								</div>
+								<div class="member-data">
+									<p style="font-weight: bold;">姓　　名：</p>
+									<p>{user-name}</p>
+								</div>
+								<div class="member-data">
+									<p style="font-weight: bold;">手機號碼：</p>
+									<p>{user-phone}</p>
+								</div>
+								<!-- <div class="member-data">
+									<p style="font-weight: bold;">電子信箱：</p>
+									<p>test0000000001@gmail.com</p>
+								</div> -->
+							</div>
+						</div>
+						<div class="member-bottom">
+							<h4>現有P點資產(電子錢包)</h4>
+							<h1>${user-wallet}</h1>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-7 stats-info stats-last widget-shadow">
+					<div class="agileinfo-grap-1">
+						<h3>交易中心</h3>
+						<div class="game-introduction-block">
+							<img src="../../img/lbc/game_02.jpg" alt="">
+							<div class="game-introduction-content">
+								<p class="height-170px">
+									「差價指數交易」用以反映每分鐘匯率變動程度，測量市場預期的變動程度，通常用來評估未來風險，因此也有人稱作恐慌指數。是以年化百分比反映變動程度，且以常態分布的機率出現。舉例來說，假設指數為15，表示預期的年變動率為15%，因此接下來變動率的標準差為4.33%，也就是指數波動在正負4.33%以內的機率是68%，正負一個標準差所涵蓋的機率68%，正負兩個標準差的機率是95%)。
+								</p>
+								<div class="game-introduction-content01">
+									<button class="Signout-button"
+										onclick="window.open('/game/vvgame2',  '_blank');">開始買賣</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="agileits-w3layouts-stats">
+				<div class="col-md-12 w3ls-graph margin-top-bottom-15px">
+					<div class="agileinfo-grap-2">
+						<h3>交易項目</h3>
+						<div class="display-flex">
+							<a href="/page-game_financial" class="game-item-block">
+								<div class="img-01"></div>
+								<h4>理財項目</h4>
+							</a>
+							<!-- <a href="/page-game_sport" class="game-item-block">
+								<div class="img-02"></div>
+								<h4>體育娛樂</h4>
+							</a> -->
+							<!-- <a href="/page-game_real" class="game-item-block">
+								<div class="img-03"></div>
+								<h4>真人娛樂</h4>
+							</a> -->
+							<!-- <a href="/page-game_egame" class="game-item-block">
+								<div class="img-04"></div>
+								<h4>電子遊戲</h4>
+							</a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 下半部 -->
+		</div>
+		<div class="footer">
+			<div class="wthree-copyright">
+				<p>{web-foot}</p>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+
+
+<script>
+	$(function () {
+		// console.error('conter section');
+		var dd = new Date();
+		var max = 976658;
+		var floatSeed = dd.getMonth() % 3 * 100 + dd.getDate() % 7 * 89;
+		max -= floatSeed;
+		//  console.log("max : "+ max);
+		var now = (dd.getHours() * 60 * 60 + dd.getMinutes() * 60 + dd.getSeconds()) / 86400;
+
+		$(".timer.num").text(Math.floor(max * now).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','));
+
+		$($(".timer.percent")[0]).text(Math.floor(Math.random() * 21 + 60) + "%");
+		$($(".timer.percent")[1]).text(Math.floor(Math.random() * 21 + 20) + "%");
+		// upper 30-80 % down 20-60 %
+		$('.timer').each(function () {
+			var $this = $(this);
+			$({
+				Counter: 0
+			}).animate({
+				Counter: $this.text().replace(",", "").replace("%", "")
+			}, {
+				duration: 6000,
+				easing: 'swing',
+				step: function () {
+					$this.text(Math.ceil(this.Counter));
+					if ($this.hasClass('num')) {
+						// console.log("num");
+						// var parts = $this.text().toString().split('.');
+						$this.text($this.text().replace(/\B(?=(\d{3})+(?!\d))/g, ','));
+					}
+					if ($this.hasClass('percent')) {
+
+						$this.text($this.text() + "%");
+					}
+
+				}
+			});
+		});
+	});
+</script>
+
+<style>
+	#footer {
+		display: none;
+	}
+</style>

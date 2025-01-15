@@ -1,0 +1,153 @@
+<div class="content">
+	<div class="container base">
+		<div class="base-content">
+			<div class="base-content-title"><i class="fa fa fa-handshake-o" aria-hidden="true"></i> 合作加盟</div>
+				<div class="base-content-block">
+					<div class="base-content-block-item">
+						<div class="base-content-block-item-title">未來開放</div>
+
+					</div>
+				</div>
+			<!-- <div class="base-content-block">
+				<div class="base-content-block-item">
+					<div class="base-content-block-item-title">合作商如何運作？</div>
+					<div>
+						首先，您必須在本公司官方網站詳細了解本公司提供給您的系統，
+						可透過我們眾多合作的營運商先行免費註冊一個會員帳號，並熟悉我們的系統操作及運作便利性。<br><br>
+						當您肯定我們的系統並想取得合作商資格，您可透過〔聯繫提案〕確實填寫您的相關資料，送出申請，
+						我們會以E-mail與您回應。<br>
+					</div>
+				</div>
+				<div class="base-content-block-item">
+					<div class="base-content-block-item-title">★什麼是合作商合營計畫？</div>
+					<div>
+						我們提供了多種合作商合營計畫方案讓合作商以最低成本及可取得本公司系統所有經銷權。<br>
+						合作商合營計畫在于合作商可以完全的操作本公司系統，及以下由本公司提供給您的協助：<br>
+						1.我們會依照您想要的風格打造您自己的專屬娛樂城網站。<br>
+						2.免費提供給您安全的客服系統。<br>
+						3.您可以無限制開放代理商加入您的娛樂城參與推廣合作。<br>
+						4.本公司免費系統更新及備份。<br>
+						5.免費接入您需要的金流系統。<br>
+					</div>
+				</div>
+				<div class="base-content-block-item">
+					<div class="base-content-block-item-title">★合作商合營計畫推廣？</div>
+					<div>
+						您有丰富的人脈嗎？您想一試無風險的賺錢嗎？<br>
+						您還要錯過多少次的機會呢？加入合作商合營計畫，
+						善用您的資源加上本公司最高品質最完善的服務，
+						你還需要猶豫嗎？隨時歡迎您的加入！
+					</div>
+				</div>
+				<div class="base-content-block-item">
+					<div class="base-content-block-item-title">聯繫提案</div>
+					<form class="joinus_form base-form" action="/ajax/joinus" method="POST">
+						<div class="base-item">
+							<table>
+								<tr>
+									<td>姓名</td>
+									<td><input type="text" name="name"/></td>
+								</tr>
+								<tr>
+									<td>電子信箱</td>
+									<td><input type="text" name="email"/></td>
+								</tr>
+								<tr>
+									<td>連絡電話</td>
+									<td><input type="text" name="phone"/></td>
+								</tr>
+								<tr>
+									<td>Skype帳號</td>
+									<td><input type="text" name="skype"/></td>
+								</tr>
+								<tr>
+									<td>Line ID</td>
+									<td><input type="text" name="title"/></td>
+								</tr>
+								<tr>
+									<td>補充說明</td>
+									<td>
+										<textarea name="content" rows="3" cols="20"style="width:100%; height: 150px;"></textarea>
+									</td>
+								</tr>
+								<tr>
+									<td>驗 證 碼</td>
+									<td>
+										<div id="captcha" style="cursor: pointer;margin-bottom: 5px;">
+											<img src="" alt="驗證碼讀取中" style="vertical-align: middle;">
+											<div class="glyphicon glyphicon-refresh"></div>
+										</div>
+										<input name="captcha" type="text">
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2" style="text-align:center;padding-top:5rem;">
+										<button type="button" class="submit btn-send" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 處理中...">
+											送　出
+										</button>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</form>
+				</div>
+			</div> -->
+		</div>
+		<div class="base-menu {auth}">
+			<div class="base-menu-title">快速選單</div>
+			<div class="base-menu-item">
+				<a href="/store" class="{auth}">
+					<i class="fa fa-credit-card"></i>&nbsp;點數儲值
+				</a>
+				<a href="/transfer" class="{auth}">
+					<i class="fa fa-refresh"></i>&nbsp;點數轉移
+				</a>
+				<a href="/withdraw" class="{auth}">
+					<i class="fa fa-arrow-circle-o-up"></i>&nbsp;點數提領
+				</a>
+				<a href="/member" class="{auth}">
+					<i class="fa fa-user-circle-o"></i>&nbsp;修改資料
+				</a>
+				<a href="/message" class="{auth}">
+					<i class="fa fa-comments"></i>&nbsp;客服訊息<span class="getUnread-js">{user-unread}</span>
+				</a>
+				<a href="/record_store" class="{auth}">
+					<i class="fa fa-file-text"></i>&nbsp;帳務紀錄
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+$(function(){
+	$('#captcha').click(function(){
+		$(this).find('img').attr('src', 'captcha/?rand=' + Math.random());
+	});
+
+	setTimeout(function(){
+		$('#captcha').click();
+	}, 2000);
+});
+</script>
+
+<script>
+	$(function(){
+		$('.joinus_form').find('.submit').onClick(function(data){
+			if(data.code){
+				// fail
+				swal({title: data.text,  html: true,
+				customClass: 'swalPopup'});
+				// reload
+				$('#captcha').trigger('click');
+			}else{
+				swal({title: data.text, html: true,
+				customClass: 'swalPopup'}, function () {
+					location.reload();
+				});
+			}
+			$(this).find('.submit').button('reset');
+		}, function(){
+			$(this).find('.submit').button('loading');
+		});
+    });
+</script>

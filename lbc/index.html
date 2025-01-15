@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 2020-02-07 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap Core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- Main stylesheet -->
+    <link href="./css/hallooou.css" rel="stylesheet">
+    <!-- Plugin stylesheets -->
+    <link href="./css/owl.carousel.min.css" rel="stylesheet">
+    <link href="./css/plugins/owl.theme.css" rel="stylesheet">
+    <link href="./css/plugins/owl.transitions.css" rel="stylesheet">
+    <link href="./css/plugins/animate.css" rel="stylesheet">
+    <link href="./css/main.scss" rel="stylesheet">
+    <link href="./css/plugins/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+
+    <!-- 影片 -->
+    <link href="./css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+    <script src="./js/jquery-3.2.1.min.js"></script>
+
+</head>
+
+<body id="home">
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header pull-left">
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <span class="brand-logo"><img src="./img/logo.png"></span>
+                </a>
+            </div>
+            <div class="web-menu">
+                <ul>
+                    <li><a href="#about">關於我們</a></li>
+                    <li><a href="#services">投資項目</a></li>
+                    <li><a href="#mechanism">監管機構</a></li>
+                    <li><a href="#portfolio">風險警示</a></li>
+                    <li><a href="/login" class="btn btn-overcolor no-bottom-line {unauth}">會員登入</a></li>
+                    <li><a href="/register" class="btn btn-overcolor no-bottom-line {unauth}">立即加入</a></li>
+                    <li><a href="/member_center" class="btn btn-overcolor no-bottom-line {auth}">會員中心</a></li>
+                </ul>
+            </div>
+            <div class="main-nav pull-right">
+                <div class="button_container toggle">
+                    <span class="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+                </div>
+            </div>
+            <div class="overlay" id="overlay">
+                <nav class="overlay-menu">
+                    <ul>
+                        <li><a href="#about">關於我們</a></li>
+                        <li><a href="#services">投資項目</a></li>
+                        <li><a href="#mechanism">監管機構</a></li>
+                        <li><a href="#portfolio">風險警示</a></li>
+                        <li><a href="/login" class="btn btn-overcolor no-bottom-line {unauth}">會員登入</a></li>
+                        <li><a href="/register" class="btn btn-overcolor no-bottom-line {unauth}">立即加入</a></li>
+                        <li><a href="/member_center" class="btn btn-overcolor no-bottom-line {auth}">會員中心</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div id="intro-carousel" class="carousel slide">
+        <div class="carousel-inner" id="bgndVideo"
+            data-property="{videoURL:'https://youtu.be/imF_nwnFISo',containment:'#bgndVideo',autoPlay:true, mute:true, startAt:0, opacity:1, realfullscreen:true}">
+            <div class="item html5-video-container active">
+                <div class="carousel-caption">
+                    <img src="./img/logo.png" alt="" style="max-width:270px;">
+                    <h1 class="animated slideInDown">
+                        時刻緊跟市場脈動</h1>
+                    <p class="intro-text animated slideInUp">
+                        我們提供快速、便捷的智慧投資平台，<br>進而輕鬆規劃出最佳方案、達成目標！
+                    </p>
+                </div>
+                <div class="overlay-detail"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="portfolio" class="portfolio content-section parallax">
+        <div class="container">
+            <div class="row text-center">
+                <h3>
+                    DAP與廣大投資者、專業金融機構和各式信息獲取渠道緊密合作，<br>提供簡單的操作方式及快捷的信息，幫助您快速達成目標，完成計劃。
+                </h3>
+                <div class="col-sm-4 col-lg-2 counter-wrap">
+                    <img src="./img/index-icon-1.png" alt="" style="width: 56px;">
+                    <!-- <strong><span class="timer">283358</span></strong> -->
+                    <span class="count-description">強大投資<br>管理技術</span>
+                </div>
+
+                <div class="col-sm-4 col-lg-2 counter-wrap">
+                    <img src="./img/index-icon-2.png" alt="" style="width: 56px;">
+                    <!-- <strong><span class="timer">49663</span></strong> -->
+                    <span class="count-description">安全穩定<br>資訊保護</span>
+                </div>
+
+                <div class="col-sm-4 col-lg-2 counter-wrap">
+                    <img src="./img/index-icon-3.png" alt="" style="width: 56px;">
+                    <!-- <strong><span class="timer">86254</span></strong> -->
+                    <span class="count-description">豐富精準<br>投資計劃</span>
+                </div>
+
+                <div class="col-sm-4 col-lg-2 counter-wrap">
+                    <img src="./img/index-icon-4.png" alt="" style="width: 56px;">
+                    <!-- <strong><span class="timer">90662</span></strong> -->
+                    <span class="count-description">全天線上<br>諮詢服務</span>
+                </div>
+
+                <!-- <div class="col-sm-4 col-lg-2 counter-wrap">
+                    <img src="./img/index-icon-5.png" alt="" style="width: 56px;">
+                    <strong><span class="timer">5688</span></strong>
+                    <span class="count-description">國內募資</span>
+                </div>
+
+                <div class="col-sm-4 col-lg-2 counter-wrap">
+                    <img src="./img/index-icon-6.png" alt="" style="width: 56px;">
+                    <strong><span class="timer">839721</span></strong>
+                    <span class="count-description">國外募資</span>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="about" class="about content-section alt-bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>關於我們</h1>
+                    <blockquote>
+                        全球最大的理財品牌
+                    </blockquote>
+                    <p>
+                        我們努力確保客戶做出最佳的交易和投資決策。我們的服務範圍廣泛，為您提供最佳的指導、建議和資源，共創美好未來。
+                    </p>
+                    <p>
+                        當您選擇我們， 您就是選擇了首屈一指的全球交易商。我們日以繼夜地工作，創造和維護更好的交易環境，幫助客戶進入市場，進而從理財新手成為專業交易員。
+                        您擁有開始交易所需的一切。我們為您提供交易工具、銀行間流動性、先進的交易平台和即時的金融消息，與您一路相伴。
+                    </p>
+                    <blockquote>
+                        相信百萬客戶的選擇
+                    </blockquote>
+                    <p>
+                        擁有超過百萬名的客戶，這得益於我們在過去數十年裡建立的聲譽。我們的目標是保持卓越的高標準，我們提供值得信賴、可靠、技術先進的交易環境，同時確保每一位客戶都能得到最適的服務。
+                    </p>
+                    <p>
+                        聰明的投資取決於精準的計劃。您可以按自己的計劃交易和投資，您可以選擇獨立地交易或參加我們的跟單：跟著有經驗豐富的投資者。同時，保證您的帳戶安全，我們精心設計的安全程序將全力保護您的金融資產及個人信息。
+                    </p>
+
+                </div>
+                <div class="col-md-6">
+                    <img src="./img/about.png" alt="";>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="services" class="services content-section">
+        <div class="container">
+            <div class="row text-center">
+                <h1 style="color:white;">
+                    投資項目
+                </h1>
+                <div class="col-sm-4 col-lg-2 counter-wrap">
+                    <img src="./img/invest01.jpg" alt="" style="width:100%;padding:5px;border-radius:10px">
+                    <span class="count-description">金融理財</span>
+                </div>
+
+                <div class="col-sm-4 col-lg-2 counter-wrap">
+                    <img src="./img/invest02.jpg" alt="" style="width:100%;padding:5px;border-radius:10px">
+                    <span class="count-description">房產交易</span>
+                </div>
+
+                <div class="col-sm-4 col-lg-2 counter-wrap">
+                    <img src="./img/invest03.jpg" alt="" style="width:100%;padding:5px;border-radius:10px">
+                    <span class="count-description">渡假中心</span>
+                </div>
+
+                <div class="col-sm-4 col-lg-2 counter-wrap">
+                    <img src="./img/invest04.jpg" alt="" style="width:100%;padding:5px;border-radius:10px">
+                    <span class="count-description">再生能源</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="mechanism" class="services content-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12" style="margin-bottom: 30px;">
+                    <h1 class="title">監管機構</h1>
+                    <h4>
+                        保障您所有的交易都經過公正機構認證
+                    </h4>
+                </div>
+
+                <div class="container services-block">
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <div class="bg"
+                                style="width: 100%;height: 200px; background-image:url('./img/cysec.jpg');"></div>
+                            <div class="bottom-block">
+                                <h3>塞浦路斯證監會 CySEC</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="bg "
+                                style="width: 100%;height: 200px; background-image:url('./img/fca.jpg');"></div>
+                            <div class="bottom-block">
+                                <h3>英國金融管理局 FCA</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="bg "
+                                style="width: 100%;height: 200px; background-image:url('./img/sec.jpg');"></div>
+                            <div class="bottom-block">
+                                <h3>美國證交監委會 SEC</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <div class="bg "
+                                style="width: 100%;height: 200px; background-image:url('./img/lse.jpg');"></div>
+                            <div class="bottom-block">
+                                <h3>倫敦證券交易所 LSE</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="bg "
+                                style="width: 100%;height: 200px; background-image:url('./img/nyse.jpg');"></div>
+                            <div class="bottom-block">
+                                <h3>紐約證券交易所 NYSE</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="bg "
+                                style="width: 100%;height: 200px; background-image:url('./img/asic.jpg');"></div>
+                            <div class="bottom-block">
+                                <h3>澳洲投資委員會 ASIC</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="cta-two-section">
+        <div class="container">
+            <div class="row" style="justify-content: center;flex-wrap:wrap;display: flex;
+            text-align: -webkit-center;">
+                <div class="col-sm-9 {unauth}">
+                    <h2 style="color:#fff;margin-bottom: 0;">加入DAP。共創美好未來</h2>
+                </div>
+                <div class="col-sm-9 {auth}">
+                    <h2 style="color:#fff;margin-bottom: 0;">與您共創美好未來</h2>
+                </div>
+
+                <div class="col-sm-3">
+                    <a href="/register" class="btn btn-overcolor no-bottom-line {unauth}">立即加入</a>
+                    <a href="/member_center" class="btn btn-overcolor no-bottom-line {auth}">開始管理</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="portfolio" class="portfolio content-section parallax">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 style="color:#fff;">風險警示</h2>
+                    <p class="text-left color-ddd">
+                        在您進入交易市場之前，您必須記住貨幣交易、股票和其他金融產品的本質上是包含相當大的風險， 由於各種金融波動，您不僅僅可能顯著地增加您的資金，也有可能完全失去它。</p>
+                    <p class="text-left color-ddd">因此，我們的客戶必須向公司保證他們瞭解這樣的風險帶來的所有可能的結果，他們知道所有的細節，
+                        投資產品使用的規章制度，包含公司活動，導致基礎資產的改變，客戶理解這是有特殊的風險和影響價格，
+                        匯率和投資產品的特性。本網站提供的金融工具交易存在較大的風險。如果使用本網站提供的金融工具進行交易，
+                        您可能會遭受虧損。在決定使用本網站提供的金融工具開始交易之前，您必須仔細查看服務協議和風險披露信息。 這些風險包括流動性降低，價格的變化，高波動性和無法控制的情況。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="copynote">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                      Copyright © 2023 HJtech Corporation. All rights reserved.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- jQuery -->
+    <!-- <script src="js/jquery.min.js"></script> -->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/plugins/owl.carousel.min.js"></script>
+    <script src="./js/plugins/jquery.parallax-1.1.3.js"></script>
+    <script src="./js/plugins/jquery.magnific-popup.min.js"></script>
+    <script src="./js/plugins/jquery.countTo.js"></script>
+    <script src="./js/plugins/jquery.inview.min.js"></script>
+    <script src="./js/plugins/pace.min.js"></script>
+    <script src="./js/plugins/jquery.easing.min.js"></script>
+    <script src="./js/plugins/jquery.validate.min.js"></script>
+    <script src="./js/plugins/additional-methods.min.js"></script>
+
+
+
+    <!-- 影片 -->
+    <script src="./js/jquery.mb.YTPlayer.js"></script>
+
+    <script>
+        $('link[rel=stylesheet][href~="./css/lbc.scss"]').remove();
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        $("#bgndVideo").YTPlayer({
+          videoURL: 'https://youtu.be/imF_nwnFISo',
+          containment: '#bgndVideo',
+          autoPlay: true,
+          mute: true,
+          startAt: 0,
+          opacity: 1,
+          showControls: false,
+          useOnMobile: true,
+          mobileFallbackImage: "./img/fallback-bg.jpg",
+          optimizeDisplay: true,
+          abundance: 0,
+          anchor: 'center,center',
+          showYTLogo: false,
+          playOnlyIfVisible: true,
+          coverImage: "./img/fallback-bg.jpg"
+        });
+      });
+
+      const styleElement = document.createElement('style');
+      styleElement.textContent = `
+        #bgndVideo {
+          position: relative;
+          height: 100vh;
+          width: 100%;
+          overflow: hidden;
+        }
+
+        .player {
+          position: relative;
+        }
+
+        .carousel-caption {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 2;
+          text-align: center;
+        }
+
+        .overlay-detail {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          z-index: 1;
+        }
+      `;
+      document.head.appendChild(styleElement);
+    </script>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .navbar-brand>img {
+            max-height: unset;
+            max-width: unset;
+            height: unset;
+        }
+
+        header {
+            display: none;
+        }
+
+        #bgndVideo {
+            padding-bottom: 0px !important;
+            height: inherit !important;
+        }
+
+        #wrapper_bgndVideo {
+            filter: hue-rotate(165deg);
+        }
+
+        .html5-video-container {
+            background: rgba(0,0,0,.5);
+        }
+
+
+        .mb_YTPBar .buttonBar {
+            display: none;
+        }
+
+        /* .mbYTP_wrapper {
+            filter: grayscale(0.7);
+        } */
+
+        .mb_YTPBar .mb_YTPseekbar {
+            display: none;
+        }
+
+        .mb_YTPBar .inlinePlayer {
+            display: none;
+        }
+
+        .inlinePlayButton {
+            display: none !important;
+        }
+
+        .mb_YTPProgress {
+            display: none;
+        }
+
+        #controlBar_bgndVideo {
+            display: none;
+        }
+
+        #iframe_bgndVideo {
+            filter: sepia(1);
+        }
+    </style>
+</body>
+
+</html>
+<script src="./js/hallooou.js"></script>

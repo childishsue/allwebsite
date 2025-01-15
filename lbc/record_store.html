@@ -1,0 +1,110 @@
+<section id="secHeader">
+		<img src="../../img/lbc/favicon-01.png">
+		<li class="{auth}"><a href="/member_center"><img src="../../img/lbc/icon-13.png" alt="about">會員中心</a></li>
+		<li class="{auth}"><a href="/member"><img src="../../img/lbc/icon-11.png" alt="editfile">修改資料</a></li>
+		<li class="{auth}"><a href="/store"><img src="../../img/lbc/icon-07.png" alt="verify">買進P點</a></li>
+		<li class="{auth}"><a href="/transfer"><img src="../../img/lbc/icon-08.png" alt="transfer">資產轉移</a></li>
+		<li class="{auth}"><a href="/withdraw"><img src="../../img/lbc/icon-09.png" alt="withdraw">賣出P點</a></li>
+		<li class="active {auth}"><a href="/record_store"><img src="../../img/lbc/icon-10.png" alt="account">交易紀錄</a></li>
+		<!--<li class="{auth}"><a href="/customer_service"><img src="../../img/lbc/icon-12.png" alt="message">客服中心</a></li>-->
+	</section>
+
+<section id="mobileSecHeader">
+		<li class="{auth}"><a href="/member_center"><img src="../../img/lbc/icon-13.png" alt="about"></a></li>
+		<li class="{auth}"><a href="/member"><img src="../../img/lbc/icon-11.png" alt="editfile"></a></li>
+		<li class="{auth}"><a href="/store"><img src="../../img/lbc/icon-07.png" alt="verify"></a></li>
+		<li class="{auth}"><a href="/transfer"><img src="../../img/lbc/icon-08.png" alt="transfer"></a></li>
+		<li class="{auth}"><a href="/withdraw"><img src="../../img/lbc/icon-09.png" alt="withdraw"></a></li>
+		<li class="active {auth}"><a href="/record_store"><img src="../../img/lbc/icon-10.png" alt="account"></a></li>
+		<!--<li class="{auth}"><a href="/customer_service"><img src="../../img/lbc/icon-12.png" alt="message"></a></li>-->
+	</section>
+<section id="mainWrap" class="wrapper style2">
+    <div class="secWrap-1">
+        <!-- 上半部 -->
+        <div id="memTitle">
+            <div class="title">
+                <img src="../../img/lbc/icon-10.png" alt="">
+                <h1>交易紀錄</h1>
+            </div>
+            <div class="Signout">
+                <a href="/logout">
+                    <button class="Signout-button">
+                        登出
+                    </button>
+                </a>
+            </div>
+        </div>
+        <!-- 下半部 -->
+        <div id="editList">
+            <div class="col-md-12 margin-top-bottom-15px">
+                <div id="accountItem">
+                    <div id="storeLog" class="active">
+                        <a href="/record_store">
+                            <h4>儲值紀錄</h4>
+                        </a>
+                    </div>
+                    <div id="transferLog">
+                        <a href="/record_transfer">
+                            <h4>轉移紀錄</h4>
+                        </a>
+                    </div>
+                    <div id="withdrawLog">
+                        <a href="/record_withdraw">
+                            <h4>提領紀錄</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="agileinfo-grap-2 background-white margin-top-2">
+                    <div class="col-md-12">
+                        <!-- 表格 -->
+                        <div class="member-list">
+                            <ul>
+                                <li class="li-title">
+                                    <div class="w-30">
+                                        <b>訂單日期</b>
+                                    </div>
+                                    <div class="w-40">
+                                        <b>明細</b>
+                                    </div>
+                                    <div class="w-20">
+                                        <b>金額</b>
+                                    </div>
+                                </li>
+                                <!-- @record-item -->
+                                <li>
+                                    <div field="order_date" class="w-30">
+                                        <b>{date}</b>
+                                    </div>
+                                    <div class="w-40 detail-content">
+                                        <div>
+                                            <b class="font-blod">繳費代碼 :</b>
+                                            <b>{code}</b>
+                                        </div>
+                                        <div>
+                                            <b class="font-blod">儲值目標 :</b>
+                                            <b>{target}</b>
+                                        </div>
+                                        <div>
+                                            <b class="font-blod">處理狀態 :</b>
+                                            <b>{status}</b>
+                                        </div>
+                                    </div>
+                                    <div field="order_money" class="w-20">
+                                        <b>{total}</b>
+                                    </div>
+                                </li>
+                                <!-- @record-item -->
+                            </ul>
+                            <div class="text-center">{page}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="wthree-copyright">
+                <p>{web-foot}</p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,157 @@
+
+<section id="secHeader">
+	<img src="../../img/lbc/favicon-01.png">
+	<li class="{auth}"><a href="/member_center"><img src="../../img/lbc/icon-13.png" alt="about">會員中心</a></li>
+	<li class="{auth}"><a href="/member"><img src="../../img/lbc/icon-11.png" alt="editfile">修改資料</a></li>
+	<li class="{auth}"><a href="/store"><img src="../../img/lbc/icon-07.png" alt="verify">買進P點</a></li>
+	<li class="{auth}"><a href="/transfer"><img src="../../img/lbc/icon-08.png" alt="transfer">資產轉移</a></li>
+	<li class="active {auth}"><a href="/withdraw"><img src="../../img/lbc/icon-09.png" alt="withdraw">賣出P點</a></li>
+	<li class="{auth}"><a href="/record_store"><img src="../../img/lbc/icon-10.png" alt="account">交易紀錄</a></li>
+		<!--<li class="{auth}"><a href="/customer_service"><img src="../../img/lbc/icon-12.png" alt="message">客服中心</a></li>-->
+</section>
+
+<section id="mobileSecHeader">
+	<li class="{auth}"><a href="/member_center"><img src="../../img/lbc/icon-13.png" alt="about"></a></li>
+	<li class="{auth}"><a href="/member"><img src="../../img/lbc/icon-11.png" alt="editfile"></a></li>
+	<li class="{auth}"><a href="/store"><img src="../../img/lbc/icon-07.png" alt="verify"></a></li>
+	<li class="{auth}"><a href="/transfer"><img src="../../img/lbc/icon-08.png" alt="transfer"></a></li>
+	<li class="active {auth}"><a href="/withdraw"><img src="../../img/lbc/icon-09.png" alt="withdraw"></a></li>
+	<li class="{auth}"><a href="/record_store"><img src="../../img/lbc/icon-10.png" alt="account"></a></li>
+	<!--<li class="{auth}"><a href="/customer_service"><img src="../../img/lbc/icon-12.png" alt="message"></a></li>-->
+</section>
+<section id="mainWrap" class="wrapper style2">
+	<div class="secWrap-1">
+		<!-- 上半部 -->
+		<div id="memTitle">
+			<div class="title">
+				<img src="../../img/lbc/icon-09.png" alt="">
+				<h1>賣出P點</h1>
+			</div>
+			<div class="Signout">
+				<a href="/logout">
+					<button class="Signout-button">
+						登出
+					</button>
+				</a>
+			</div>
+		</div>
+		<!-- 下半部 -->
+		<div id="editList">
+			<div class="col-md-12">
+				<div class="agileinfo-grap-2 background-white margin-top-2">
+					<div class="col-md-7">
+						<div id="withdrawList">
+							<form class="bank_form " method="post" action="/ajax/bank">
+								<div id="bankName" class="input-group">
+									<h2>銀行名稱 :</h2>
+									<select name="bank_id">
+										<!-- @bank-item -->
+										<option value="{id}">{bank}</option>
+										<!-- @bank-item -->
+									</select>
+								</div>
+								<div id="bankAccount" class="input-group">
+									<h2>帳號 :</h2>
+									<input name="account_no" style="color:black;" type="text">
+								</div>
+								<div id="accountName" class="input-group">
+									<h2>戶名 :</h2>
+									<input name="account_name" style="color:black;" type="text">
+								</div>
+								<div class="input-group-1">
+									<h2>上傳檔案 :</h2>
+									<input class="fileup" id="file" name="pic" type="hidden">
+								</div>
+								<p class="notice">請拍照上傳正確的帳戶資料，以免影響您的個人權益。</p>
+								<tr>
+									<th>
+										<h2></h2>
+									</th>
+									<td>
+										<!-- <button type="button" class="submit btn-send" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 處理中...">
+													送出
+												</button> -->
+									</td>
+								</tr>
+
+								<div id="saveChange">
+									<button type="button" class="submit btn-store Signout-button"
+										data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 處理中...">
+										送出
+									</button>
+								</div>
+							</form>
+
+							<div id="warning">
+								<h3>新增帳戶注意事項:</h3>
+								<strong>
+									會員首次填寫帳號後，即永久綁定，恕不任意變更。<br>
+									為防止有心人士利用本站作為詐騙工具：申請前請確認自己的帳戶資料，才可提出申請。<br>
+									如有必要原因需更改資料，請洽線上客服人員。<br>
+									如利用本平台進行任何洗錢詐騙行為，本公司有權利審核會員帳戶或永久終止會員服務，不另行通知。
+								</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="wthree-copyright">
+				<p>{web-foot}</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style type="text/css">
+	.bank_form [type="file"] {
+		background: transparent;
+		font-size: 13px;
+		color: transparent;
+	}
+
+	.icon-set {
+		bottom: 0px;
+		font-size: 15px;
+	}
+</style>
+<script>
+	$(function () {
+		$('#file').uploadfile({
+			url: '/ajax/upload'
+		});
+		$('.bank_form').find('.submit').onClick(function (data) {
+			if (data.code) {
+				// fail
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				});
+			} else {
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				}, function () {
+					location.reload();
+				});
+			}
+			$(this).find('.submit').button('reset');
+		}, function () {
+			$(this).find('.submit').button('loading');
+		});
+	});
+</script>
+<script>
+	$(function () {
+		setTimeout(function () {
+			swal({
+				title: '請先新增一組銀行帳戶',
+				customClass: 'swalPopup'
+			})
+		}, 1000);
+		$('[type="file"]').attr("style", "background: transparent;");
+	});
+</script>

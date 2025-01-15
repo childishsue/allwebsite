@@ -1,0 +1,108 @@
+<div class="content">
+	<div class="container base">
+		<div class="base-content">
+			<div class="base-content-title">信用卡驗證</div>
+			<div class="base-content-block">
+				<div class="base-content-block-item">
+					<div class="base-content-block-item-sp">
+						<div>
+							<div class="base-content-block-item-title">保障帳戶安全</div>
+							您只需要填寫信用卡號末4碼及確認本人持有證明文件連結至會員帳號，讓我們保護你的登入和財務資料的安全，
+							你可以安心游玩，不必擔心信用卡或隱私資料外洩。<br><br>
+							<div class="base-content-block-item-title">證明文件格式</div>
+							請提供拍攝照片圖檔<br>
+							拍攝您的信用卡正面及身分證正面或駕照正面。<br>
+							並與一張您手寫字條「本人同意此信用卡進行購買點數並確認為我本人所有。以茲證明」<br>
+							送出資料後請等待財務部門審核。<br>
+						</div>
+						<div>
+							<img class="img-responsive" src="/img/_common/card_example.gif" style="min-width: 300px;margin: 20px">
+						</div>
+					</div>
+					<form class="card_form" method="post" action="/ajax/card" style="margin-top: 2rem;">
+						<div class="base-form">
+							<table>
+								<tr>
+									<th>卡號末4碼</th>
+									<td>
+										<div class="div" style="width:100px;display: inline-block;">XXXX</div>	- <div class="div" style="width:100px;display: inline-block;">XXXX</div> - <div class="div" style="width:100px;display: inline-block;">XXXX</div> - <input name="code" type="text" maxlength="4" style="width:100px;">
+									</td>
+								</tr>
+								<tr>
+									<th>上傳檔案</th>
+									<td>
+										<input class="fileup" id="file" name="pic" type="hidden"/>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2" style="text-align:center;padding-top:2rem;">
+										<div style="padding: 10px; font-size: .875rem; color: white;">我已填妥所有資料並同意以上使用條款</div>
+										<button type="button" class="submit btn-send" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 處理中...">
+											送　出
+										</button>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</form>
+				</div>
+				<div class="base-content-block-item">
+					<div class="base-content-block-item-title">
+						<i class="fa fa-1x fa-exclamation-triangle"></i> 使用條款:
+					</div>
+					<div>
+						本公司信用卡交易為確保您本人才可以使用自己的信用卡，結合國際發卡組織提供3D驗證服務，提供加倍安全的防護機制，不需擔心他人知道卡號遭受盜刷。</br></br>
+						透過信用卡消費完成，即表示同意本公司消費者使用條款，您購買之點數將無法轉讓予第三人或轉入其他帳號，亦不得要求將遊戲點數進行退費。</br>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="base-menu">
+			<div class="base-menu-title">快速選單</div>
+			<div class="base-menu-item">
+				<a href="/store" class="{auth}">
+					<i class="fa fa-credit-card"></i>&nbsp;點數儲值
+				</a>
+				<a href="/transfer" class="{auth}">
+					<i class="fa fa-refresh"></i>&nbsp;點數轉移
+				</a>
+				<a href="/withdraw" class="{auth}">
+					<i class="fa fa-arrow-circle-o-up"></i>&nbsp;點數提領
+				</a>
+				<a href="/member" class="{auth}">
+					<i class="fa fa-user-circle-o"></i>&nbsp;修改資料
+				</a>
+				<a href="/message" class="{auth}">
+					<i class="fa fa-comments"></i>&nbsp;客服訊息<span class="getUnread-js">{user-unread}</span>
+				</a>
+				<a href="/record_store" class="{auth}">
+					<i class="fa fa-file-text"></i>&nbsp;帳務紀錄
+				</a>
+				<a href="/joinus">
+					<i class="fa fa-hand-o-right"></i>&nbsp;合作加盟
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(function(){
+		$('#file').uploadfile({url: '/ajax/upload'});
+		$('.card_form').find('.submit').onClick(function(data){
+			if(data.code){
+				// fail
+				swal({title: data.text,  html: true,
+				customClass: 'swalPopup'});
+			}else{
+				swal({title: data.text, html: true,
+				customClass: 'swalPopup'}, function(){
+					window.location = '/store';
+				});
+			}
+			$(this).button('reset');
+		}, function(){
+			$(this).button('loading');
+		});
+	});
+</script>

@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="../../css/lbc/stylelogin.css">
+<style>
+	@media screen and (max-width:414px) {
+		body {
+			background-repeat: no-repeat;
+			background-position-y: 10%;
+		}
+
+		.login {
+			margin-top: 5%;
+		}
+	}
+
+	html {
+		background-image: unset;
+	}
+
+	#header {
+		display: none;
+	}
+
+	#company {
+		display: none;
+	}
+
+	#footer {
+		display: none;
+	}
+
+	input[type="text"],
+	input[type="password"] {
+		min-width: 200px;
+		margin: 15px auto;
+	}
+
+
+	.w3layouts-main .btn-login {
+		margin: 27px auto 31px;
+		width: 30%;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"] {
+		margin: 14px auto;
+
+	}
+
+	input[type="password"] {
+		background: rgba(0, 0, 0, 0.55) url(../../img/lbc/lock.png) no-repeat 10px 10px;
+		background-size: 26px;
+	}
+</style>
+
+<div class="login" align="center">
+	<div class="main-w3l" style="margin-top:5%;">
+		<h1><a class="logo-w3" href="index.html"><img src="../../img/lbc/logo.png"></a></h1>
+		<!-- <h1 class="logo-w3">Login and Registered</h1> -->
+		<div class="w3layouts-main">
+			<h2><span>會員登入</span></h2>
+			<form class="login_form" action="/ajax/login" method="POST">
+				<input class="inputAccount base-login-block-item-input" placeholder="輸入帳號" name="account" type="text"
+					required="">
+				<input class="inputPassword base-login-block-item-input" placeholder="輸入密碼" name="password"
+					type="password" required="">
+				<button class="submit btn-login" type="button" value="" style="color: #fff !important;">登入</button>
+				<!-- <input type="button" value="登入" name="login" style="width: 75%;"> -->
+			</form>
+			<h6><a href="/register">立即開戶</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">回到首頁</a></h6>
+			<br>
+			<!-- <a href="{url-chat}" target="_black">忘記密碼</a> -->
+		</div>
+		<div class="clear"></div>
+		<div class="inner">
+			<p>&copy; </p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function () {
+		$('.inner p').html($('.copyright').html());
+	});
+</script>
