@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- Head -->
+
+<head>
+
+	<title>{web-title}</title>
+
+	<!-- Meta-Tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+		var isIndex = false;
+	</script>
+	<!-- //Meta-Tags -->
+
+	<link href="/img/sdtu/favicon.png" rel="icon" type="image/x-icon">
+
+	<link rel="stylesheet" href="/css/sdtu/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="/css/sdtu/aos.css">
+	<link rel="stylesheet" href="/css/sdtu/magnific-popup.css">
+	<link rel="stylesheet" href="/css/sdtu/jquery.timepicker.css">
+
+	<script type="text/javascript" src="/js/sdtu/jquery.min.js"></script>
+	<script src="/js/_common.js?20190117"></script>
+	<script src="/js/sweetalert.min.js"></script>
+	<link href="/css/sweetalert.css" rel="stylesheet">
+	<script src="/js/aos.js"></script>
+	<script src="/js/sdtu/jquery.stellar.min.js"></script>
+	<script src="/js/sdtu/scrollax.min.js"></script>
+	<script src="/js/sdtu/bootstrap-datepicker.js"></script>
+	<script src="/js/sdtu/jquery.magnific-popup.min.js"></script>
+	<script src="/js/sdtu/jquery.timepicker.min.js"></script>
+
+	<style media="screen">
+		.swalPopup {
+			-webkit-border-radius: 0;
+			background-color: #fff;
+			box-shadow: 0px 1px 10px black;
+			border-radius: 8px;
+		}
+
+		.swalPopup .sa-button-container button.confirm {
+			background-color: #63cdff !important;
+			color: #38373c;
+			-webkit-border-radius: 0;
+			border-radius: 5px;
+			padding: 10px 30px 10px 30px;
+			line-height: 1.5;
+			transition: all .5s ease-in-out;
+		}
+
+		.swalPopup .sa-button-container button.confirm:hover,
+		.swalPopup .sa-button-container button.confirm:active {
+			background-color: #0088cc !important;
+			color: #fff;
+		}
+
+		.swalPopup.sweet-alert h2 {
+			color: #202020 !important;
+			font-size: 18px;
+			line-height: 28px;
+		}
+
+		body {
+			background-color: #fff;
+			/* background-image: url('{background-image}'); */
+		}
+
+		.sweet-alert p {
+			color: #202020;
+		}
+
+		/* .sweet-alert {
+			margin-left: -239px;
+		} */
+
+		.mobile-shortcut {
+			background-color: #63cdff;
+			position: fixed;
+			width: 100%;
+			left: 0;
+			bottom: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 99999;
+		}
+
+		.mobile-shortcut a {
+			padding: 8px 10px;
+			font-size: 14px;
+		}
+
+		.mobile-shortcut i {
+			padding: 0 3px 0 0;
+			font-size: 16px;
+		}
+
+		@media screen and (min-width:768px) {
+    .mobile-shortcut {
+        display: none;
+    }
+}
+
+	</style>
+</head>
+<!-- //Head -->
+
+<!-- Body -->
+
+<body>
+	<input id="auth" type="hidden" value="{user-auth}">
+
+
+	<div class="mobile-shortcut">
+		<a href="/game/vvgame2"><i class="fas fa-chart-area"></i></i>CFD差價合約</a>
+		<i class="fas fa-ellipsis-v" style="color:#0088cc"></i>
+		<a href="/game/vvgame"><i class="fas fa-flag-checkered"></i>Lottery</a>
+	</div>
+
+
+	<!-- //Navigation -->
+	<!-- @frame -->
+	<main class="main">
+		{html}
+	</main>
+	<!-- @frame -->
+
+
+	<!-- Footer -->
+	<section id="footer">
+
+		<div class="copyright">
+			<!-- {web-foot} -->
+		</div>
+		</div>
+	</section>
+
+
+	
+	<!-- Bootstrap-JavaScript -->
+	<script type="text/javascript" src="/js/sdtu/bootstrap.min.js"></script>
+
+	<!-- Resopnsive-Slider-JavaScript -->
+	<script src="/js/sdtu/responsiveslides.min.js"></script>
+	<script>
+		$(function () {
+			$("#slider").responsiveSlides({
+				auto: true,
+				nav: true,
+				speed: 2000,
+				namespace: "callbacks",
+				pager: true,
+			});
+			// if ('{auth}' == 'hidden') {
+			// 	var loginstr = '請登入會員';
+			// 	$("a").removeAttr("href");
+			// 	$("a").attr("onclick", "swal({title: '" + loginstr + "',  html: true})"); //swal({title: data.text,  html: true});
+			// 	$("button").removeAttr("onclick");
+			// 	$("button").attr("onclick", "swal({title: '" + loginstr + "',  html: true})"); //swal({title: data.text,  html: true});
+			// 	$(".dropdown-toggle").removeAttr("onclick");
+			// 	$(".submit").removeAttr("onclick");
+			// 	$(".btn-next").removeAttr("onclick");
+			// }
+		});
+	</script>
+	<!-- //Resopnsive-Slider-JavaScript -->
+
+	<!-- Tab-JavaScript -->
+	<script src="/js/sdtu/cbpFWTabs.js"></script>
+	<script>
+		(function () {
+			[].slice.call(document.querySelectorAll('.tabs')).forEach(function (el) {
+				new CBPFWTabs(el);
+			});
+		})();
+	</script>
+	<!-- //Tab-JavaScript -->
+
+
+
+	<!-- Stats-Number-Scroller-Animation-JavaScript -->
+	<script src="/js/sdtu/counterup.min.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$('.counter').counterUp({
+				delay: 10,
+				time: 1000
+			});
+		});
+	</script>
+	<!-- //Stats-Number-Scroller-Animation-JavaScript -->
+
+	<!-- Popup-Box-JavaScript -->
+	<script src="/js/sdtu/jquery.chocolat.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('.w3portfolioaits-item a').Chocolat();
+		});
+	</script>
+	<!-- //Popup-Box-JavaScript -->
+
+	<!-- Smooth-Scrolling-JavaScript -->
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+
+		if (!isIndex) {
+			$(".scroll").click(function () {
+				location.href = '/';
+			});
+		}
+
+		// 簡單又明瞭的重新命名
+		$(document).ready(function () {
+			gName = {
+				1: "電子錢包",
+				33: "Lottery",
+				34: "CFD差價合約"
+			};
+			var options = $('.transfer_form [name="src_id"] option, .transfer_form [name="tar_id"] option, .withdraw_form [name="src_id"] option');
+			$(options).each(function (index) {
+				$(this).text(gName[$(this).val()]);
+			});
+
+			var bNames = $('b[att-id]');
+			$(bNames).each(function (index) {
+				$(this).html(gName[$(this).attr("att-id")]);
+			});
+
+		});
+
+	</script>
+	<!-- //Smooth-Scrolling-JavaScript -->
+
+	<!-- //Custom-JavaScript-File-Links -->
+
+	<script src="/js/sdtu/jquery.dropotron.min.js"></script>
+	<script src="/js/sdtu/jquery.scrollex.min.js"></script>
+	<script src="/js/sdtu/browser.min.js"></script>
+	<script src="/js/sdtu/breakpoints.min.js"></script>
+	<script src="/js/sdtu/util.js"></script>
+	<script src="/js/sdtu/main.js"></script>
+
+
+
+</body>
+<!-- //Body -->
+
+{web-script}
+
+
+</html>

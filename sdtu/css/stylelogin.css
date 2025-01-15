@@ -1,0 +1,413 @@
+/* 基本設定 */
+body {
+    font-family: 'microsoft jhenghei', "Segoe UI", 'Noto Sans TC', sans-serif, "Lucida Grande", Helvetica, Arial, Verdana;
+    background-color: #161616 !important;
+    color: #1d1d1d;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: color .5s ease-in-out;
+}
+
+a:hover,
+a:active,
+a.active {
+    color: #3ac1ff;
+    text-decoration: none;
+}
+
+input,
+select,
+textarea,
+.userphone,
+#bankSelect,
+#bank-account,
+#bank-name {
+    height: 40px;
+    padding: 0 8px;
+    background-color: #e2e2e2;
+    border: none;
+    color: #000;
+    border-radius: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 300px;
+    width: calc(100% - 19px);
+    overflow-y: scroll;
+    padding: 8px;
+}
+
+option {
+    width: 50px !important;
+}
+
+input[placeholder],
+[placeholder],
+*[placeholder] {
+    font: 400 15px 'microsoft jhenghei';
+}
+
+input[type="file"] {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    height: 40px;
+    padding: 7px 0px;
+    box-sizing: border-box;
+}
+
+.input-block {
+    margin: 10px 0;
+}
+
+label {
+    color: #333 !important;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+
+/* 輸入框點擊後外框顏色 */
+input:focus,
+textarea:focus {
+    border: 1px solid #0088cc !important;
+    box-shadow: 0 0 3px #0088cc !important;
+    -moz-box-shadow: 0 0 3px #0088cc !important;
+    -webkit-box-shadow: 0 0 3px #0088cc !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline-offset: 0px !important;
+    outline: none !important;
+}
+
+
+span {
+    font-size: 13px;
+    color: #ad0000;
+    letter-spacing: 1px;
+}
+
+button:focus {
+    outline: none;
+}
+
+.btn {
+    padding: 10px 30px !important;
+    background-color: #b5334f;
+    border: none;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    color: #fff !important;
+    border-radius: 5px;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #2998ff;
+}
+
+
+.btn1 {
+    padding: 15px 35px !important;
+    background-color: #63cdff;
+    border: none;
+    color: #38373c;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn1:hover,
+.btn1:active {
+    background-color: #0088cc;
+    color: #fff;
+}
+
+.btn2 {
+    padding: 10px 25px !important;
+    background-color: transparent !important;
+    border: 1px solid #b5334f !important;
+    color: #b5334f !important;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.btn2:hover,
+.btn2:active {
+    background-color: #b5334f !important;
+    color: #fff !important;
+}
+
+
+.submit {
+    width: 100%;
+}
+
+.btn-store {
+    margin-top: 10px;
+}
+
+/* 文字顏色 */
+.font-green {
+    color: #068485;
+}
+
+/* 顯示排列 */
+.display-flex {
+    display: flex;
+}
+
+/* 圖片顯示 */
+img {
+    width: auto;
+}
+
+/* 登入登出的判斷 */
+.hidden {
+    display: none !important;
+}
+
+/*================================================*/
+/* 所有共同使用 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.member-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 15px;
+    min-height: calc(100vh - 80px -88px);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    color: #333333;
+}
+
+/*================================================*/
+/* login + register */
+.login-form {
+    margin-top: 20px !important;
+    padding: 0 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.login-form .full-page {
+    background-color: #fff;
+    box-shadow: 0 0 30px #060606;
+    border-radius: 5px;
+}
+
+.web-left-block,
+.web-right-block {
+    padding: 0 15px;
+}
+
+.web-left-block {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    background-color: #000000b6;
+    background-image: url(../../img/sdtu/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.web-left-block .logo {
+    max-width: 250px;
+    width: 80%;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+
+.web-left-block h1 {
+    color: #00235a;
+    margin: 0;
+}
+
+.web-right-block {
+    padding-bottom: 30px;
+}
+
+.login-btn {
+    margin-top: 30px;
+}
+
+form .link-area {
+    max-width: 400px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+form .forget-password {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    color: #9c9c9c;
+}
+
+
+form .link-area a {
+    color: #333;
+}
+
+form .link-area a:hover {
+    color: #0088cc;
+}
+
+/*================================================*/
+/* register */
+.communication-software {
+    margin: 0;
+}
+
+.register_form .img-block {
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.change {
+    background-image: url(../../img/sdtu/icon_change.png);
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.input-verification-code-block .display-flex .img-block {
+    margin-right: 10px;
+}
+
+[type="checkbox"] {
+    width: 21px;
+    height: 21px;
+    margin-right: 5px;
+    margin-top: 0;
+}
+
+#register .policy-style {
+    color: #ad0000;
+}
+
+#register .input-block .communication-software:last-child {
+    margin-top: 10px;
+}
+
+#register .text-block {
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1024px) {
+
+    /*================================================*/
+    /* login + register */
+    .full-page {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .web-right-block {
+        border-left: 1px solid #fff;
+        padding: 0 50px;
+    }
+
+    .web-left-block {
+        padding: 0 50px;
+    }
+
+
+
+
+    /*================================================*/
+    /* login */
+    .login-form {
+        padding-top: 18vh;
+    }
+
+    .login-form .full-page {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .login-form .web-left-block {
+        width: 300px;
+        padding-top: 140px;
+        border-right: 6px solid #63cdff;
+    }
+
+    .login-form .web-right-block {
+        width: calc(100% - 230px);
+        padding: 50px;
+        box-sizing: border-box;
+    }
+
+    /*================================================*/
+    /* register */
+    .input-block-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .input-block-area .input-block {
+        width: calc(50% - 5px);
+    }
+
+    .input-verification-code-block {
+        padding: 20px 0;
+    }
+
+    .verification {
+        display: flex;
+        align-items: center;
+    }
+
+    .register_form .img-block {
+        margin-left: 15px;
+    }
+
+    #register .web-left-block {
+        width: 370px;
+    }
+
+    #register .web-right-block {
+        width: calc(100% - 370px);
+    }
+
+    #register .input-block .communication-software:last-child {
+        margin-top: 0;
+    }
+
+}

@@ -1,0 +1,163 @@
+<section id="secHeader">
+	<img src="/img/sdtu/favicon.ico">
+	<li><a href="/member_center" class="active {auth}"><img src="/img/sdtu/icon-07.png" alt="about">會員中心</a></li>
+	<li><a href="/member" class="{auth}"><img src="/img/sdtu/icon-11.png" alt="editfile">修改資料</a></li>
+	<li><a href="/store" class="{auth}"><img src="/img/sdtu/icon-07.png" alt="verify">存入資金</a></li>
+	<li><a href="/transfer" class="{auth}"><img src="/img/sdtu/icon-08.png" alt="transfer">資產轉移</a></li>
+	<li><a href="/withdraw" class="{auth}"><img src="/img/sdtu/icon-09.png" alt="withdraw">提取資金</a></li>
+	<li><a href="/record_store" class="{auth}"><img src="/img/sdtu/icon-10.png" alt="account">交易紀錄</a></li>
+	<li><a href="/message" class="{auth}"><img src="/img/sdtu/icon-12.png" alt="message">客服訊息</a></li>
+
+</section>
+
+<section id="mobileSecHeader">
+	<li><a href="/store" class="{auth}"><img src="/img/sdtu/icon-07.png" alt="verify"></a></li>
+	<li><a href="/transfer" class="{auth}"><img src="/img/sdtu/icon-08.png" alt="transfer"></a></li>
+	<li><a href="/withdraw" class="{auth}"><img src="/img/sdtu/icon-09.png" alt="withdraw"></a></li>
+	<li class="active"><a href="/member" class="active {auth}"><img src="/img/sdtu/icon-11.png" alt="editfile"></a>
+	</li>
+	<li><a href="/message" class="{auth}"><img src="/img/sdtu/icon-12.png" alt="message"></a></li>
+	<li><a href="/record_store" class="{auth}"><img src="/img/sdtu/icon-10.png" alt="account"></a></li>
+</section>
+
+<div class="wrapper style2" id="mainWrap">
+	<div class="secWrap">
+		<div id="memTitle">
+			<div class="title">
+				<img src="/img/sdtu/icon-11.png" alt="">
+				<h1>修改基本資料</h1>
+			</div>
+			<div class="Signout">
+				<a href="/logout">
+					<button class="Signout-button">
+						登出
+					</button>
+				</a>
+			</div>
+		</div>
+
+		<div id="editList">
+			<form class="member_form col-md-7" action="/ajax/edit" method="POST">
+				<div id="typeAccount" class="input-group">
+					<h2>*登入帳號 :</h2>
+					<input type="text" style="color:black;" required="" disabled value="{user-account}">
+				</div>
+
+				<div id="memName" class="input-group">
+					<h2>*姓名 :</h2>
+					<input type="text" style="color:black;" required="" disabled value="{user-name}">
+				</div>
+
+				<div id="nickName" class="input-group">
+					<h2>*暱稱 :</h2>
+					<input type="text" style="color:black;" required="" disabled value="{user-name}">
+				</div>
+
+				<div id="password" class="input-group">
+					<h2>登入密碼 :</h2>
+					<input name="password" type="password" style="color:black;" maxlength="20" required=""
+						placeholder="輸入新密碼">
+				</div>
+
+				<div id="check" class="input-group">
+					<h2>確認密碼 :</h2>
+					<input name="password_confirm" style="color:black;" maxlength="20" type="password" required=""
+						placeholder="再次輸入新密碼">
+				</div>
+
+				<div id="memCell" class="input-group">
+					<h2>*手機號碼 :</h2>
+					<input type="text" style="color:black;" required="" disabled value="{user-phone}">
+					<!-- <span class="validLabel">{user-valid}</span> -->
+				</div>
+
+				<div id="email" class="input-group">
+					<h2>*電子信箱 :</h2>
+					<input type="email" style="color:black;" required="" disabled value="">
+				</div>
+
+				<div id="checkcode" class="input-group-1">
+					<h2>*驗證碼 :</h2>
+					<input type="text" style="color:black;" required="" disabled value="">
+					<a class="chenge_captcha_image" href="#"><img src="/img/sdtu/verification.png" /></a>
+				</div>
+
+				<div id="saveChange">
+					<button type="button" class="submit btn-store Signout-button"
+						data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 處理中...">
+						儲存
+					</button>
+				</div>
+				<!-- <div id="warning">
+					<strong>注意事項:<br>如遇不可抗拒因素，需要變更資料，請洽詢客服人員！</strong>
+				</div> -->
+			</form>
+
+			<div class="agileits-w3layouts-stats">
+				<div class="col-md-12 w3ls-graph margin-top-bottom-15px">
+					<div class="agileinfo-grap-2 background-white">
+						<h3>交易項目</h3>
+						<div class="display-flex">
+							<div class="game-item-block">
+								<img src="./img/sdtu/11.png" alt="">
+								<a href="#" class="game-item">
+									<h4>理財項目</h4>
+								</a>
+							</div>
+							<div class="game-item-block">
+								<img src="./img/sdtu/12.png" alt="">
+								<a href="#" class="game-item">
+									<h4>體育娛樂</h4>
+								</a>
+							</div>
+							<div class="game-item-block">
+								<img src="./img/sdtu/13.png" alt="">
+								<a href="#" class="game-item">
+									<h4>真人娛樂</h4>
+								</a>
+							</div>
+							<div class="game-item-block">
+								<img src="./img/sdtu/14.png" alt="">
+								<a href="#" class="game-item">
+									<h4>電子遊戲</h4>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="wthree-copyright">
+				<p>{web-foot}</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+	$(function () {
+		$('.member_form').find('.submit').onClick(function (data) {
+			if (data.code) {
+				// fail
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				});
+			} else {
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				}, function () {
+					location.reload();
+				});
+			}
+			$(this).find('.submit').button('reset');
+		}, function () {
+			$(this).find('.submit').button('loading');
+		});
+	});
+</script>

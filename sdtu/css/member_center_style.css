@@ -1,0 +1,1447 @@
+/*================================================*/
+/* 所有共同使用 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.member-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 15px;
+    min-height: calc(100vh - 80px -88px);
+}
+
+
+/*================================================*/
+/* header區 */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.nav {
+    background-color: #eaeaea;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.nav a img {
+    width: 180px;
+}
+
+.nav .btn1 {
+    padding: 5px 25px !important;
+}
+
+button {
+    outline: none;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    background: -webkit-linear-gradient(90deg, #30c2da, #00a3ff);
+    background: linear-gradient(90deg, #30c2da, #00a3ff);
+
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: #fff;
+}
+
+.hamburger:hover,
+.hamburger.is-active:hover {
+    opacity: 1;
+}
+
+.nav-right-index-link-block {
+    display: none;
+    background-color: #49395A;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    height: calc(100vh - 80px);
+}
+
+.nav-right-index-link-block.show {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    left: 0;
+    overflow-y: scroll;
+    z-index: 999;
+    box-sizing: border-box;
+
+}
+
+.nav-right-index-link-block a {
+    display: block;
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 40px;
+}
+
+.nav-right-index-link-block .btn,
+.nav-right-index-link-block .btn2 {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.nav-right-index-link-block .btn {
+    display: block;
+    box-sizing: border-box;
+    width: 95px;
+}
+
+header .web-member-center {
+    display: none;
+}
+
+.mobile-member-center {
+    background-color: #554368;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+}
+
+.mobile-member-center .mobile-user-information {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f4e9ff;
+    margin-bottom: 20px;
+}
+
+.mobile-member-center .mobile-user-information .icon {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #fff;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-member-center .mobile-user-information .member_center {
+    margin-left: 20px;
+}
+
+.mobile-member-center .mobile-user-information .member_center .input-block {
+    margin: 0;
+}
+
+.mobile-member-center .mobile-user-information .member_center p,
+.mobile-member-center .mobile-user-information .member_center h3 {
+    margin: 0;
+}
+
+.mobile-member-center .member-center-content a {
+    padding-left: 0;
+}
+
+.mobile-member-center .member-center-content a:last-child {
+    margin-bottom: 0;
+}
+
+/* header .mobile-member-center .user-information .member_center h1 {
+    font-size: 1.5em;
+    line-height: 1;
+} */
+
+
+
+
+
+/*================================================*/
+/* footer區 */
+footer {
+    padding: 15px;
+    text-align: center;
+    background: -webkit-linear-gradient(180deg, rgb(73, 57, 90), rgb(33, 24, 41));
+    background: linear-gradient(180deg, rgb(73, 57, 90), rgb(33, 24, 41));
+}
+
+footer p {
+    color: #fff !important;
+    margin-bottom: 0;
+}
+
+footer a {
+    display: block;
+    margin-top: 10px;
+}
+
+
+
+
+/*================================================*/
+/* login + register */
+.login_form {
+    margin-top: 80px !important;
+    padding: 0 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.login_form .full-page {
+    background-color: #fff;
+    box-shadow: 0 0 30px #211829;
+    border-radius: 5px;
+}
+
+.web-left-block,
+.web-right-block {
+    padding: 0 15px;
+}
+
+.web-left-block {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #49395a;
+    background-image: url(../../img/cloud/login-bg-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.web-left-block h1 {
+    color: #fff;
+}
+
+.web-right-block {
+    padding-bottom: 30px;
+}
+
+.login-btn {
+    margin-top: 30px;
+}
+
+form .link-area {
+    max-width: 400px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+form .forget-password {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    color: #9c9c9c;
+}
+
+
+form .link-area a {
+    color: #333;
+}
+
+form .link-area a:hover {
+    color: #30c2da;
+}
+
+/*================================================*/
+/* register */
+.communication-software {
+    margin: 0;
+}
+
+.register_form .img-block {
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.change {
+    background-image: url(../../img/cloud/icon_change.png);
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.input-verification-code-block .display-flex .img-block {
+    margin-right: 10px;
+}
+
+[type="checkbox"] {
+    width: 21px;
+    height: 21px;
+    margin-right: 5px;
+    margin-top: 0;
+}
+
+#register .policy-style {
+    color: #ad0000;
+}
+
+#register .input-block .communication-software:last-child {
+    margin-top: 10px;
+}
+
+#register .text-block {
+    color: #333;
+}
+
+
+
+/*================================================*/
+/* policy */
+#policy {
+    color: #fff;
+    padding-top: 40px;
+}
+
+#policy hr {
+    border-color: #fff;
+    border-width: 3px;
+}
+
+.policy .back {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+#policy .back a {
+    color: #b6b6b6;
+}
+
+#policy .back a:hover {
+    color: #30c2da;
+}
+
+.policy .policy-block {
+    margin: 30px 0;
+}
+
+
+.policy ol {
+    padding-inline-start: 20px;
+    margin-bottom: 50px;
+}
+
+.policy ul {
+    padding-inline-start: 15px;
+}
+
+.return-btn {
+    display: block;
+    width: 180px;
+    padding: 15px 0;
+    text-align: center;
+    border: 2px solid #a7a7a7;
+    color: #a7a7a7;
+    border-radius: 5px;
+    margin: auto;
+    transition: .3s ease-in-out;
+    margin-bottom: 50px;
+}
+
+.return-btn:hover {
+    border-color: #30c2da;
+}
+
+
+/*================================================*/
+/* 會員中心共同 */
+.member-center-section {
+    margin-top: 80px;
+}
+
+
+/* 側邊欄 */
+#side-menu {
+    display: none;
+}
+
+/* P幣資訊欄 */
+.user-information {
+    padding: 30px 0;
+    border-bottom: 1px solid #cacaca;
+}
+
+.user-information .user-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user-information .user-block img {
+    width: 100px;
+    height: 100px;
+}
+
+.user-information .user-coin {
+    margin-left: 15px;
+}
+
+.user-information .user-coin p,
+.user-information .user-coin h2 {
+    margin: 0;
+}
+
+.user-information .user-coin p {
+    color: #949494;
+}
+
+.user-information .user-coin h2 {
+    font-weight: bold;
+    color: #333;
+}
+
+.user-information .btn-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.user-information .btn-block a {
+    display: block;
+    width: 45%;
+    padding: 5px 0;
+    text-align: center;
+    background-color: #00a3ff;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.user-information .btn-block a:hover {
+    background-color: #30dace;
+    color: #fff !important;
+}
+
+
+/* 內容範圍 */
+.member-center-section .member-container {
+    background-color: #f9f9f9;
+}
+
+/* 標題開頭 */
+.member-center-section .main-block .member-title {
+    padding-left: 15px;
+    border-left: 5px solid #30c2da;
+}
+
+.member-center-section .main-block .member-title h3 {
+    color: #30c2da;
+    margin-bottom: 0;
+}
+
+/* 主要內容 */
+.member-container .main-block {
+    padding: 30px 0;
+}
+
+/* 注意事項 */
+.precautions {
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid #cacaca;
+}
+
+.precautions h6 {
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.precautions p {
+    margin: 0;
+    color: #333;
+}
+
+.precautions ol {
+    padding-inline-start: 20px;
+}
+
+.precautions li {
+    color: #333;
+}
+
+
+
+
+/*================================================*/
+/* member_center */
+#member_center .phone {
+    position: relative;
+}
+
+/* 手機驗證提示 */
+#valid {
+    width: 70px;
+    height: 25px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    color: #fff !important;
+}
+
+.label-danger {
+    background-color: #b61b00;
+}
+
+.label-success {
+    background-color: #0c7c1b;
+}
+
+
+
+
+/*================================================*/
+/* verify */
+.userphone {
+    display: flex;
+    align-items: center;
+}
+
+/* 獲取手機驗證碼按鈕樣式 */
+.verification-code-block {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.verification-code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #087b33;
+    color: #fff;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.verification-code:hover,
+.verification-code:active {
+    background-color: #0d9c41;
+}
+
+.verification-code i {
+    margin-right: 10px;
+}
+
+.verification-code p {
+    margin: 0;
+}
+
+.step-title {
+    margin-top: 30px;
+}
+
+.step-title h5 {
+    margin: 0;
+    color: #333;
+}
+
+.step-title h5 span {
+    font-size: 1.25rem;
+    ;
+    color: #00a3ff;
+    font-weight: bold;
+}
+
+#verify .input-with-verification {
+    display: flex;
+    align-items: flex-end;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+
+#verify .input-with-verification .verify_form {
+    width: calc(100% - 160px);
+}
+
+#verify .input-with-verification .verify_form .input-block {
+    margin: 0;
+}
+
+#verify .step-one {
+    margin-bottom: 50px;
+}
+
+#verify .verification-code h5 {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+
+/*================================================*/
+/* transfer */
+#transfer #editList .button-group {
+    display: flex;
+    align-items: center;
+}
+
+#transfer #editList .button-group h5 {
+    color: #333;
+    margin: 0;
+}
+
+#transfer #editList .button-group .btn {
+    padding: 5px 20px !important;
+    margin-right: 10px;
+}
+
+
+/* 交易平台 */
+/* 電子錢包先隱藏 */
+#editList .member-list .game-width:nth-child(1) {
+    display: none;
+}
+
+#editList .member-list .game-width {
+    margin-top: 30px;
+}
+
+#editList .member-list .game {
+    display: flex;
+    align-items: stretch;
+    background-color: #d3d3d3;
+    color: #333;
+}
+
+
+#editList .member-list .game .game-img {
+    width: 50%;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+}
+
+#editList .member-list .game-width .game-img[att-id^="33"] {
+    background-image: url(../../img/cloud/game_01.jpg);
+}
+
+#editList .member-list .game-width .game-img[att-id^="34"] {
+    background-image: url(../../img/cloud/game_02.jpg);
+}
+
+#editList .member-list .game .game-content {
+    width: 50%;
+    padding: 10px;
+}
+
+#editList .member-list .game .game-content .top-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #888888;
+    margin-bottom: 5px;
+}
+
+#editList .member-list .game .game-content .top-block .coin {
+    font-size: 12px;
+    color: #888888;
+}
+
+#editList .member-list .game .game-content .big-size {
+    font-size: 22px;
+}
+
+
+
+/* #transfer #editList .member-list .game .game-content .btn1 {
+    padding: 5px 0 !important;
+    width: 100%;
+    margin-top: 30px;
+} */
+
+
+
+/*================================================*/
+/* bank  */
+#bank .fileup-block {
+    margin-bottom: 0;
+}
+
+#bank span {
+    margin-bottom: 20px;
+    display: block;
+}
+
+
+/*================================================*/
+/* customer_service */
+#customer_service {
+    color: #333 !important;
+    padding: 30px;
+}
+
+#customer_service h3 {
+    display: block;
+    padding: 0 15px;
+    border-left: 5px solid #30c2da;
+    color: #30c2da;
+}
+
+#customer_service hr {
+    border-color: #cacaca;
+}
+
+
+
+/*================================================*/
+/* record */
+.member-container .main-block .record-area {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cacaca;
+}
+
+.member-container .main-block .record-area .record {
+    width: 96px;
+    margin-right: 10px;
+}
+
+.member-container .main-block .record-area .record a {
+    color: #959595;
+    display: block;
+    position: relative;
+    text-align: center;
+
+}
+
+.member-container .main-block .record-area .record a:hover {
+    color: #30c2da;
+}
+
+.member-container .main-block .record-area .record a.active {
+    color: #000;
+}
+
+.member-container .main-block .record-area .record a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: -12px;
+    height: 5px;
+    background-color: #30c2da;
+}
+
+.member-container .main-block .record-area .record a h5 {
+    margin-bottom: 0;
+}
+
+
+/* 手機版 */
+.member-container .list {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.member-container .list .detail-day {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #a7a7a7;
+    margin-bottom: 10px;
+}
+
+/* 電腦版 */
+.member-container .list .list-title.mobile {
+    display: none;
+}
+
+
+/* 上下頁 */
+.next-page-block {
+    padding-bottom: 30px;
+}
+
+.pagination {
+    margin: 0;
+    justify-content: center;
+}
+
+.pagination .disabled {
+    margin-right: 30px;
+}
+
+.pagination .disabled span {
+    color: #a7a7a7;
+}
+
+.pagination a {
+    color: #333;
+}
+
+
+
+/*================================================*/
+/* store */
+/* .wallet-address-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+.wallet-address {
+    list-style-type: none;
+    padding-inline-start: 0px;
+    font-weight: bold;
+    margin-top: 0;
+    font-size: 16px;
+}
+
+#store .right {
+    margin-right: -15px;
+    margin-left: -15px;
+} */
+
+
+/*================================================*/
+/* withdraw */
+#bankSelect,
+#bank-account,
+#bank-name {
+    display: flex;
+    align-items: center;
+}
+
+.text-block h2 {
+    color: #c9f781;
+}
+
+#withdraw #editList .member-list {
+    margin-bottom: 50px;
+}
+
+
+.introduction-content .currency-value {
+    width: 50%;
+    padding: 10px 15px;
+    text-align: center;
+    color: #000;
+}
+
+.introduction-content .currency-value img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RWD */
+/* 桌機版 */
+@media screen and (min-width:768px) {
+
+    /*================================================*/
+    /* 會員中心共同 */
+
+    /* P幣資訊欄 */
+    .user-information {
+        display: flex;
+        align-items: center;
+    }
+
+    .user-information .user-block {
+        width: 330px;
+        position: relative;
+        margin-bottom: 0;
+    }
+
+    .user-information .user-block::after {
+        content: '';
+        position: absolute;
+        width: 3px;
+        height: 60px;
+        background-color: #cacaca;
+        bottom: 18px;
+        right: 0;
+    }
+
+    .user-information .btn-block {
+        width: 280px;
+    }
+
+    .user-information .btn-block a {
+        width: 100px;
+    }
+
+
+
+    /*================================================*/
+    /* store */
+    #store .right {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    /*================================================*/
+    /* transfer */
+    #transfer .right {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    #transfer #editList .member-list .game .game-img {
+        height: 150px;
+    }
+
+    #transfer #editList .member-list .game .game-content {
+        padding: 40px 30px;
+    }
+
+    /* ========================================================== */
+    /* withdraw */
+    #withdraw #editList .member-list .game .game-img {
+        height: 150px;
+    }
+
+    #withdraw #editList .member-list .game .game-content {
+        padding: 30px 20px;
+    }
+
+
+
+}
+
+@media screen and (min-width:1024px) {
+
+    .desktop-show {
+        display: unset;
+    }
+
+    .mobile-show {
+        display: none;
+    }
+
+
+    /*================================================*/
+    /* header區 */
+    header {
+        background-color: #49395A;
+        display: flex;
+        padding: 10px 15px;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+    }
+
+    header .hamburger {
+        display: none;
+    }
+
+    .nav {
+        display: contents;
+        height: auto;
+        background-color: transparent;
+    }
+
+    header .nav-right-index-link-block {
+        display: block;
+        float: right;
+        background: transparent;
+        padding-top: 0;
+        height: auto;
+        padding-bottom: 0;
+    }
+
+    header .web-member-center {
+        display: block;
+    }
+
+    header .nav-right-index-link-block .mobile-member-center {
+        display: none;
+    }
+
+    header .nav-right-index-link-block .web-style {
+        display: flex;
+        align-items: center;
+    }
+
+    header .nav-right-index-link-block .web-style a {
+        margin: 0;
+        padding: 0 15px;
+        position: relative;
+    }
+
+    header .nav-right-index-link-block .web-style .line:hover:after {
+        content: '';
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        bottom: -28px;
+        height: 5px;
+        background-color: #30c2da;
+        animation-name: header-link-animation;
+        animation-duration: .5s;
+    }
+
+    @keyframes header-link-animation {
+        0% {
+            left: 15px;
+            right: 200px;
+        }
+
+        100% {
+            left: 15px;
+            right: 15px;
+        }
+    }
+
+    header .nav-right-index-link-block .web-style a:last-child:hover:after {
+        display: none;
+    }
+
+    header .nav-right-index-link-block .web-style .btn2 {
+        padding: 5px 15px !important;
+        margin: 0;
+        margin-left: 15px;
+    }
+
+    .nav-right-index-link-block .btn {
+        width: auto;
+        padding: 5px 20px !important;
+        margin-left: 15px !important;
+    }
+
+
+
+
+    /*================================================*/
+    /* footer  */
+    footer {
+        text-align: left;
+        padding: 30px 15px;
+    }
+
+    footer .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer a {
+        margin-top: 0;
+        margin-left: 30px;
+    }
+
+
+
+
+    /*================================================*/
+    /* login + register */
+    .full-page {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .web-right-block {
+        border-left: 1px solid #fff;
+        padding: 0 50px;
+    }
+
+    .web-left-block {
+        padding: 0 50px;
+    }
+
+
+    /*================================================*/
+    /* login */
+    .login_form.full-page {
+        padding-top: 20vh;
+    }
+
+    .login_form .web-left-block {
+        width: 300px;
+        padding-top: 140px;
+    }
+
+    .login_form .web-right-block {
+        width: calc(100% - 230px);
+        padding: 50px;
+        box-sizing: border-box;
+    }
+
+    /*================================================*/
+    /* register */
+    .input-block-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .input-block-area .input-block {
+        width: calc(50% - 5px);
+    }
+
+    .input-verification-code-block {
+        padding: 20px 0;
+    }
+
+    .verification {
+        display: flex;
+        align-items: center;
+    }
+
+    .register_form .img-block {
+        margin-left: 15px;
+    }
+
+    #register .web-left-block {
+        width: 370px;
+    }
+
+    #register .web-right-block {
+        width: calc(100% - 370px);
+    }
+
+    #register .input-block .communication-software:last-child {
+        margin-top: 0;
+    }
+
+
+    /*================================================*/
+    /* 會員中心共同 */
+    /* 內容區 */
+    .member-center-section {
+        display: flex;
+    }
+
+    /* 側邊欄 */
+    #side-menu {
+        display: block;
+        width: 180px;
+        background-image: url(../../img/cloud/login-bg.jpg);
+        background-position: center;
+        background-size: cover;
+        padding-left: 50px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        left: 0;
+    }
+
+
+    #side-menu .menu-block {
+        margin-bottom: 55px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    #side-menu .menu-block:hover {
+        cursor: pointer;
+    }
+
+
+    #side-menu .menu-block p {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 0;
+        transition: all .5s ease-in-out;
+    }
+
+    #side-menu .menu-block:hover p {
+        color: #4fe8ff !important;
+    }
+
+    #side-menu .menu-block.active p {
+        color: #fff !important;
+    }
+
+    #side-menu .menu-block.active::after {
+        content: '';
+        position: absolute;
+        width: 91px;
+        height: 3px;
+        background-color: #4fe8ff;
+        left: 0;
+        bottom: -3px;
+    }
+
+
+
+    #side-menu .menu-icon {
+        position: absolute;
+        bottom: -7px;
+        right: -25px;
+        width: 50px;
+        height: 50px;
+        border-radius: 999px;
+        background-color: #554368;
+        border: 2px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s ease-in-out;
+    }
+
+    #side-menu .menu-block:hover .menu-icon,
+    #side-menu .menu-icon.active {
+        background-color: #30c2da;
+    }
+
+    #side-menu .menu-icon.active {
+        box-shadow: 0 0 20px #75ebff;
+    }
+
+    #side-menu .menu-icon img {
+        width: 20px;
+    }
+
+    /* 內容 */
+    .member-center-section .member-container {
+        width: calc(100% - 300px);
+        margin-top: 100px;
+        margin-bottom: 100px;
+        padding: 0 30px;
+        border-radius: 20px;
+        margin-left: 255px;
+        box-shadow: 15px 15px 0 #9a5db6;
+    }
+
+    /* 主要內容輸入框 */
+    .member-center-section .input-block {
+        display: flex;
+        align-items: center;
+    }
+
+    .member-center-section .input-block .title {
+        width: 75px;
+        text-align: right;
+        margin-right: 10px;
+    }
+
+    .member-center-section .input-block .input-content,
+    #bank input[type="file"] {
+        width: calc(100% - 75px);
+    }
+
+    /* 主要內容按鈕 */
+    .member-center-section .submit {
+        width: auto;
+        margin-left: calc(100% - 102px);
+    }
+
+
+    /*================================================*/
+    /* bank */
+    #bank span {
+        margin-left: 85px;
+    }
+
+
+
+    /*================================================*/
+    /* record */
+    .member-container .main-block .record-area .record {
+        width: 120px;
+    }
+
+    .member-container .list {
+        margin-bottom: 10px;
+        padding: 10px 20px;
+    }
+
+    .member-container .list:hover {
+        background-color: #c7c7c7;
+    }
+
+    /* 手機版 */
+    .member-container .list .list-title.mobile {
+        display: flex;
+        align-items: center;
+        color: #8b8b8b;
+        font-size: 12px;
+    }
+
+    .member-container .list .w-2 {
+        width: 40%;
+    }
+
+    .member-container .list .w-1 {
+        width: 20%;
+    }
+
+    .member-container .list .list-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .member-container .list b.font-blod {
+        display: none;
+    }
+
+    .member-container .list .detail-day {
+        padding-bottom: 0;
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+
+    /*================================================*/
+    /* record */
+    .form-block {
+        display: flex;
+    }
+
+    .form-block .form-top,
+    .form-block .form-content {
+        width: 50%;
+        padding: 0 15px;
+    }
+
+    .form-block .form-content {
+        padding: 0 15px 0 40px;
+    }
+
+    .form-block .form-top {
+        border-bottom: none;
+        padding-bottom: 0px;
+        border-right: 1px solid #333;
+    }
+
+    /*================================================*/
+    /* verify */
+    #verify .btn-verification {
+        width: 150px !important;
+        margin-left: 10px;
+    }
+
+
+}
+
+@media screen and (min-width:1200px) {
+
+    /* 側邊欄 */
+    #side-menu {
+        width: 220px;
+        padding-left: 90px;
+    }
+
+    .member-center-section .member-container {
+        width: calc(100% - 400px);
+        margin-left: 320px;
+    }
+
+
+}
+
+@media screen and (min-width:1400px) {
+
+    /* ======================================== */
+    /* 會員中心共同 */
+    .member-container .form {
+        display: flex;
+    }
+
+    .member-container .form .right {
+        width: 60%;
+    }
+
+    .member-container .form .left {
+        padding-left: 30px;
+        width: 40%;
+    }
+
+    .member-container .form .left .precautions {
+        margin-top: 0;
+        padding-top: 20px;
+        border-top: none;
+    }
+
+    /*================================================*/
+    /* transfer */
+    #editList .member-list {
+        display: flex;
+    }
+
+    #editList .member-list .game-width {
+        width: 50%;
+        padding: 0 10px;
+    }
+
+    #editList .member-list .game .game-content {
+        padding: 40px 20px;
+    }
+
+    /*================================================*/
+    /* withdraw */
+    #withdraw #editList .member-list {
+        display: flex;
+        align-items: center;
+    }
+
+    #withdraw #editList .member-list .game-width {
+        width: 50%;
+        padding: 0 10px;
+    }
+
+    #withdraw #editList .member-list .game .game-img {
+        height: 100px;
+    }
+
+    #withdraw .form .right {
+        width: 40%;
+    }
+
+    /* #withdraw #editList .member-list {
+        display: block;
+    } */
+
+    #withdraw #editList .member-list .game-width {
+        width: 100%;
+    }
+
+    #withdraw #editList .member-list .game {
+        display: block;
+    }
+
+    #withdraw #editList .member-list .game .game-img {
+        width: 100%;
+    }
+
+    #withdraw #editList .member-list .game .game-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #withdraw .form .left {
+        width: 60%;
+    }
+
+}

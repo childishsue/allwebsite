@@ -1,0 +1,675 @@
+<!-- 10221830 -->
+<title></title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="./css/open-iconic-bootstrap.min.css">
+<link rel="stylesheet" href="./css/animate1.css">
+<link rel="stylesheet" href="./css/magnific-popup.css">
+<link rel="stylesheet" href="./css/aos.css">
+<link rel="stylesheet" href="./css/ionicons.min.css">
+<link rel="stylesheet" href="./css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="./css/jquery.timepicker.css">
+<link rel="stylesheet" href="./css/flaticon.css">
+<link rel="stylesheet" href="./css/icomoon.css">
+<link rel="stylesheet" href="./css/style1.css">
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<script src="./js/6603bd9dd4.js"></script>
+<!-- 影片 -->
+<link href="./css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+
+<style>
+    .navbar-brand>img {
+        max-height: unset;
+        max-width: 150px;
+        height: unset;
+    }
+
+    .mobile-shortcut {
+			display: none;
+		}
+
+    header,
+    footer {
+        display: none;
+    }
+
+    .label-13XFthDT.bottom-21EGGcaf,
+    .tradingview-widget-copyright {
+        display: none;
+    }
+
+
+
+    .animate-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 20px auto;
+        width: 120px;
+        height: 120px;
+        background: white;
+        border-radius: 75px;
+        font-family: microsoft jhenghei;
+        font-size: 34px;
+        font-weight: lighter;
+        letter-spacing: 2px;
+        transition: 1s box-shadow;
+        border: 1px solid #bebebe;
+        transition: all .3s;
+    }
+
+    .animate-number:hover {
+        box-shadow: 0 5px 35px 0px rgba(0, 0, 0, .1);
+        background: -webkit-linear-gradient(151deg, #ffffff, #d6d6d6);
+        background: linear-gradient(151deg, #ffffff, #d6d6d6);
+        transition: all .3s;
+        border: 1px solid #ffffff;
+
+    }
+
+    .animate-number:hover::before,
+    .animate-number:hover::after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: #ff53da;
+        border-radius: 75px;
+        z-index: -1;
+        animation: 1s clockwise infinite;
+    }
+
+    .animate-number:hover:after {
+        background: #34a4ff;
+        animation: 2s counterclockwise infinite;
+    }
+
+    @keyframes clockwise {
+        0% {
+            top: -5px;
+            left: 0;
+        }
+
+        12% {
+            top: -2px;
+            left: 2px;
+        }
+
+        25% {
+            top: 0;
+            left: 5px;
+        }
+
+        37% {
+            top: 2px;
+            left: 2px;
+        }
+
+        50% {
+            top: 5px;
+            left: 0;
+        }
+
+        62% {
+            top: 2px;
+            left: -2px;
+        }
+
+        75% {
+            top: 0;
+            left: -5px;
+        }
+
+        87% {
+            top: -2px;
+            left: -2px;
+        }
+
+        100% {
+            top: -5px;
+            left: 0;
+        }
+    }
+
+    @keyframes counterclockwise {
+        0% {
+            top: -5px;
+            right: 0;
+        }
+
+        12% {
+            top: -2px;
+            right: 2px;
+        }
+
+        25% {
+            top: 0;
+            right: 5px;
+        }
+
+        37% {
+            top: 2px;
+            right: 2px;
+        }
+
+        50% {
+            top: 5px;
+            right: 0;
+        }
+
+        62% {
+            top: 2px;
+            right: -2px;
+        }
+
+        75% {
+            top: 0;
+            right: -5px;
+        }
+
+        87% {
+            top: -2px;
+            right: -2px;
+        }
+
+        100% {
+            top: -5px;
+            right: 0;
+        }
+    }
+
+    .mb_YTPBar .buttonBar {
+        display: none;
+    }
+
+    .mb_YTPBar .mb_YTPseekbar {
+        display: none;
+    }
+
+    .mb_YTPBar .inlinePlayer {
+        display: none;
+    }
+
+    .inlinePlayButton {
+        display: none !important;
+    }
+
+    .mb_YTPProgress {
+        display: none;
+    }
+
+    #controlBar_bgndVideo {
+        display: none !important;
+    }
+
+    #wrapper_bgndVideo {
+        filter: hue-rotate(346deg);
+    }
+</style>
+
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./img/logo.png" alt="" class="logo">
+            </a>
+            <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+                data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav nav ml-auto">
+                    <li class="nav-item cta {auth} width-110px" style="margin:10px;text-align:center"><a
+                            href="/member_center" class="nav-link">會員中心</a></li>
+                    <li class="nav-item cta {auth} width-110px" style="margin:10px;text-align:center"><a href="/logout"
+                            class="nav-link">登出</a></li>
+                    <li class="nav-item cta {unauth} width-110px" style="margin:10px;text-align:center"><a href="/login"
+                            class="nav-link">會員登入</a></li>
+                    <li class="nav-item cta {unauth} width-110px" style="margin:10px;text-align:center"><a
+                            href="/register" class="nav-link">馬上註冊</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="banner-section">
+        <div id="bgndVideo"
+            data-property="{videoURL:'https://youtu.be/xQVEKWdhYxU',containment:'#bgndVideo',loop:true,autoPlay:true, mute:true, startAt:0, opacity:1, realfullscreen:true ,stopMovieOnBlur:false}">
+            <div class="container">
+                <div class="text">
+                    <img src="./img/mobile.png" alt="" class="">
+                    <h1 class="mb-4">創新 安全 卓越</h1>
+                    <h3 class="mb-4">提供專業人士的投資環境</h3>
+                    <a href="/login" class="btn btn-primary py-3 px-4 {unauth}">會員登入</a>
+                    <a href="/member_center" class="btn btn-primary py-3 px-4 {auth}">開始管理</a>
+                </div>
+            </div>
+        </div>
+        <div class="cover"></div>
+    </section>
+
+    <section class="section-products">
+        <div class="wrapper">
+            <div class="product-block {unauth}">
+                <ul class="product-group">
+                    <li class="product-item">
+                        <a href="/login" target="_blank">
+                            <div class="product-content"><img src="./img/Furball2657.png" alt=""></div>
+                            <h3>Furball #2657</h3>
+                        </a>
+                    </li>
+                    <li class="product-item">
+                        <a href="/login" target="_blank">
+                            <div class="product-content"><img src="./img/Furball2745.png" alt=""></div>
+                            <h3>Furball #2745</h3>
+                        </a>
+                    </li>
+                    <li class="product-item">
+                        <a href="/login" target="_blank">
+                            <div class="product-content"><img src="./img/Furball2958.png" alt=""></div>
+                            <h3>Furball #2958</h3>
+                        </a>
+                    </li>
+                    <li class="product-item">
+                        <a href="/login" target="_blank">
+                            <div class="product-content"><img src="./img/Furball3067.png" alt=""></div>
+                            <h3>Furball #3067</h3>
+                        </a>
+                    </li>
+                    <li class="product-item">
+                        <a href="/login" target="_blank">
+                            <div class="product-content"><img src="./img/Furball3028.png" alt=""></div>
+                            <h3>Furball #3028</h3>
+                        </a>
+                    </li>
+                    <li class="product-item">
+                        <a href="/login" target="_blank">
+                            <div class="product-content"><img src="./img/Furball4706.png" alt=""></div>
+                            <h3>Furball #4706</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="product-block {auth}">
+                <ul class="product-group">
+                    <li class="product-item">
+                        <a href="/game/vvgame2" target="_blank">
+                            <div class="product-content"><img src="./img/Furball2657.png" alt=""></div>
+                            <h3>Furball #2657</h3>
+                        </a>
+                    </li>
+                    <li class="product-item">
+                        <a href="/game/vvgame2" target="_blank">
+                            <div class="product-content"><img src="./img/Furball2745.png" alt=""></div>
+                            <h3>Furball #2745</h3>
+                        </a>
+                    </li>
+                    <li class="product-item">
+                        <a href="/game/vvgame2" target="_blank">
+                            <div class="product-content"><img src="./img/Furball2958.png" alt=""></div>
+                            <h3>Furball #2958</h3>
+                        </a>
+                    </li>
+                    <li class="product-item">
+                        <a href="/game/vvgame2" target="_blank">
+                            <div class="product-content"><img src="./img/Furball3067.png" alt=""></div>
+                            <h3>Furball #3067</h3>
+                        </a>
+                    </li>
+                    <li class="product-item">
+                        <a href="/game/vvgame2" target="_blank">
+                            <div class="product-content"><img src="./img/Furball3028.png" alt=""></div>
+                            <h3>Furball #3028</h3>
+                        </a>
+                    </li>
+                    <li class="product-item">
+                        <a href="/game/vvgame2" target="_blank">
+                            <div class="product-content"><img src="./img/Furball4706.png" alt=""></div>
+                            <h3>Furball #4706</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-about">
+        <div class="wrapper">
+            <div class="about-block">
+                <div class="container-about">
+                    <div class="about-img">
+                        <img src="./img/about.jpg" alt="">
+                    </div>
+                </div>
+                <div class="container-about">
+                    <div class="about-content">
+                        <div class="about-title">
+                            <h2>公司簡介</h2>
+                        </div>
+                        <div class="about-txt">
+                            <p>全新的數位資產交易所，創始團隊成員來自幣安安全領域，風控團隊每周加強後端安全功能建設。</p>
+                            <p>透過創新科技的網絡平台將兩者相互結合，達到台灣市場雙贏的效果，是未來網絡平台發展的最大挑戰， 營運方式即是以開放平台為架構，符合創新及市場通路多元化服務需求，結合智能數位服務與大數據行銷，並結合台灣區用戶下單更加融入生活，符合未來最具影響力的元宇宙經營方式。</p>
+                            <a href="/login" class="btn btn-primary py-3 px-4 {unauth}">了解更多</a>
+                            <a href="/page-game_financial" class="btn btn-primary py-3 px-4 {auth}">開始管理</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-service">
+        <div class="wrapper">
+            <div class="service-block">
+                <div class="service-content">
+                    <div class="service-title">
+                        <h2>強大優勢</h2>
+                    </div>
+                    <div class="service-txt">
+                        <p>開創新時代，助您創造及保管財富
+                        </p>
+                        <ul class="service-group">
+                            <li>
+                                <div class="service-img">
+                                    <div class="icon-box">
+                                        <img src="./img/icon-s01.png" alt="">
+                                    </div>
+                                    <div class="meta-img">
+                                        <img src="./img/staff-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="service-descr">
+                                    <h3>移動應用</h3>
+                                    <p>我們的介面可完美的適用於任何裝置，您可以輕鬆地瀏覽。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="service-img">
+                                    <div class="icon-box">
+                                        <img src="./img/icon-s02.png" alt="">
+                                    </div>
+                                    <div class="meta-img">
+                                        <img src="./img/staff-2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="service-descr">
+                                    <h3>多重監管</h3>
+                                    <p>在IOS、Android智慧型手機、平板、電腦等裝置皆可操作。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="service-img">
+                                    <div class="icon-box">
+                                        <img src="./img/icon-s03.png" alt="">
+                                    </div>
+                                    <div class="meta-img">
+                                        <img src="./img/staff-3.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="service-descr">
+                                    <h3>即時數字交易</h3>
+                                    <p>我們的介面可完美的適用於任何裝置，您可以輕鬆地瀏覽。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="service-img">
+                                    <div class="icon-box">
+                                        <img src="./img/icon-s04.png" alt="">
+                                    </div>
+                                    <div class="meta-img">
+                                        <img src="./img/staff-4.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="service-descr">
+                                    <h3>多語系線上客服</h3>
+                                    <p>我們是您的救星，時刻備戰，提供精準專業規劃。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-join">
+        <div class="wrapper">
+            <div class="join-block">
+                <div class="join-img">
+                    <img src="./img/logo-01.png" alt="TODU">
+                </div>
+                <div class="join-txt">
+                    <p>了解世界頂級加密貨幣交易所的新聞動態及視野觀點</p>
+                    <a href="/register" class="btn btn-primary py-3 px-4 {unauth}">加入我們</a>
+                    <a href="/page-game_financial" class="btn btn-primary py-3 px-4 {auth}">數位資產</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-cloud">
+        <div class="wrapper">
+            <div class="cloud-block">
+                <div class="cloud-content">
+                    <div class="cloud-title">
+                        <h2>領先各大交易所</h2>
+                        <span>運用區塊鏈與NFT的特性，將台灣區交易用戶優先選取，並使用AI智能嚴格保障投資人資產安全風險分級控管。</span>
+                    </div>
+                    <div class="cloud-txt">
+                        <p>在區塊鏈技術中，任何信息都是公開且不可被修改的，再加上NFT的不可替代性和分割性。因此，NFT非常適合作為一種權益證明。</p>
+                        <ul class="cloud-group waterfall-group">
+                            <li class="waterfall-item">
+                                <div class="cloud-item">
+                                        <div class="cloud-img"><img src="./img/Furball2533.png" alt=""></div>
+                                    <div class="cloud-descr">
+                                        <h3>FURBALL #2533</h3>
+                                        <a href="/login" class="btn btn-primary {unauth}">立即開始</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="waterfall-item">
+                                <div class="cloud-item">
+                                    <div class="cloud-img"><img src="./img/Furball2657.png" alt=""></div>
+                                    <div class="cloud-descr">
+                                        <h3>FURBALL #2657</h3>
+                                        <a href="/login" class="btn btn-primary {unauth}">立即開始</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="waterfall-item">
+                                <div class="cloud-item">
+                                    <div class="cloud-img"><img src="./img/Furball6901.png" alt=""></div>
+                                    <div class="cloud-descr">
+                                        <h3>FURBALL #6901</h3>
+                                        <a href="/login" class="btn btn-primary {unauth}">立即開始</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="waterfall-item">
+                                <div class="cloud-item">
+                                    <div class="cloud-img"><img src="./img/Furball2958.png" alt=""></div>
+                                    <div class="cloud-descr">
+                                        <h3>FURBALL #2958</h3>
+                                        <a href="/login" class="btn btn-primary {unauth}">立即開始</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="waterfall-item">
+                                <div class="cloud-item">
+                                    <div class="cloud-img"><img src="./img/Furball2745.png" alt=""></div>
+                                    <div class="cloud-descr">
+                                        <h3>FURBALL #2745</h3>
+                                        <a href="/login" class="btn btn-primary {unauth}">立即開始</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="waterfall-item">
+                                <div class="cloud-item">
+                                    <div class="cloud-img"><img src="./img/Furball3067.png" alt=""></div>
+                                    <div class="cloud-descr">
+                                        <h3>FURBALL #3067</h3>
+                                        <a href="/login" class="btn btn-primary {unauth}">立即開始</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="waterfall-item">
+                                <div class="cloud-item">
+                                    <div class="cloud-img"><img src="./img/Furball3028.png" alt=""></div>
+                                    <div class="cloud-descr">
+                                        <h3>FURBALL #3028</h3>
+                                        <a href="/login" class="btn btn-primary {unauth}">立即開始</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="waterfall-item">
+                                <div class="cloud-item">
+                                    <div class="cloud-img"><img src="./img/Furball4706.png" alt=""></div>
+                                    <div class="cloud-descr">
+                                        <h3>FURBALL #4706</h3>
+                                        <a href="/login" class="btn btn-primary {unauth}">立即開始</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-agency">
+        <div class="wrapper">
+            <div class="agency-block">
+                <div class="agency-content">
+                    <div class="agency-title">
+                        <h2>監管機構</h2>
+                    </div>
+                    <div class="agency-txt">
+                        <p>數字貨幣開創全新時代，助您創造及保管財富</p>
+                        <div class="swiper-container">
+                            <ul class="agency-group swiper-wrapper" style="height: auto;">
+                                <li class="swiper-slide">
+                                    <div class="agency_img">
+                                        <img src="./img/agency-1.png" alt="">
+                                    </div>
+                                    <h3>日本金融監管廳</h3>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="agency_img">
+                                        <img src="./img/agency-2.png" alt="">
+                                    </div>
+                                    <h3>英國金融行為監管局</h3>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="agency_img">
+                                        <img src="./img/agency-3.jpg" alt="">
+                                    </div>
+                                    <h3>德國聯邦金融監管局</h3>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="agency_img">
+                                        <img src="./img/agency-4.png" alt="">
+                                    </div>
+                                    <h3>美國商品期貨委員會</h3>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lowest">
+        <div class="container">
+            <div class="block">
+                <img src="./img/logo-w.png" alt="" class="logo" style="max-width: 150px;">
+                <p>
+                    本網站提供的金融工具交易存在較大的風險。如果使用本網站提供的金融工具進行交易，您可能會遭受虧損。這些風險包括流動性降低，價格的變化，高波動性和無法控制的情況。在決定使用本網站提供的金融工具開始交易之前，您必須仔細查看服務協議和風險信息。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="ftco-footer ftco-section" style="display: block;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                      Copyright © 2023 SXIGMA Corporation. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+	<script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.easing.1.3.js"></script>
+    <script src="./js/jquery.waypoints.min.js"></script>
+    <script src="./js/jquery.stellar.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/jquery.magnific-popup.min.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/jquery.animateNumber.min.js"></script>
+    <script src="./js/bootstrap-datepicker.js"></script>
+    <script src="./js/jquery.timepicker.min.js"></script>
+    <script src="./js/scrollax.min.js"></script>
+
+    <!-- 影片 -->
+    <script src="./js/jquery.mb.YTPlayer.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+    <script>
+        var myPlayer;
+        jQuery(function () {
+            myPlayer = jQuery("#bgndVideo").YTPlayer({
+                useOnMobile: true,
+                mobileFallbackImage: "assets/mask-4.png"
+            });
+
+            myPlayer = jQuery("#bgndVideo2").YTPlayer({
+                useOnMobile: true,
+                mobileFallbackImage: "assets/mask-4.png"
+            });
+
+        });
+
+        const mySwiper = new Swiper('.swiper-container' , {
+            slidesPerView: 1.5,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                },
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+                },
+            loop: true,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2.5,
+                    loop: true,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    loop: false,
+                },
+            },
+        });
+
+    </script>

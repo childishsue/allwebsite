@@ -1,0 +1,1511 @@
+/* 基本設定 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'microsoft jhenghei', "Segoe UI", 'Noto Sans TC', sans-serif, "Lucida Grande", Helvetica, Arial, Verdana;
+    background-color: #2c2c2c !important;
+    color: #333;
+    position: relative;
+    letter-spacing: 1px;
+    padding-top: 22px;
+    background-image: url(../../img/sdtu/bg2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    transition: color .5s ease-in-out;
+}
+
+a:hover,
+a:active,
+a.active {
+    /* background-color: #63ceff9a; */
+    color: #38373c;
+}
+
+input,
+select,
+textarea,
+.userphone,
+#bank-account,
+#bank-name {
+    height: 40px;
+    padding: 0 8px;
+    background-color: #ffffffd3;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    color: #333;
+    border-radius: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 300px;
+    width: calc(100% - 19px);
+    overflow-y: scroll;
+    padding: 8px;
+}
+
+option {
+    width: 50px !important;
+}
+
+input[placeholder],
+[placeholder],
+*[placeholder] {
+    font: 400 15px 'microsoft jhenghei';
+}
+
+input[type="file"] {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    height: 40px;
+    padding: 7px 0px;
+    box-sizing: border-box;
+}
+
+.input-block {
+    margin: 10px 0;
+}
+
+label {
+    color: #333 !important;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+
+/* 輸入框點擊後外框顏色 */
+input:focus,
+textarea:focus {
+    border: 1px solid #0088cc ;
+    box-shadow: 0 0 3px #0088cc ;
+    -moz-box-shadow: 0 0 3px #0088cc ;
+    -webkit-box-shadow: 0 0 3px #0088cc ;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline-offset: 0px ;
+    outline: none ;
+}
+
+
+span {
+    font-size: 13px;
+    color: #ad0000;
+    letter-spacing: 1px;
+}
+
+button:focus {
+    outline: none;
+}
+
+.btn {
+    padding: 5px 20px ;
+    background-color: transparent;
+    border: 1px solid #0088cc;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    color: #0088cc ;
+    border-radius: 5px;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #0088cc;
+    color: #fff ;
+}
+
+
+.btn1 {
+    padding: 10px 35px !important;
+    background-color: #63cdff;
+    border: none;
+    color: #38373c;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn1:hover,
+.btn1:active {
+    background-color: #0088cc;
+    color: #fff;
+}
+
+.btn2 {
+    padding: 10px 25px !important;
+    background-color: transparent !important;
+    border: 1px solid #43a8ff !important;
+    color: #43a8ff !important;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.btn2:hover,
+.btn2:active {
+    background-color: #43caff !important;
+    color: #fff !important;
+}
+
+.btn3 {
+    padding: 10px 25px !important;
+    background-color: transparent !important;
+    border: 1px solid #0088cc !important;
+    color: #0088cc !important;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.btn3:hover,
+.btn3:active {
+    background-color: #0088cc !important;
+    color: #fff !important;
+}
+
+#content1 img {
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+
+.submit {
+    width: 100%;
+}
+
+.btn-store {
+    margin-top: 10px;
+}
+
+/* 文字顏色 */
+.font-green {
+    color: #068485;
+}
+
+/* 顯示排列 */
+.display-flex {
+    display: flex;
+}
+
+/* 圖片顯示 */
+img {
+    width: 100%;
+    /* z-index: 9999; */
+}
+
+/* 登入登出的判斷 */
+.hidden {
+    display: none !important;
+}
+
+.label-success {
+    color: #228522;
+}
+
+.marquee-text a {
+    color: #000;
+}
+
+/*================================================*/
+/* 所有共同使用 */
+.content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footer {
+    font-size: 11px;
+    background: #222222;
+    padding: 1em 0;
+    z-index: 0;
+    text-align: center;
+    color: #fff;
+}
+
+.input-group {
+    margin: 10px 0;
+}
+
+@media screen and (max-width:1024px) {
+    .footer {
+        opacity: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/*================================================*/
+/* nav */
+nav {
+    background: #ffffff;
+    padding: 10px 0 5px 0;
+    width: 100%;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+}
+
+nav .content {
+    display: flex;
+    flex-direction: row-reverse;
+    /* float: right; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    width: 150px;
+}
+
+/*================================================*/
+/* mobile-menu */
+.mobile-menu {
+    color: #43a8ff;
+    font-size: 20px;
+}
+
+.mobile-menu i {
+    color: #090909;
+    font-size: 22px;
+}
+
+/*================================================*/
+/* web-user-icon */
+nav .web-user-icon {
+    display: none;
+}
+
+
+
+/*================================================*/
+/* mobile-link-block */
+.mobile-link-block {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    top: -100vh;
+    bottom: 0;
+    background: #efefef;
+    text-align: center;
+    transition: all .3s ease-in-out;
+    z-index: 999;
+}
+
+.mobile-link-block.show {
+    top: 0;
+}
+
+.mobile-link-block .close-icon {
+    color: #38373c;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #63cdff;
+    padding: 15px;
+}
+
+.mobile-link-block .link-block {
+    padding-top: 60px;
+}
+
+.mobile-link-block .link-block a {
+    /* color: #fff; */
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.mobile-link-block .link-block .btn {
+    width: 120px;
+    margin: 10px auto;
+    color: #ffffff;
+    background-color: #0088cc;
+}
+
+.mobile-link-block .link-block .btn:hover{
+    background-color: #ffffff;
+    color: #0088cc;
+}
+
+/*================================================*/
+/* web-link-block */
+.web-link-block {
+    display: none;
+}
+
+
+/*================================================*/
+/* 主要區域 */
+/*================================================*/
+
+.title-block,
+.title-block-1 {
+    border-left: 5px solid #0088cc;
+    margin-bottom: 20px;
+}
+
+.title-block-1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.title-block p,
+.title-block-1 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #0088cc;
+    padding-left: 10px;
+}
+
+.title-block-1 {
+    font-size: 16px;
+}
+
+.main-block {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.block {
+    background-color: #F7FBFE;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px #000000a8;
+    background: #fff;
+    background-image: url(../../img/sdtu/bg3.jpg);
+    background-size: cover;
+    /* background-position: center center; */
+}
+
+#saveChange {
+    text-align: right;
+}
+
+.block .btn1 {
+    max-width: 100px;
+}
+
+#warning {
+    margin-top: 15px;
+}
+
+#warning h4 {
+    color: #0088cc;
+    padding-left: 15px;
+    border-left: 5px solid #0088cc;
+    margin-bottom: 10px;
+}
+
+
+
+/*================================================*/
+/* redditList */
+.redditList {
+    padding-top: 40px;
+    /* background-image: url(../../img/sdtu/bg_mark.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: calc(100vh - 61.42px - 53px); */
+}
+
+/*================================================*/
+/* web-pagination-block */
+.web-pagination-block {
+    display: none;
+}
+
+
+/*================================================*/
+/* left-block */
+.left-block {
+    padding-top: 30px;
+}
+
+
+/* stats-info-agileits */
+.stats-info-agileits {
+    /* background-image: url(../../img/sdtu/member-top-bg.png);
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: center;
+    background-repeat: no-repeat; */
+    background: -webkit-linear-gradient(180deg, #fffffff3, #ffffffc2);
+    background: linear-gradient(180deg, #fffffff3, #ffffffc2);
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px #000000a8;
+}
+
+.stats-info-agileits .member-image {
+    width: 60px;
+    margin: 0 auto;
+}
+
+.stats-info-agileits .member-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.stats-info-agileits .member-bottom {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.member-bottom h1 {
+    font-size: 22px;
+}
+
+.stats-info-agileits .member-bottom h4 {
+    color: #5f1a29;
+}
+
+.stats-info-agileits .member-bottom h1 {
+    color: #0088cc;
+}
+
+
+
+/*================================================*/
+/* right-block */
+
+/*================================================*/
+/* market-updates */
+.market-updates {
+    background-color: #fff;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.market-updates h4 {
+    font-size: 20px;
+    /* color: white; */
+    /* text-shadow: 0 2px 8px #000000; */
+}
+
+.market-update-block {
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.market-update-right {
+    width: 60px;
+}
+
+/* .market-update-right img {
+    filter: drop-shadow(0 2px 7px #000000b0);
+} */
+
+.market-update-left {
+    margin-left: 10px;
+}
+
+.market-update-left .timer {
+    color: #0088cc;
+    font-size: 22px;
+    /* text-shadow: 0 2px 8px #000000; */
+}
+
+/*================================================*/
+/* news-block */
+.news-block {
+    margin: 15px 0;
+    display: flex;
+    height: 50px;
+    padding: 0 15px;
+    background-color: #fff;
+    /* background-color: #fff;
+    box-shadow: 0px 3px 10px #000000a8;
+    border-radius: 10px; */
+    /* border-top: 1px dotted #00235a;
+    border-bottom: 1px dotted #00235a; */
+    border-radius: 15px;
+}
+
+.news-left {
+    display: none;
+}
+
+.news-left img {
+    width: 50px;
+}
+
+.news-right {
+    width: 100%;
+    overflow: hidden;
+}
+
+marquee {
+    width: 100%;
+}
+
+.news-block h4,
+.marquee-text {
+    line-height: 2.8;
+    font-size: 18px;
+    color: #0088cc;
+}
+
+/* .marquee-text a {
+    color: #ffffff;
+} */
+
+
+/*================================================*/
+/* transaction-item */
+.transaction-item {
+    margin: 15px 0;
+    padding: 15px;
+    /* box-shadow: 0px 3px 10px #000000a8;
+    border-radius: 10px; */
+    /* border-left: 2px solid #43a8ff; */
+}
+
+.game-item-block {
+    background-color: #33a3ffce;
+    padding: 15px;
+    text-align: center;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.game-item-block .img-01 {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-image: url(../../img/sdtu/11.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.game-item-block:hover {
+    background-color: #43caff;
+}
+
+.game-item-block:hover .img-01 {
+    background-image: url(../../img/sdtu/11-hover.png);
+}
+
+.game-item-block:hover h4 {
+    color: #fff !important;
+}
+
+
+/*================================================*/
+/* trading-center */
+.trading-center {
+    margin: 15px 0;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    /* box-shadow: 0px 3px 10px #000000a8;
+    border-radius: 10px; */
+    /* border-left: 2px solid #43a8ff; */
+}
+
+.trading-center-block .introduction-content h4 {
+    color: #6ecaff;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* .trading-center-block .introduction-content p {
+    margin-bottom: 15px;
+} */
+
+.trading-center-block .introduction-btn {
+    text-align: center;
+}
+
+
+
+/*================================================*/
+/* member */
+#memCell {
+    position: relative;
+}
+
+.validLabel {
+    position: absolute;
+    bottom: 11px;
+    right: 10px;
+}
+
+/*================================================*/
+.resend_form {
+    text-align: center;
+}
+
+/* 獲取驗證碼 */
+.btn-verification {
+    max-width: 200px;
+    height: 50px;
+    padding: 0 1em;
+    background-color: #15b106;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    box-shadow: unset;
+    margin: 0;
+    color: #fff !important;
+}
+
+.btn-verification:hover {
+    background-color: #59d44d !important;
+    color: white !important;
+    box-shadow: unset;
+}
+
+/*================================================*/
+/* 資產轉移 */
+.button-group {
+    margin-bottom: 15px;
+}
+
+.member-list>ul>li:first-child {
+    display: none;
+}
+
+.member-list>ul>li {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid #b1b1b1;
+    margin-bottom: 10px;
+}
+
+.member-list>ul {
+    border-color: transparent;
+}
+
+.member-list>ul>li {
+    display: block;
+}
+
+.w-10,
+.w-20,
+.w-30,
+.w-40,
+.w-50,
+.w-60,
+.w-70,
+.w-80 {
+    width: 100%;
+}
+
+.member-list>ul>li>div:before {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.member-list>ul>li>div[field="provider_name"]:before {
+    content: "交易平台 :";
+}
+
+.member-list>ul>li>div[field="provider_currency"]:before {
+    content: "幣別 :";
+}
+
+.member-list>ul>li>div[field="game_balance_format"]:before {
+    content: "交易資金 :";
+}
+
+.member-list>ul>li>div[field="game_acc_and_pwd"]:before {
+    content: "交易帳密 :";
+}
+
+.member-list .Signout-button-2 {
+    margin-top: 15px;
+}
+
+
+
+/*================================================*/
+/* bank */
+.bank-img {
+    max-width: 600px;
+}
+
+
+/*================================================*/
+/* record */
+#accountItem a {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #4e4e4e;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: all .5s ease-in-out;
+    color: #4e4e4e;
+}
+
+#accountItem a:hover {
+    border: 1px solid #0088cc;
+    color: #0088cc;
+}
+
+#accountItem a.active {
+    background-color: #0088cc;
+    color: #fff;
+    border: 1px solid #0088cc;
+}
+
+/*================================================*/
+/* 上下頁 */
+.pagination {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination li {
+    font-size: 15px;
+    padding-right: 8px;
+}
+
+.pagination li a {
+    color: #333333;
+}
+
+.pagination li a:hover {
+    color: #0088cc;
+}
+
+.pagination li.disabled span {
+    color: #666666;
+}
+
+
+/*================================================*/
+/* 儲值紀錄 */
+.member-list>ul>li>div[field="order_date"]:before {
+    content: "訂單日期 :";
+}
+
+.member-list>ul>li>div[field="order_money"]:before {
+    content: "金額 :";
+}
+
+/*================================================*/
+/* 客服中心 */
+#content1 .text {
+    margin-top: 30px;
+    text-align: left;
+    color:#333;
+}
+
+#content1 a {
+    color:#0088cc;
+    margin: 10px 0;
+}
+
+/*================================================*/
+/* 最新消息 */
+.bullet {
+    cursor: pointer;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    padding: 1em;
+    background-color: #f1f1f1;
+    text-align: left;
+}
+
+/*================================================*/
+/* 交易項目 */
+.product-item {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 6;
+    -webkit-box-shadow: 5px 5px 5px -1px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 5px -1px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: rgb(200, 200, 200);
+    background: linear-gradient(to bottom, rgb(235, 235, 235) 1%, #bebebe 100%);
+}
+
+.product-item-img {
+    margin: 0;
+    overflow: hidden;
+    margin-bottom: 15px;
+    height: auto;
+}
+
+.product-item-img img {
+    width: 100%;
+    -webkit-transition: ease-in-out all 0.5s;
+    -moz-transition: ease-in-out all 0.5s;
+    -ms-transition: ease-in-out all 0.5s;
+    -o-transition: ease-in-out all 0.5s;
+    transition: ease-in-out all 0.5s;
+}
+
+.product-item:hover .product-item-img img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.product-item-intro-title {
+    font-size: 20px;
+    color: #0d3259;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.product-item-intro-text {
+    color: #333;
+    /* height: 100px; */
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: left;
+    font-size: 14px;
+}
+
+.product-item-intro-text p {
+    margin: 0;
+}
+
+
+
+
+.introduction-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.introduction-content .currency-value {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+    border-radius: 18px;
+    transition: all .5s ease-in-out;
+}
+
+.introduction-content .currency-value:hover {
+    background-color: #63ceff9a;
+}
+
+.introduction-content .currency-value img {
+    width: 100%;
+    border-radius: 18px;
+}
+
+/* event */
+#event .content-title-block {
+    display: none;
+}
+
+#event .article {
+    padding: 10px 0;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+#event .article .w-1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+#event .article .w-1 .title {
+    width: 50px;
+}
+
+#event .article .w-1 .text {
+    width: calc(100% - 50px);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#event .article .w-2 {
+    color: #909090;
+}
+
+#event .drop-down-content {
+    display: none;
+    background-color: #e6e6e6;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+#event .drop-down-content.show {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RWD */
+@media screen and (min-width:768px) {
+
+    /*================================================*/
+    /* .stats-info-agileits {
+        background-position-y: -80px;
+    } */
+
+    /*================================================*/
+    .market-updates {
+        display: flex;
+        align-items: center;
+    }
+
+    .market-update-gd {
+        width: 33.3333333%;
+    }
+
+    /*================================================*/
+    .news-left {
+        display: flex;
+        align-items: center;
+        width: 170px;
+    }
+
+    .news-left img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .news-left h4 {
+        margin-left: 10px;
+    }
+
+    /*================================================*/
+    .trading-center-block {
+        display: flex;
+    }
+
+    .trading-center-block img {
+        width: 40%;
+    }
+
+    .trading-introduction {
+        width: 100%;
+        /* padding-left: 20px; */
+    }
+
+    .trading-center-block .introduction-content h4 {
+        text-align: left;
+    }
+
+    .introduction-content .currency-value img {
+        max-width: 100%;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+
+    body {
+        padding-top: 60px;
+    }
+
+    /*================================================*/
+    /* mobile-menu */
+    .mobile-menu {
+        display: none;
+    }
+
+    nav .logo {
+        width: 150px;
+    }
+
+    nav .content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: unset;
+        /* float: right; */
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /*================================================*/
+    /* web-user-icon */
+    nav .web-user-icon {
+        display: none;
+        align-items: center;
+    }
+
+    nav .web-user-icon i {
+        color: #6b6b6b;
+    }
+
+    nav .web-user-icon .fa-angle-down {
+        margin-left: 2px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .redditList {
+        padding-top: 0px;
+    }
+
+    /*================================================*/
+    /* mobile-link-block */
+    .mobile-link-block {
+        display: none;
+    }
+
+    /*================================================*/
+    /* web-link-block */
+    .web-link-block {
+        display: none;
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        padding: 10px 20px 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px #414141;
+        border-radius: 5px;
+        z-index: 999;
+    }
+
+    .web-link-block.show {
+        display: block;
+    }
+
+    .web-link-block .link-block a {
+        padding: 10px 0;
+    }
+
+    .web-link-block .link-block .btn {
+        margin-top: 10px;
+    }
+
+    .web-link-block .link-block .btn:hover {
+        color: #fff !important;
+    }
+
+
+    /*================================================*/
+    /* 主要區域 */
+
+    .redditList {
+        min-height: calc(100vh - 90px);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+
+    /*================================================*/
+    /* web-pagination-block */
+    .web-pagination-block {
+        /* background: #0088cc; */
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+        padding: 2px;
+        /* background: linear-gradient(21deg, #ff9400, #a33c00, #ff5c00, #b65200); */
+        background-size: 800% 800%;
+
+        -webkit-animation: AnimationName 6s ease infinite;
+        -moz-animation: AnimationName 6s ease infinite;
+        animation: AnimationName 6s ease infinite;
+    }
+
+    @-webkit-keyframes AnimationName {
+        0% {
+            background-position: 0% 96%
+        }
+
+        50% {
+            background-position: 100% 5%
+        }
+
+        100% {
+            background-position: 0% 96%
+        }
+    }
+
+    @-moz-keyframes AnimationName {
+        0% {
+            background-position: 0% 96%
+        }
+
+        50% {
+            background-position: 100% 5%
+        }
+
+        100% {
+            background-position: 0% 96%
+        }
+    }
+
+    @keyframes AnimationName {
+        0% {
+            background-position: 0% 96%
+        }
+
+        50% {
+            background-position: 100% 5%
+        }
+
+        100% {
+            background-position: 0% 96%
+        }
+    }
+
+    .web-pagination-block a {
+        font-size: 14px;
+        font-weight: bold;
+        padding: 10px 12px;
+        position: relative;
+        transition: all .5s ease-in-out;
+        border-radius: 15px;
+    }
+
+    .web-pagination-block a:hover {
+        background-color: #63cdff;
+        color: #38373c;
+    }
+
+
+    /* .web-pagination-block a.active::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        right: 0;
+        left: 0;
+        height: 3px;
+        background-color: #0088cc;
+    } */
+
+    /* ================================================ */
+    .redditList .bottom-main-block {
+        display: flex;
+        align-items: stretch;
+        padding-bottom: 30px;
+    }
+
+    /* ================================================ */
+    /* .web-pagination-block {
+        padding-top: 50px;
+    } */
+
+    /* ================================================ */
+    .redditList .left-block {
+        width: 25%;
+        padding-top: 0;
+        margin-top: 30px;
+        padding-right: 15px;
+    }
+
+    /* ================================================ */
+    /* .stats-info-agileits {
+        height: 100%;
+    }
+ */
+    .stats-info-agileits .member-bottom {
+        margin-top: 20px;
+    }
+
+    /* ================================================ */
+    .redditList .right-block {
+        width: 75%;
+    }
+
+    /* ================================================ */
+    .market-updates {
+        margin-top: 30px;
+    }
+
+    /* ================================================ */
+    .market-update-right {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* ================================================ */
+    .redditList .row-block {
+        display: flex;
+        align-items: stretch;
+    }
+
+    /* ================================================ */
+    .transaction-item {
+        width: calc(25% - 15px);
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+
+
+    /* ================================================ */
+    .trading-center {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .trading-center-block .introduction-btn {
+        margin-top: 5px;
+    }
+
+    /* ================================================ */
+    /* 資產轉移 */
+    .member-list>ul>li:nth-child(odd) {
+        display: flex;
+        align-items: center;
+        background: #9e9e9e52;
+        border-radius: 0;
+        /* color: white; */
+    }
+
+    .member-list>ul>li:first-child {
+        display: flex;
+        align-items: center;
+        background: #0088cc;
+        color: white;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .member-list>ul>li:last-child {
+        border-radius: 0 0 15px 15px;
+    }
+
+    .member-list>ul>li>div:before {
+        display: none;
+    }
+
+    .button-group {
+        width: 100%;
+        padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0;
+    }
+
+    .button-group button {
+        margin-top: 0;
+        width: 110px;
+        margin-left: 10px;
+    }
+
+
+    .Signout-button-2 {
+        margin-top: 0;
+        height: 40px;
+    }
+
+    /* .right-button-group {
+        float: right;
+    } */
+
+    .show-money {
+        padding: 0;
+    }
+
+    .member-list>ul {
+        /* border: 1px solid #fff; */
+        background: #ffffffd1;
+        border-radius: 15px;
+        padding-left: 0;
+    }
+
+    .member-list>ul>li {
+        display: flex;
+        border: 1px solid transparent;
+        padding: 8px;
+        -webkit-align-items: center;
+        align-items: center;
+        text-align: left;
+        margin-bottom: 8px;
+        border-radius: 10px;
+    }
+
+    .member-list>ul>li:last-child {
+        /* border-bottom: 1px solid #b1b1b1; */
+    }
+
+    /* .member-list b {
+        color: #fff;
+    } */
+
+    .member-list .li-title b {
+        font-weight: bold;
+    }
+
+
+    .member-list .Signout-button-2 {
+        margin-top: 0;
+    }
+
+    /* 資產轉移-表格寬度 */
+    .w-10 {
+        flex: 10%;
+    }
+
+    .w-20 {
+        flex: 20%;
+    }
+
+    .w-30 {
+        flex: 30%;
+    }
+
+    .w-40 {
+        flex: 40%;
+        text-align: center;
+    }
+
+    .w-50 {
+        flex: 50%;
+    }
+
+    .w-60 {
+        flex: 60%;
+    }
+
+    .w-70 {
+        flex: 70%;
+    }
+
+    .w-80 {
+        flex: 80%;
+    }
+
+    /* ================================================ */
+    #accountItem {
+        display: flex;
+        align-items: center;
+    }
+
+    #accountItem a {
+        width: 150px;
+        margin-right: 15px;
+    }
+
+    .introduction-content .currency-value {
+        width: 100%;
+    }
+
+    /* event */
+    #event .content-title-block {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        justify-content: space-between;
+        border-bottom: 1px solid #c5c5c5;
+    }
+
+    #event .w-1,
+    #event .article .w-1 {
+        width: 80%;
+    }
+
+    #event .w-2 {
+        width: 20%;
+    }
+
+    #event .article .click-block {
+        display: flex;
+        align-items: center;
+    }
+
+    #event .article .w-1 .title {
+        display: none;
+    }
+
+    #event .article .w-1 .text {
+        width: 100%;
+    }
+
+
+    .display-flex-block {
+        display: block;
+        align-items: center;
+    }
+
+    .product-item {
+        width: 100%;
+        /* margin: 0 15px; */
+        max-width: 700px;
+    }
+
+    .product-item-img {
+        height: 280px;
+    }
+}
