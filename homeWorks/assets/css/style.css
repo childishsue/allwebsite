@@ -252,6 +252,10 @@
   z-index: 1;
 }
 
+.position-relative nav a h1 figure {
+  margin: 0;
+}
+
 @media (max-width: 991.98px) {
     .sticky-top.navbar-light {
         position: relative;
@@ -984,6 +988,18 @@
     background: var(--bs-dark);
 }
 /*** copyright end ***/
+@media (max-width: 992px) {
+  .navbar-light .navbar-brand img {
+    max-height: 60px;
+    transition: .5s;
+    filter: unset;
+  }
+  .sticky-top.navbar-light {
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+  }
+}
 
 @media (max-width: 767px) {
   .feature .feature-item {
