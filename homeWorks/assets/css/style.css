@@ -1,4 +1,3 @@
-
 /*** Spinner Start ***/
 /*** Spinner ***/
 #spinner {
@@ -74,6 +73,7 @@
 .btn.btn-primary:hover {
     background: var(--bs-dark);
     color: var(--bs-primary);
+    border: 1px var(--bs-primary) solid;
 }
 
 .btn.btn-light {
@@ -150,6 +150,13 @@
 .navbar-light .navbar-brand img {
     max-height: 60px;
     transition: .5s;
+    filter: brightness(500);
+}
+
+.navbar-light.sticky-top .navbar-brand img {
+  max-height: 60px;
+  transition: .5s;
+  filter: unset;
 }
 
 .sticky-top.navbar-light .navbar-brand img {
@@ -176,6 +183,68 @@
     background: var(--bs-light);
     transition: .5s;
     opacity: 1;
+}
+
+.service {
+  background-image: linear-gradient(-34deg, #e2fff5 0%, #ffeadd 130%);
+}
+
+.service .row .rounded-bottom {
+  min-height: 250px;
+}
+
+.copyright .row .col-md-6 p {
+  margin: 0 20px 0 0;
+}
+
+.faq-section .accordion .accordion-item .accordion-header .accordion-button b {
+  font-size: 2rem;
+    margin: 0 10px 10px 0;
+    color: var(--bs-primary);
+}
+
+#about ,#license ,#forexbroker ,#summarize ,#qa {
+  scroll-margin-top: 80px;
+}
+
+[class*='section-overlay'] > * {
+  position: relative;
+  z-index: 1;
+}
+
+.parallax-container.bg-gray-700 {
+  color: #fff;
+}
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  background-image: url('../img/home-parallax-1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.section-overlay-1::before {
+  background-image: linear-gradient(-34deg, #b4ffe4 0%, #ffbe97 130%);
+  opacity: 0.569;
+}
+
+[class*='section-overlay']::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 991.98px) {
@@ -222,6 +291,7 @@
         border-radius: 10px;
         transition: .5s;
         opacity: 0;
+        left: -25px;
     }
 
     .navbar-light {
@@ -232,7 +302,7 @@
         border-bottom: 1px solid rgba(255, 255, 255, .1);
         z-index: 999;
     }
-    
+
     .sticky-top.navbar-light {
         position: fixed;
         background: var(--bs-light);
@@ -444,6 +514,7 @@
     background: var(--bs-light);
     border: 1px solid transparent;
     transition: 0.5s;
+    min-height: 370px;
 }
 
 .feature .feature-item:hover {
@@ -636,7 +707,7 @@
 }
 
 .team .team-item .team-img {
-    width: 100%; 
+    width: 100%;
     height: 100%;
     border-radius: 100%;
     position: relative;
@@ -725,7 +796,7 @@
 }
 
 .testimonial .testimonial-item .testimonial-img img {
-    width: 100px; 
+    width: 100px;
     height: 100px;
     border-radius: 100px;
     border: 5px solid var(--bs-light);
@@ -745,7 +816,7 @@
 
 .testimonial .testimonial-item  .testimonial-quote-left {
     position: absolute;
-    width: 60px; 
+    width: 60px;
     height: 60px;
     top: 20px;
     left: 25px;
@@ -759,7 +830,7 @@
 
 .testimonial .testimonial-item  .testimonial-quote-right {
     position: absolute;
-    width: 60px; 
+    width: 60px;
     height: 60px;
     bottom: -30px;
     right: 25px;
@@ -909,4 +980,12 @@
 }
 /*** copyright end ***/
 
+@media (max-width: 767px) {
+  .feature .feature-item {
+    min-height: unset;
+  }
 
+  .service .row .rounded-bottom {
+    min-height: unset;
+  }
+}
