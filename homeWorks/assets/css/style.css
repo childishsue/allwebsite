@@ -993,4 +993,8 @@
   .service .row .rounded-bottom {
     min-height: unset;
   }
+
+  .copyright .row div.d-flex {
+    justify-content: center;
+  }
 }
