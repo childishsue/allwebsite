@@ -1,0 +1,147 @@
+<section id="secHeader" class="wrapper style2">
+	<img src="../../img/lbc/favicon-01.png">
+	<li class="{auth}"><a href="/member_center"><img src="../../img/lbc/icon-13.png" alt="about">會員中心</a></li>
+	<li class="{auth}"><a href="/member"><img src="../../img/lbc/icon-11.png" alt="editfile">修改資料</a></li>
+	<li class="active {auth}"><a href="/store"><img src="../../img/lbc/icon-07.png" alt="verify">買進P點</a></li>
+	<li class="{auth}"><a href="/transfer"><img src="../../img/lbc/icon-08.png" alt="transfer">資產轉移</a></li>
+	<li class="{auth}"><a href="/withdraw"><img src="../../img/lbc/icon-09.png" alt="withdraw">賣出P點</a></li>
+	<li class="{auth}"><a href="/record_store"><img src="../../img/lbc/icon-10.png" alt="account">交易紀錄</a></li>
+		<!--<li class="{auth}"><a href="/customer_service"><img src="../../img/lbc/icon-12.png" alt="message">客服中心</a></li>-->
+</section>
+
+<section id="mobileSecHeader">
+	<li class="{auth}"><a href="/member_center"><img src="../../img/lbc/icon-13.png" alt="about"></a></li>
+	<li class="{auth}"><a href="/member"><img src="../../img/lbc/icon-11.png" alt="editfile"></a></li>
+	<li class="active {auth}"><a href="/store"><img src="../../img/lbc/icon-07.png" alt="verify"></a></li>
+	<li class="{auth}"><a href="/transfer"><img src="../../img/lbc/icon-08.png" alt="transfer"></a></li>
+	<li class="{auth}"><a href="/withdraw"><img src="../../img/lbc/icon-09.png" alt="withdraw"></a></li>
+	<li class="{auth}"><a href="/record_store"><img src="../../img/lbc/icon-10.png" alt="account"></a></li>
+	<!--<li class="{auth}"><a href="/customer_service"><img src="../../img/lbc/icon-12.png" alt="message"></a></li>-->
+</section>
+<div class="wrapper style2" id="mainWrap">
+	<div class="secWrap-1">
+		<!-- 上半部 -->
+		<div id="memTitle">
+			<div class="title">
+				<img src="../../img/lbc/icon-07.png" alt="">
+				<h1>買進P點</h1>
+			</div>
+			<div class="Signout">
+				<a href="/logout">
+					<button class="Signout-button">
+						登出
+					</button>
+				</a>
+			</div>
+		</div>
+		<!-- 下半部 -->
+		<div id="editList">
+			<div class="col-md-12">
+				<div class="agileinfo-grap-2 background-white margin-top-2">
+					<div class="col-md-7">
+						<form class="resend_form" method="post" action="/ajax/send_code">
+							<button type="button" class="submit btn-verification"
+								data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 處理中...">
+								<span class="glyphicon glyphicon-envelope"></span>
+								<span style="font-family: 微軟正黑體">獲取驗證碼</span>
+							</button>
+						</form>
+
+						<form class="verify_form" method="post" action="/ajax/verify_code">
+							<div class="verifyCol">
+								<div id="memCell" class="input-group">
+									<h2>手機號碼 :</h2>
+									<!-- <input type="password" maxlength="20" required="" placeholder="輸入新密碼"> -->
+									<input disabled type="text" value="{user-phone}" style="color:black">
+								</div>
+								<div id="password" class="input-group-1">
+									<h2>驗證碼 :</h2>
+									<!-- <input type="password" maxlength="20" required="" placeholder="輸入新密碼"> -->
+									<input name="verify_code" type="text" style="color:black;" placeholder="請輸入簡訊驗證碼">
+								</div>
+								<!-- <button type="button" class="submit btn-verification" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 處理中..."></button> -->
+							</div>
+
+							<div id="saveChange">
+								<button type="button" class="submit btn-store Signout-button"
+									data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 處理中...">
+									驗證
+								</button>
+							</div>
+
+							<div id="warning">
+								<h3>注意事項 :</h3>
+								<strong>驗證後手機號碼即永久綁定，若久未收到簡訊，請於三分鐘後再重新獲取。<br></strong>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="wthree-copyright">
+				<p>{web-foot}</p>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<script>
+	$(function () {
+		$('.resend_form').find('.submit').onClick(function (data) {
+			if (data.code) {
+				// fail
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				});
+			} else {
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				});
+			}
+			$(this).find('.submit').button('reset');
+		}, function () {
+			$(this).find('.submit').button('loading');
+		});
+
+		$('.verify_form').find('.submit').onClick(function (data) {
+			if (data.code) {
+				// fail
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				});
+			} else {
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				}, function () {
+					location.reload();
+				});
+			}
+			$(this).find('.submit').button('reset');
+		}, function () {
+			$(this).find('.submit').button('loading');
+		});
+	});
+</script>
+
+<script>
+	$(function () {
+		setTimeout(function () {
+			swal({
+				title: '請驗證手機',
+				customClass: 'swalPopup'
+			})
+		}, 1000);
+	});
+</script>

@@ -1,0 +1,170 @@
+<head>
+	<link rel="stylesheet" href="/css/sdtu/stylelogin.css">
+</head>
+<style>
+	body {
+		background-color: #000000b6;
+		background-image: url(/img/sdtu/bg.jpg);
+		background-size: cover;
+		background-position: right;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+
+	#toTop {
+		display: none !important;
+	}
+	
+	.mobile-shortcut {
+        display: none;
+    }
+
+
+	.login-form .full-page {
+		max-width: 1200px;
+	}
+
+	@media screen and (min-width:1024px) {
+		.login-form {
+			padding-top: 0;
+		}
+	}
+</style>
+
+
+<div class="container login-form" id="register">
+	<div class="full-page">
+		<div class="web-left-block">
+			<img src="../../img/sdtu/logo-w.png" alt="" class="logo">
+		</div>
+		<div class="web-right-block">
+			<!-- 要有form才會傳資料 -->
+			<!-- input要加上name,才會認得這是甚麼 -->
+			<!-- button class要調整,請看other.html寫的 -->
+			<form action="/ajax/register" class="register_form" method="post">
+
+				<div class="input-block">
+					<label for="" class="title">真實姓名</label>
+					<input type="text" class="input-content" placeholder="輸入真實姓名" name="name" required=""
+						maxlength="16">
+				</div>
+				<div class="input-block">
+					<label for="" class="title">手機號碼</label>
+					<input type="text" class="input-content" placeholder="ex:0987654321" name="phone" required=""
+						maxlength="10" value="" onblur="this.value=''+''+this.value">
+					<span>為了維護您的權利，註冊姓名/身分證/帳戶 須為同一人。請使用本人手機號碼且可接收簡訊。禁止利用多重身分申請大量帳號，造成會員資料重疊或點數遺失，後果自負。</span>
+				</div>
+
+				<div class="input-block">
+					<label for="" class="title">帳號名稱</label>
+					<input type="text" class="input-content" placeholder="帳號需為3~20英數組合" autocomplete="off"
+						name="account" required="" maxlength="20">
+				</div>
+				<!-- <div class="input-block">
+					<label for="" class="title">E-mail</label>
+					<input name="contact" type="email" maxlength="30" placeholder="輸入email">
+				</div> -->
+
+
+
+				<div class="input-block-area">
+					<div class="input-block">
+						<label for="" class="title">輸入密碼</label>
+						<input type="password" class="input-content" placeholder="輸入密碼" autocomplete="off"
+							name="password" required="" maxlength="40">
+					</div>
+					<div class="input-block">
+						<label for="" class="title">再次輸入密碼</label>
+						<input type="password" class="input-content" placeholder="輸入密碼
+						" autocomplete="off" name="password_confirm" required="" maxlength="40">
+					</div>
+				</div>
+
+
+				<div class="input-block">
+					<label for="">通訊軟體</label>
+					<div class="input-block-area">
+						<div class="input-block communication-software">
+							<input type="text" placeholder="輸入LINE ID" name="line" maxlength="30">
+						</div>
+						<div class="input-block communication-software">
+							<input type="text" placeholder="輸入WECHAT ID" name="wechat" maxlength="30">
+						</div>
+					</div>
+				</div>
+				<div class="input-block">
+					<div class="input-verification-code-block">
+						<label for="" class="title">輸入驗證碼</label>
+						<div class="verification">
+							<input name="captcha" type="text" class="input-content" placeholder="輸入驗證碼">
+							<div class="img-block captcha">
+								<img alt="驗證碼讀取中">
+								<div class="change"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="text-block">
+					<input type="checkbox" class="checkbox"
+						checked>確認本人已滿18歲且在此網站的所有活動，並沒有抵觸本人所身在的國家所管轄的法律。本人也接受在此項申請下有關的所有<a href="/policy"
+						class="policy-style">規則與條例以及隱私權聲明。</a>
+				</div>
+
+
+				<button class="btn1 login-btn submit"
+					data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 處理中...">註冊</button>
+				<div class="link-area">
+					<a href="{url-chat}" target="_blank">聯繫客服</a>
+					<div>|</div>
+					<a href="/login">已有帳號</a>
+					<div>|</div>
+					<a href="/index">回到首頁</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<script src="/js/jquery-ui.min.js"></script>
+<script>
+	$(function () {
+		$('.inner p').html($('.copyright').html());
+		var win_width = $(window).width();
+
+		$('.register_form').find('.submit').onClick(function (data) {
+			if (data.code) {
+				// fail
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				});
+				// reload
+				$('.captcha').trigger('click');
+
+			} else {
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				}, function () {
+					location.reload();
+				});
+			}
+			$(this).button('reset');
+		}, function () {
+			$(this).button('loading');
+		});
+
+		$('.captcha').click(function () {
+			$(this).find('img').attr('src', 'captcha/?rand=' + Math.random());
+		});
+		setTimeout(function () {
+			$('.captcha').click();
+		}, 2000);
+
+	});
+</script>

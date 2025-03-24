@@ -1,0 +1,145 @@
+<!-- fontawesome -->
+<script src="/js/6603bd9dd4.js"></script>
+<!-- 用戶中心使用CSS -->
+<link rel="stylesheet" href="/css/eumax/style_membercenter.css">
+
+
+<body>
+	<nav>
+		<div class="content">
+			<div class="mobile-menu">
+				<i class="fas fa-bars"></i>
+			</div>
+			<div class="web-user-icon">
+				<i class="fas fa-user-circle fa-2x"></i>
+				<i class="fas fa-angle-down"></i>
+			</div>
+			<a href="/index" class="logo">
+				<img src="/img/eumax/logo.png" alt="">
+			</a>
+			<div class="web-pagination-block">
+				<a href="/index" class="member-icon"><img src="/img/eumax/member-image.png" alt=""></a>
+				<a href="/member_center" class="active">用戶中心</a>
+				<a href="/member">修改資料</a>
+				<a href="/store">存入資金</a>
+				<a href="/transfer">資產轉移</a>
+				<a href="/withdraw">賣出資產</a>
+				<a href="/record_store">交易紀錄</a>
+				<!-- <a href="{url-chat}" target="_blank">客服中心</a> -->
+				<a href="/logout">登出</a>
+			</div>
+
+		</div>
+	</nav>
+	<div class="mobile-link-block">
+		<div class="close-icon">
+			<i class="fas fa-times"></i>
+		</div>
+		<div class="link-block">
+			<img src="/img/eumax/logo.png" style="width: 95px;
+			position: absolute;
+			left: 11px;
+			top: 11px;">
+			<a href="/member_center">用戶中心</a>
+			<a href="/member">修改資料</a>
+			<a href="/store">存入資金</a>
+			<a href="/transfer">資產轉移</a>
+			<a href="/withdraw">賣出資產</a>
+			<a href="/record_store">交易紀錄</a>
+			<!-- <a href="{url-chat}" target="_blank">客服中心</a> -->
+			<a href="/logout" class="Signout-button btn">登出</a>
+		</div>
+	</div>
+
+
+	<!-- 主要區域 -->
+	<div class="redditList">
+		<div class="content">
+			<div class="main-block">
+				<div class="block">
+					<div class="title-block">
+						<p>理財項目</p>
+					</div>
+					<div class="display-flex-block">
+						<div class="agileinfo-grap-2 margin-top-2 product-item">
+							<div class="product-item-img">
+								<img src="/img/eumax/invest-1.jpg" alt="" class="lazy" src-hover="undefined" alt
+									width="100%" style="display: inline;">
+							</div>
+							<div class="product-item-intro">
+								<div class="product-item-intro-title">現貨指標</div>
+								<div class="product-item-intro-text">
+									<p>
+										現貨指標用以反映每分鐘匯率變動程度，測量市場預期的變動程度，通常用來評估未來風險， 因此也有人稱作恐慌指數。
+										雖然是反映的變動程度，卻是以年化百分比表示，並且以常態分佈的機率出現。
+									</p>
+								</div>
+							</div>
+							<div class="game-introduction-content01">
+								<button class="Signout-button btn1"
+									onclick="window.open('/game/vvgame2',  '_blank');">進入</button>
+							</div>
+						</div>
+						<!-- <div class="agileinfo-grap-2 margin-top-2 product-item">
+							<div class="product-item-img">
+								<img src="/img/eumax/image-2.jpg" alt="" class="lazy" src-hover="undefined" alt
+									width="100%" style="display: inline;">
+							</div>
+							<div class="product-item-intro">
+								<div class="product-item-intro-title">VV LOTTERY</div>
+								<div class="product-item-intro-text">
+									<p>
+										VV LOTTERY是最豐富的彩票平台，各式彩種一應具全，賽車、飛艇、時時彩與經典輪盤，並提供各式新穎的投注方式，能滿足您以小博大的快感，也有高勝率的穩定獲利。現在馬上加入，開啟您的雙贏人生。
+									</p>
+								</div>
+							</div>
+							<div class="game-introduction-content01">
+								<button class="Signout-button btn1"
+									onclick="window.open('/game/vvgame',  '_blank');">進入</button>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p>{web-foot}</p>
+	</div>
+</body>
+
+<style>
+	.Signout-button.btn1 {
+		max-width: 150px !important;
+	}
+</style>
+
+<script>
+	$(function () {
+		$('.member_form').find('.submit').onClick(function (data) {
+			if (data.code) {
+				// fail
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				});
+			} else {
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				}, function () {
+					location.reload();
+				});
+			}
+			$(this).find('.submit').button('reset');
+		}, function () {
+			$(this).find('.submit').button('loading');
+		});
+	});
+</script>
+
+<!-- 用戶中心共同使用js -->
+<script src="/js/eumax/all.js"></script>

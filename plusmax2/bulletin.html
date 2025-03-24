@@ -1,0 +1,72 @@
+<!-- Banner -->
+<section id="secHeader">
+	<a href="/index" class="goBack"><img src="../img//logo-white.png"></a>
+	<li class="active {auth}">
+		<span class="top"></span>
+		<span class="bottom"></span>
+		<a href="/member_center"><img src="../img//icon-13.png" alt="about">用戶中心</a>
+	</li>
+	<li class="{auth}"><a href="/member"><img src="../img//icon-11.png" alt="editfile">用戶資料</a></li>
+	<li class="{auth} "><a href="/store"><img src="../img//icon-07.png" alt="verify">買進資產</a></li>
+	<li class="{auth}"><a href="/transfer"><img src="../img//icon-08.png" alt="transfer">資產轉移</a></li>
+	<li class="{auth} "><a href="/withdraw"><img src="../img//icon-09.png" alt="withdraw">賣出資產</a></li>
+	<li class="{auth}"><a href="/record_store"><img src="../img//icon-10.png" alt="account">交易紀錄</a></li>
+	<li class="{auth}"><a href="{url-chat}" target="_blank"><img src="../img//icon-12.png" alt="message">客服中心</a></li>
+	<a href="/logout">
+		<button class="Signout-button outline-btn">
+			登出
+		</button>
+	</a>
+</section>
+
+<section id="mobileSecHeader">
+	<li class="active {auth}"><a href="/member_center"><img src="../img//icon-13.png" alt="about"></a></li>
+	<li class="{auth}"><a href="/member"><img src="../img//icon-11.png" alt="editfile"></a></li>
+	<li class="{auth} "><a href="/store"><img src="../img//icon-07.png" alt="verify"></a></li>
+	<li class="{auth}"><a href="/transfer"><img src="../img//icon-08.png" alt="transfer"></a></li>
+	<li class="{auth} "><a href="/withdraw"><img src="../img//icon-09.png" alt="withdraw"></a></li>
+	<li class="{auth}"><a href="/record_store"><img src="../img//icon-10.png" alt="account"></a></li>
+	<li class="{auth}"><a href="/message"><img src="../img//icon-12.png" alt="message"></a></li>
+</section>
+
+<section class="wrapper style2" id="mainWrap">
+	<div class="secWrap">
+		<div id="memTitle">
+			<div class="title">
+				<img src="../img//icon-18.png" alt="">
+				<h1>公告列表</h1>
+			</div>
+			<div class="Signout">
+				<a href="/logout">
+					<button class="Signout-button outline-btn">
+						登出
+					</button>
+				</a>
+			</div>
+		</div>
+
+		<!-- 下半部 -->
+		<div id="editList">
+			<div class="col-md-12 margin-top-bottom-15px">
+				<div class="agileinfo-grap-2 background-white ">
+					<!-- Two -->
+					<section id="content" class="col-md-12" style="min-height:980px;">
+						<!-- @bulletin-item -->
+						<div class="bullet">
+							<div onclick="$(this).next().slideToggle()">【系统公告】{date} {title}</div>
+							<div class="bullet-content" style="display: none">{content}</div>
+						</div>
+						<!-- @bulletin-item -->
+						<div>{page}</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="wthree-copyright">
+				<p>{web-foot}</p>
+			</div>
+		</div>
+	</div>
+
+</section>

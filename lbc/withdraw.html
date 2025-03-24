@@ -1,0 +1,161 @@
+<style>
+	#memTitle .divider {
+		width: 20%;
+	}
+
+	@media screen and (max-width:1024px) {
+		#memTitle .divider {
+			width: 30%;
+			height: 3px;
+		}
+
+	}
+
+	@media screen and (max-width:425px) {
+		#memTitle .divider {
+			width: 80%;
+			height: 3px;
+		}
+
+	}
+</style>
+
+<section id="secHeader">
+		<img src="../../img/lbc/favicon-01.png">
+		<li class="{auth}"><a href="/member_center"><img src="../../img/lbc/icon-13.png" alt="about">會員中心</a></li>
+		<li class="{auth}"><a href="/member"><img src="../../img/lbc/icon-11.png" alt="editfile">修改資料</a></li>
+		<li class="{auth}"><a href="/store"><img src="../../img/lbc/icon-07.png" alt="verify">買進P點</a></li>
+		<li class="{auth}"><a href="/transfer"><img src="../../img/lbc/icon-08.png" alt="transfer">資產轉移</a></li>
+		<li class="active {auth}"><a href="/withdraw"><img src="../../img/lbc/icon-09.png" alt="withdraw">賣出P點</a></li>
+		<li class="{auth}"><a href="/record_store"><img src="../../img/lbc/icon-10.png" alt="account">交易紀錄</a></li>
+		<!--<li class="{auth}"><a href="/customer_service"><img src="../../img/lbc/icon-12.png" alt="message">客服中心</a></li>-->
+	</section>
+
+<section id="mobileSecHeader">
+		<li class="{auth}"><a href="/member_center"><img src="../../img/lbc/icon-13.png" alt="about"></a></li>
+		<li class="{auth}"><a href="/member"><img src="../../img/lbc/icon-11.png" alt="editfile"></a></li>
+		<li class="{auth}"><a href="/store"><img src="../../img/lbc/icon-07.png" alt="verify"></a></li>
+		<li class="{auth}"><a href="/transfer"><img src="../../img/lbc/icon-08.png" alt="transfer"></a></li>
+		<li class="active {auth}"><a href="/withdraw"><img src="../../img/lbc/icon-09.png" alt="withdraw"></a></li>
+		<li class="{auth}"><a href="/record_store"><img src="../../img/lbc/icon-10.png" alt="account"></a></li>
+		<!--<li class="{auth}"><a href="/customer_service"><img src="../../img/lbc/icon-12.png" alt="message"></a></li>-->
+	</section>
+<section id="mainWrap" class="wrapper style2">
+	<div class="secWrap-1">
+		<!-- 上半部 -->
+		<div id="memTitle">
+			<div class="title">
+				<img src="../../img/lbc/icon-09.png" alt="">
+				<h1>賣出P點</h1>
+			</div>
+			<div class="Signout">
+				<a href="/logout">
+					<button class="Signout-button">
+						登出
+					</button>
+				</a>
+			</div>
+		</div>
+
+		<!-- 下半部 -->
+		<div id="editList">
+			<div class="col-md-12 margin-top-bottom-15px">
+				<div class="agileinfo-grap-2 background-white margin-top-2">
+					<div class="col-md-7">
+						<div id="withdrawList">
+							<form class="withdraw_form" action="/ajax/withdraw" method="POST">
+								<div id="bankName" class="input-group">
+									<h2>銀行名稱 :</h2>
+									<div id="bankSelect">
+										<input type="text" style="color:black;" required="" disabled
+											value="{user-bank}">
+									</div>
+								</div>
+								<div id="bankAccount" class="input-group">
+									<h2>帳　　號 :</h2>
+									<div class="bank-account">
+										<input type="text" style="color:black;" required="" disabled
+											value="{user-bank-account}">
+									</div>
+								</div>
+								<div id="accountName" class="input-group">
+									<h2>戶　　名 :</h2>
+									<div class="bank-name">
+										<input type="text" style="color:black;" required="" disabled
+											value="{user-bank-name}">
+									</div>
+								</div>
+								<div class="input-group">
+									<h2>提領項目 :</h2>
+									<select name="src_id" class="nobottom"
+										style="width:100%; background-color: white; ">
+										<option value="-1">請選擇遊戲</option>
+										<!-- @game-item -->
+										<option value="{id}">{name}</option>
+										<!-- @game-item -->
+									</select>
+
+								</div>
+								<div class="input-group-1">
+									<h2>提領總額 :</h2>
+									<input name="total" maxlength="7" style="color:black;width:100%;" type="text">
+								</div>
+
+								<div id="saveChange">
+									<button type="button" class="submit btn-store Signout-button"
+										data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 處理中...">
+										儲存
+									</button>
+								</div>
+							</form>
+
+							<div id="warning">
+								<h3>注意事項:</h3>
+								<strong>
+									<p>同一個帳戶/家庭/戶籍地址/電話號碼/IP地址/共享電腦/網路環境，視為同一會員，若查詢到多個帳號、同一IP、多組IP，且交代不清者，一律視為詐騙帳號停權處分。</p>
+									<!-- <p>申請點數需1000點以上，請務必確認填寫之帳號，若提供的帳號錯誤，恕本公司無法負責。</p> -->
+									<!-- <p>每位會員申請提款手續費計算：每筆35點處理費+該筆提領金額1%合計後之點數。</p> -->
+									<p>會員首次填寫帳號後，即永久綁定，恕不任意變更。</p>							
+									<p>有效買賣不包含雙邊互押等情形。</p>
+									</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="wthree-copyright">
+				<p>{web-foot}</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	$(function () {
+		jQuery('.withdraw_form').find('.submit').onClick(function (data) {
+			if (data.code) {
+				// fail
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				});
+			} else {
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				}, function () {
+					window.location = 'record_withdraw';
+				});
+			}
+			jQuery(this).button('reset');
+			jQuery(this).prop('disabled', false);
+		}, function () {
+			jQuery(this).button('loading');
+			jQuery(this).prop('disabled', true);
+		});
+	});
+</script>

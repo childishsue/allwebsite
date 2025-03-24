@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- Head -->
+
+<head>
+
+	<title>{web-title}</title>
+
+	<!-- Meta-Tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+		var isIndex = false;
+	</script>
+	<!-- //Meta-Tags -->
+
+	<link href="/img/fca_v2/favicon.png" rel="icon" type="image/x-icon">
+
+	<link rel="stylesheet" href="/css/fca_v2/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="/css/fca_v2/aos.css">
+	<link rel="stylesheet" href="/css/fca_v2/magnific-popup.css">
+	<link rel="stylesheet" href="/css/fca_v2/jquery.timepicker.css">
+	<link href="/css/sweetalert.css" rel="stylesheet">
+
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/_common.js?20190117"></script>
+	<script src="/js/sweetalert.min.js"></script>
+	<script src="/js/aos.js"></script>
+	<script src="/js/fca_v2/jquery.stellar.min.js"></script>
+	<script src="/js/fca_v2/scrollax.min.js"></script>
+	<script src="/js/fca_v2/bootstrap-datepicker.js"></script>
+	<script src="/js/fca_v2/jquery.magnific-popup.min.js"></script>
+	<script src="/js/fca_v2/jquery.timepicker.min.js"></script>
+
+	<style media="screen">
+		:root {
+			--primary: #223B51;
+			--secondary: #334756;
+			--light: #BACDD3;
+			--linkHoverColor: #DBBD78;
+			--btnColor-light: #FAEBD4;
+			--btnColor-middle: #E9C598;
+			--btnColor-dark: #E1AE75;
+
+			--focusColor: #FFE19499;
+			--placeholderColor: #BCBBB6;
+
+
+			--lightText: #E4EAF4;
+			--darkBg: #1B334D;
+			--transparentHoverBg: #BCBBB633;
+		}
+
+		.swalPopup {
+			-webkit-border-radius: 0;
+			background-color: var(--darkBg);
+			box-shadow: 0px 1px 10px black;
+			border-radius: 8px;
+		}
+
+		/* .swalPopup .sa-button-container {
+			background-color:#EA5514 !important;
+		} */
+
+		.swalPopup .sa-button-container button.confirm {
+			background-color: transparent !important;
+			border-radius: 5px;
+			padding: 10px 30px 10px 30px;
+			line-height: 1.7em;
+			transition: all .5s ease-in-out;
+			border: 2px solid var(--btnColor-dark);
+			color: var(--btnColor-dark);
+		}
+
+		.swalPopup .sa-button-container button.confirm:hover,
+		.swalPopup .sa-button-container button.confirm:active {
+			background-color: var(--btnColor-dark) !important;
+			color: #fff;
+		}
+
+		.swalPopup.sweet-alert h2 {
+			color: var(--lightText);
+			font-size: 18px;
+		}
+
+		body {
+			background-color: #0f0f0f;
+			/* background-image: url('{background-image}'); */
+		}
+
+		.sweet-alert p {
+			color: var(--light);
+		}
+
+		/* .sweet-alert {
+			margin-left: -239px;
+		} */
+	</style>
+</head>
+<!-- //Head -->
+
+<!-- Body -->
+
+<body>
+	<input id="auth" type="hidden" value="{user-auth}">
+
+
+
+	<!-- //Navigation -->
+	<!-- @frame -->
+	<main class="main">
+		{html}
+	</main>
+	<!-- @frame -->
+
+
+	<!-- Footer -->
+	<section id="footer">
+
+		<div class="copyright">
+			<!-- {web-foot} -->
+		</div>
+		</div>
+	</section>
+
+
+	<!-- Custom-JavaScript-File-Links -->
+
+	<!-- Default-JavaScript -->
+	<!-- <script type="text/javascript" src="js/fca_v2/jquery-2.1.4.min.js"></script> -->
+	<!-- Bootstrap-JavaScript -->
+	<script type="text/javascript" src="/js/fca_v2/bootstrap.min.js"></script>
+
+	<!-- Resopnsive-Slider-JavaScript -->
+	<script src="/js/fca_v2/responsiveslides.min.js"></script>
+	<script>
+		$(function () {
+			$("#slider").responsiveSlides({
+				auto: true,
+				nav: true,
+				speed: 2000,
+				namespace: "callbacks",
+				pager: true,
+			});
+			// if ('{auth}' == 'hidden') {
+			// 	var loginstr = '請登入會員';
+			// 	$("a").removeAttr("href");
+			// 	$("a").attr("onclick", "swal({title: '" + loginstr + "',  html: true})"); //swal({title: data.text,  html: true});
+			// 	$("button").removeAttr("onclick");
+			// 	$("button").attr("onclick", "swal({title: '" + loginstr + "',  html: true})"); //swal({title: data.text,  html: true});
+			// 	$(".dropdown-toggle").removeAttr("onclick");
+			// 	$(".submit").removeAttr("onclick");
+			// 	$(".btn-next").removeAttr("onclick");
+			// }
+		});
+	</script>
+	<!-- //Resopnsive-Slider-JavaScript -->
+
+	<!-- Tab-JavaScript -->
+	<script src="/js/fca_v2/cbpFWTabs.js"></script>
+	<script>
+		(function () {
+			[].slice.call(document.querySelectorAll('.tabs')).forEach(function (el) {
+				new CBPFWTabs(el);
+			});
+		})();
+	</script>
+
+	<!-- Stats-Number-Scroller-Animation-JavaScript -->
+	<script src="/js/fca_v2/counterup.min.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$('.counter').counterUp({
+				delay: 10,
+				time: 1000
+			});
+		});
+	</script>
+	<!-- //Stats-Number-Scroller-Animation-JavaScript -->
+
+	<!-- Popup-Box-JavaScript -->
+	<script src="/js/fca_v2/jquery.chocolat.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('.w3portfolioaits-item a').Chocolat();
+		});
+	</script>
+	<!-- //Popup-Box-JavaScript -->
+
+	<!-- Smooth-Scrolling-JavaScript -->
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+
+		if (!isIndex) {
+			$(".scroll").click(function () {
+				location.href = '/';
+			});
+		}
+
+		// 簡單又明瞭的重新命名
+		$(document).ready(function () {
+			gName = {
+				1: "電子錢包",
+				33: "VV Lottery",
+				34: "CFD差價合約"
+			};
+			var options = $('[name="src_id"] option, [name="tar_id"] option');
+			$(options).each(function (index) {
+				$(this).text(gName[$(this).val()]);
+			});
+
+			var bNames = $('b[att-id]');
+			$(bNames).each(function (index) {
+				$(this).html(gName[$(this).attr("att-id")]);
+			});
+
+		});
+
+	</script>
+	<!-- //Smooth-Scrolling-JavaScript -->
+
+	<!-- //Custom-JavaScript-File-Links -->
+
+	<script src="/js/fca_v2/jquery.dropotron.min.js"></script>
+	<script src="/js/fca_v2/jquery.scrollex.min.js"></script>
+	<script src="/js/fca_v2/browser.min.js"></script>
+	<script src="/js/fca_v2/breakpoints.min.js"></script>
+	<script src="/js/fca_v2/util.js"></script>
+	<script src="/js/fca_v2/main.js"></script>
+
+
+</body>
+<!-- //Body -->
+
+{web-script}
+
+
+</html>

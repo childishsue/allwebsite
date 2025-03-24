@@ -1,0 +1,179 @@
+<style>
+	#memTitle .divider {
+		width: 20%;
+	}
+
+	@media screen and (max-width:1024px) {
+		#memTitle .divider {
+			width: 30%;
+			height: 3px;
+		}
+
+	}
+
+	@media screen and (max-width:425px) {
+		#memTitle .divider {
+			width: 80%;
+			height: 3px;
+		}
+
+	}
+</style>
+
+<section id="secHeader">
+	<a href="/index" class="goBack"><img src="../img//logo-white.png"></a>
+	<li class="{auth}"><a href="/member_center"><img src="../img//icon-13.png" alt="about">用戶中心</a></li>
+	<li class="{auth}"><a href="/member"><img src="../img//icon-11.png" alt="editfile">用戶資料</a></li>
+	<li class="{auth}"><a href="/store"><img src="../img//icon-07.png" alt="verify">買進資產</a></li>
+	<li class="{auth}"><a href="/transfer"><img src="../img//icon-08.png" alt="transfer">資產轉移</a></li>
+	<li class="active {auth} ">
+		<span class="top"></span>
+		<span class="bottom"></span>
+		<a href="/withdraw"><img src="../img//icon-09.png" alt="withdraw">賣出資產</a>
+	</li>
+	<li class="{auth}"><a href="/record_store"><img src="../img//icon-10.png" alt="account">交易紀錄</a></li>
+	<li class="{auth}"><a href="{url-chat}" target="_blank"><img src="../img//icon-12.png" alt="message">客服中心</a></li>
+	<a href="/logout">
+		<button class="Signout-button outline-btn">
+			登出
+		</button>
+	</a>
+</section>
+
+<section id="mobileSecHeader">
+	<li class="{auth}"><a href="/member_center"><img src="../img//icon-13.png" alt="about"></a></li>
+	<li class="{auth}"><a href="/member"><img src="../img//icon-11.png" alt="editfile"></a></li>
+	<li class="{auth}"><a href="/store"><img src="../img//icon-07.png" alt="verify"></a></li>
+	<li class="{auth}"><a href="/transfer"><img src="../img//icon-08.png" alt="transfer"></a></li>
+	<li class="active {auth} "><a href="/withdraw"><img src="../img//icon-09.png" alt="withdraw"></a></li>
+	<li class="{auth}"><a href="/record_store"><img src="../img//icon-10.png" alt="account"></a></li>
+	<li class="{auth}"><a href="{url-chat}" target="_blank"><img src="../img//icon-12.png" alt="message"></a></li>
+</section>
+<section id="mainWrap" class="wrapper style2">
+	<div class="secWrap-1">
+		<!-- 上半部 -->
+		<div id="memTitle">
+			<div class="title">
+				<img src="../img//icon-09.png" alt="">
+				<h1>賣出資產</h1>
+			</div>
+			<div class="Signout">
+				<a href="/logout">
+					<button class="Signout-button outline-btn">
+						登出
+					</button>
+				</a>
+			</div>
+		</div>
+
+		<!-- 下半部 -->
+		<div id="editList">
+			<div class="col-md-12 margin-top-bottom-15px">
+				<div class="agileinfo-grap-2 background-white ">
+					<div class="col-md-7">
+						<div id="withdrawList">
+							<form class="withdraw_form" action="/ajax/withdraw" method="POST">
+								<div id="bankName" class="input-group">
+									<h2>銀行名稱 :</h2>
+									<div id="bankSelect">
+										<input type="text" style="color:black;" required="" disabled
+											value="{user-bank}">
+									</div>
+								</div>
+								<div id="bankAccount" class="input-group">
+									<h2>帳　　號:</h2>
+									<div class="bank-account">
+										<input type="text" style="color:black;" required="" disabled
+											value="{user-bank-account}">
+									</div>
+								</div>
+								<div id="accountName" class="input-group">
+									<h2>戶　　名 :</h2>
+									<div class="bank-name">
+										<input type="text" style="color:black;" required="" disabled
+											value="{user-bank-name}">
+									</div>
+								</div>
+								<div class="input-group">
+									<h2>提款項目 :</h2>
+									<select name="src_id" class="nobottom"
+										style="width:100%; background-color: white; ">
+										<option value="-1">請選擇：</option>
+										<!-- @game-item -->
+										<option value="{id}">{name}</option>
+										<!-- @game-item -->
+									</select>
+
+								</div>
+								<div class="input-group">
+									<h2>提款總額 :</h2>
+									<input name="total" maxlength="7" style="color:black;width:100%;" type="text"
+										class="withdraw">
+								</div>
+
+								<div class=" {need-withdraw-password}">
+									<div class="input-group">
+										<h2>提款密碼 :</h2>
+										<input name="password" maxlength="8" style="color:black;width:100%;" type="password">
+									</div>
+									<p style="text-align: right;">
+										<a style="color: rgb(255, 51, 51);" href="/customer_service" target="_blank">忘記密碼?</a>
+									</p>
+								</div>
+
+								<div id="saveChange">
+									<button type="button" class="submit btn-store Signout-button"
+										data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 处理中...">
+										儲存
+									</button>
+								</div>
+							</form>
+
+							<div id="warning">
+								<h3>注意事項:</h3>
+								<strong>
+									同一帳戶/家庭/戶籍地址/電話號碼/IP地址/共享電腦/網絡環境，視為同一用戶，若查找到多個帳號、同一IP，且交代不清者，一律視為詐騙帳號停權處分。<br>
+									請務必確認填寫之戶口號，若提供錯誤，恕本公司無法負責。首次填寫戶口號後，即永久綁定，恕不任意變更。<br>
+									有效交易不包含雙邊互押等情形，本公司風險控管部門皆會審核，請勿違反規定。各別活動提款規定<br>
+									如利用本平台進行任何洗錢詐騙行為，本公司有權利審核用戶帳戶或永久終止用戶服務，不另行通知。</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="wthree-copyright">
+				<p>{web-foot}</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	$(function () {
+		jQuery('.withdraw_form').find('.submit').onClick(function (data) {
+			if (data.code) {
+				// fail
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				});
+			} else {
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				}, function () {
+					window.location = 'record_withdraw';
+				});
+			}
+			jQuery(this).button('reset');
+			jQuery(this).prop('disabled', false);
+		}, function () {
+			jQuery(this).button('loading');
+			jQuery(this).prop('disabled', true);
+		});
+	});
+</script>

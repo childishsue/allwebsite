@@ -1,0 +1,108 @@
+<head>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<script src="/js/mgi/slideToggle.js"></script>
+</head>
+
+<section id="secHeader">
+	<a href="/index" class="goBack"><img src="../img//logo-white.png"></a>
+	<li class="{auth}"><a href="/member_center"><img src="../img//icon-13.png" alt="about">用戶中心</a></li>
+	<li class="{auth}"><a href="/member"><img src="../img//icon-11.png" alt="editfile">用戶資料</a></li>
+	<li class="{auth} "><a href="/store"><img src="../img//icon-07.png" alt="verify">買進資產</a></li>
+	<li class="{auth}"><a href="/transfer"><img src="../img//icon-08.png" alt="transfer">資產轉移</a></li>
+	<li class="{auth} "><a href="/withdraw"><img src="../img//icon-09.png" alt="withdraw">賣出資產</a></li>
+	<li class="{auth}"><a href="/record_store"><img src="../img//icon-10.png" alt="account">交易紀錄</a></li>
+	<li class="active {auth}">
+		<span class="top"></span>
+		<span class="bottom"></span>
+		<a href="/customer_service"><img src="../img//icon-12.png" alt="message">客服中心</a>
+	</li>
+	<a href="/logout">
+		<button class="Signout-button outline-btn">
+			登出
+		</button>
+	</a>
+</section>
+
+<section id="mobileSecHeader">
+	<li class="{auth}"><a href="/member_center"><img src="../img//icon-13.png" alt="about"></a></li>
+	<li class="{auth}"><a href="/member"><img src="../img//icon-11.png" alt="editfile"></a></li>
+	<li class="{auth} "><a href="/store"><img src="../img//icon-07.png" alt="verify"></a></li>
+	<li class="{auth}"><a href="/transfer"><img src="../img//icon-08.png" alt="transfer"></a></li>
+	<li class="{auth} "><a href="/withdraw"><img src="../img//icon-09.png" alt="withdraw"></a></li>
+	<li class="{auth}"><a href="/record_store"><img src="../img//icon-10.png" alt="account"></a></li>
+	<li class="active {auth}"><a href="/customer_service"><img src="../img//icon-12.png" alt="message"></a>
+	</li>
+</section>
+<section id="mainWrap" class="wrapper style2">
+	<div class="secWrap-1">
+		<!-- 上半部 -->
+		<div id="memTitle">
+			<div class="title">
+				<img src="../img//icon-12.png" alt="">
+				<h1>客服消息</h1>
+			</div>
+			<div class="Signout">
+				<a href="/logout">
+					<button class="Signout-button outline-btn">
+						登出
+					</button>
+				</a>
+			</div>
+		</div>
+		<!-- 下半部 -->
+		<div id="editList">
+			<div class="col-md-12 margin-top-bottom-15px">
+				<div id="messageItem">
+					<div id="sentMessage">
+						<a href="/send">
+							<h4>发送消息</h4>
+						</a>
+					</div>
+					<div id="history" class="active">
+						<a href="/message">
+							<h4>历史消息</h4>
+						</a>
+					</div>
+				</div>
+				<div class="agileinfo-grap-2 background-white ">
+					<div class="col-md-12">
+						<div id="content1">
+							<!-- @message-item -->
+							<div class="messageContainer">
+								<div id="messageBox">
+									<span class="w-30">{msg-date}</span>
+									<span class="w-70">{msg-title}</span>
+									<!-- <span class="checkReply"> -->
+									<!-- <i class="fas fa-check" aria-hidden="true" style="font-size:20px; color:#14a01d; margin-right: 2px;"></i>已回复</span> -->
+								</div>
+
+								<div id="messageToggle">
+									<div id="messageContent">
+										<h3>内容详述</h3>
+										<p>
+											{msg-content}
+										</p>
+										<h3>回复</h3>
+										<p>
+											<!-- @reply-item -->
+											{reply-date}<br>{reply-content}<br>
+											<!-- @reply-item -->
+										</p>
+									</div>
+									<div class="clickContent" style="margin-bottom:2%;">开启</div>
+								</div>
+							</div>
+							<!-- @message-item -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="wthree-copyright">
+				<p>{web-foot}</p>
+			</div>
+		</div>
+	</div>
+</section>

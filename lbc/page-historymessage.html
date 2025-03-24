@@ -1,0 +1,98 @@
+<script src="/js/mgi/slideToggle.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <section id="secHeader">
+            <img src="../../img/lbc/favicon-01.png">
+            <li class="{auth}"><a href="/member_center"><img src="../../img/lbc/icon-13.png" alt="about">會員中心</a></li>
+            <li class="{auth}"><a href="/member"><img src="../../img/lbc/icon-11.png" alt="editfile">修改資料</a></li>
+            <li class="active {auth}"><a href="/store"><img src="../../img/lbc/icon-07.png" alt="verify">買進P點</a></li>
+            <li class="{auth}"><a href="/transfer"><img src="../../img/lbc/icon-08.png" alt="transfer">資產轉移</a></li>
+            <li class="{auth}"><a href="/withdraw"><img src="../../img/lbc/icon-09.png" alt="withdraw">賣出P點</a></li>
+            <li class="{auth}"><a href="/record_store"><img src="../../img/lbc/icon-10.png" alt="account">交易紀錄</a></li>
+            <li class="{auth}"><a href="/customer_service"><img src="../../img/lbc/icon-12.png" alt="message">客服中心</a></li>
+        </section>
+    
+    <section id="mobileSecHeader">
+            <li class="{auth}"><a href="/member_center"><img src="../../img/lbc/icon-13.png" alt="about"></a></li>
+            <li class="{auth}"><a href="/member"><img src="../../img/lbc/icon-11.png" alt="editfile"></a></li>
+            <li class="active {auth}"><a href="/store"><img src="../../img/lbc/icon-07.png" alt="verify"></a></li>
+            <li class="{auth}"><a href="/transfer"><img src="../../img/lbc/icon-08.png" alt="transfer"></a></li>
+            <li class="{auth}"><a href="/withdraw"><img src="../../img/lbc/icon-09.png" alt="withdraw"></a></li>
+            <li class="{auth}"><a href="/record_store"><img src="../../img/lbc/icon-10.png" alt="account"></a></li>
+            <!--<li class="{auth}"><a href="/customer_service"><img src="../../img/lbc/icon-12.png" alt="message"></a></li>-->
+        </section>
+
+<section id="mainWrap" class="wrapper style2">
+    <div id="messageTitle">
+        <h1><img src="/img/mgi/icon-06.png" alt="message">客服訊息</h1>
+    </div>
+    <div id="messageItem">
+        <div id="sentMessage">
+            <a href="/send">
+                <h2>發送訊息</h2>
+            </a>
+        </div>
+        <div id="history" class="active">
+            <a href="/page-historyMessage">
+                <h2>歷史訊息</h2>
+            </a>
+        </div>
+    </div>
+
+    <div id="content1">
+        <!-- @message-item -->
+        <div id="messageBox">
+            <span>{msg-date}</span>
+            <span>{msg-title}</span>
+            <span class="checkReply"><i class="fas fa-check" aria-hidden="true"
+                    style="font-size:20px; color:#14a01d; margin-right: 2px;"></i>已回覆</span>
+        </div>
+
+        <div id="messageToggle">
+            <div id="messageContent">
+                <h3>內容詳述</h3>
+                <p>{msg-content}</p>
+            </div>
+            <div id="clickContent">收和內容</div>
+        </div>
+        <!-- @message-item -->
+    </div>
+
+    <div id="content2">
+        <!-- @message-item -->
+        <div id="messageBox2">
+            <span>日期:2019-03-26 21:17:43</span>
+            <span>標題:無法儲值</span>
+            <span class="checkReply"><i class="fas fa-check" aria-hidden="true"
+                    style="font-size:20px; color:#14a01d; margin-right: 2px;"></i>已回覆</span>
+        </div>
+        <div id="messageToggle2">
+            <div id="messageContent2">
+                <h3>內容詳述</h3>
+                <p>客服小姐您好，我的帳號無法儲值，請協助處理，謝謝。</p>
+            </div>
+            <div id="clickContent2">收和內容</div>
+        </div>
+        <!-- @message-item -->
+    </div>
+
+</section>
+
+<script>
+    $('a.msg').click(function (e) {
+        e.preventDefault();
+        $('#message-modal').find('.modal-body').empty().append($(this).closest('td').find('.detail').clone());
+        $('#message-modal').modal('show');
+        var tag = $(this).find('.msg-new');
+        // set read ajax
+        $.ajax({
+            method: 'POST',
+            url: $(this).attr('href'),
+            data: {}
+        })
+            .done(function (re) {
+                $(tag).remove();
+            });
+    });
+</script>

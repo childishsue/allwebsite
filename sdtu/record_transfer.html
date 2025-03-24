@@ -1,0 +1,141 @@
+<!-- fontawesome -->
+<script src="/js/6603bd9dd4.js"></script>
+<!-- 會員中心使用CSS -->
+<link rel="stylesheet" href="/css/sdtu/style_membercenter.css">
+
+
+<body>
+	<nav>
+		<div class="content">
+			<div class="mobile-menu">
+				<i class="fas fa-bars"></i>
+			</div>
+			<div class="web-user-icon">
+				<i class="fas fa-user-circle fa-2x"></i>
+				<i class="fas fa-angle-down"></i>
+			</div>
+			<a href="/index" class="logo">
+				<img src="/img/sdtu/logo.png" alt="">
+			</a>
+			<div class="web-pagination-block">
+				<a href="/member_center">會員中心</a>
+				<a href="/member">修改資料</a>
+				<a href="/store">存入資金</a>
+				<a href="/transfer">資產轉移</a>
+				<a href="/withdraw">賣出資產</a>
+				<a href="/record_store" class="active">交易紀錄</a>
+				<a href="/customer_service">客服中心</a>
+				<a href="/logout">登出</a>
+			</div>
+
+		</div>
+	</nav>
+
+	<div class="mobile-link-block">
+		<div class="close-icon">
+			<i class="fas fa-times"></i>
+		</div>
+		<div class="link-block">
+			<img src="/img/sdtu/logo.png" style="width: 150px;
+			position: absolute;
+			left: 11px;
+			top: 11px;">
+			<a href="/member_center">會員中心</a>
+			<a href="/member">修改資料</a>
+			<a href="/store">存入資金</a>
+			<a href="/transfer">資產轉移</a>
+			<a href="/withdraw">賣出資產</a>
+			<a href="/record_store">交易紀錄</a>
+			<a href="/customer_service">客服中心</a>
+			<a href="/logout" class="Signout-button btn">登出</a>
+		</div>
+	</div>
+
+	<div class="web-link-block">
+		<div class="link-block">
+			<a href="/member">修改資料</a>
+			<a href="/customer_service">客服中心</a>
+			<a href="/logout" class="Signout-button btn">登出</a>
+		</div>
+	</div>
+
+	<!-- 主要區域 -->
+	<div class="redditList">
+		<div class="content">
+
+			<div class="main-block">
+				<div class="block">
+					<div class="title-block">
+						<p>交易紀錄</p>
+					</div>
+
+					<div id="accountItem">
+						<div id="storeLog">
+							<a href="/record_store">
+								<h4>儲值紀錄</h4>
+							</a>
+						</div>
+						<div id="transferLog">
+							<a href="/record_transfer" class="active">
+								<h4>轉移紀錄</h4>
+							</a>
+						</div>
+						<div id="withdrawLog">
+							<a href="/record_withdraw">
+								<h4>提領紀錄</h4>
+							</a>
+						</div>
+					</div>
+
+					<div class="member-list">
+						<ul>
+							<li class="li-title">
+								<div class="w-30">
+									<b>訂單日期</b>
+								</div>
+								<div class="w-40">
+									<b>明細</b>
+								</div>
+								<div class="w-20">
+									<b>金額</b>
+								</div>
+							</li>
+							<!-- @record-item -->
+							<li>
+								<div field="order_date" class="w-30">
+									<b>{date}</b>
+								</div>
+								<div class="w-40 detail-content">
+									<div>
+										<b class="font-blod">轉出 :</b>
+										<b att-id="{source_id}"></b>
+									</div>
+									<div>
+										<b class="font-blod">轉入 :</b>
+										<b att-id="{target_id}"></b>
+									</div>
+									<div>
+										<b class="font-blod">處理狀態 :</b>
+										<b>{status}</b>
+									</div>
+								</div>
+								<div field="order_money" class="w-20">
+									<b>{total}</b>
+								</div>
+							</li>
+							<!-- @record-item -->
+						</ul>
+						<div class="text-center">{page}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p>{web-foot}</p>
+	</div>
+</body>
+
+<!-- 會員中心共同使用js -->
+<script src="/js/sdtu/all.js"></script>

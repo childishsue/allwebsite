@@ -1,0 +1,115 @@
+<section id="secHeader">
+	<img src="/img/fca_v2/favicon-01.png">
+	<li class="active {auth}"><a href="/member_center"><img src="/img/fca_v2/icon-13.png" alt="about">會員中心</a></li>
+	<li class="{auth}"><a href="/member"><img src="/img/fca_v2/icon-11.png" alt="editfile">修改資料</a></li>
+	<li class="{auth}"><a href="/store"><img src="/img/fca_v2/icon-07.png" alt="verify">存入資金</a></li>
+	<li class="{auth}"><a href="/transfer"><img src="/img/fca_v2/icon-08.png" alt="transfer">資產轉移</a></li>
+	<li class="{auth}"><a href="/withdraw"><img src="/img/fca_v2/icon-09.png" alt="withdraw">提取資金</a></li>
+	<li class="{auth}"><a href="/record_store"><img src="/img/fca_v2/icon-10.png" alt="account">交易紀錄</a></li>
+	<!--<li class="{auth}"><a href="/customer_service"><img src="/img/fca_v2/icon-12.png" alt="message">客服中心</a></li>-->
+</section>
+
+<section id="mobileSecHeader">
+	<li class="active {auth}"><a href="/member_center"><img src="/img/fca_v2/icon-13.png" alt="about"></a></li>
+	<li class="{auth}"><a href="/member"><img src="/img/fca_v2/icon-11.png" alt="editfile"></a></li>
+	<li class="{auth}"><a href="/store"><img src="/img/fca_v2/icon-07.png" alt="verify"></a></li>
+	<li class="{auth}"><a href="/transfer"><img src="/img/fca_v2/icon-08.png" alt="transfer"></a></li>
+	<li class="{auth}"><a href="/withdraw"><img src="/img/fca_v2/icon-09.png" alt="withdraw"></a></li>
+	<li class="{auth}"><a href="/record_store"><img src="/img/fca_v2/icon-10.png" alt="account"></a></li>
+	<!--<li class="{auth}"><a href="/customer_service"><img src="/img/fca_v2/icon-12.png" alt="message"></a></li>-->
+</section>
+
+<div class="wrapper style2" id="mainWrap">
+	<div class="secWrap-1">
+		<div id="memTitle">
+			<div class="title">
+				<img src="/img/fca_v2/icon-16.png" alt="">
+				<h1>電子遊戲</h1>
+			</div>
+			<div class="Signout">
+				<a href="/logout">
+					<button class="Signout-button">
+						登出
+					</button>
+				</a>
+			</div>
+		</div>
+
+		<div id="editList">
+			<div class="display col-md-10">
+				<div class="col-md-6">
+					<div class="agileinfo-grap-2 margin-top-2 product-item">
+						<div class="product-item-img">
+							<img src="/img/fca_v2/game_02.jpg" alt="" class="lazy" src-hover="undefined" alt
+								width="100%" style="display: inline;">
+						</div>
+						<div class="product-item-intro">
+							<div class="product-item-intro-title">FX趨勢線</div>
+							<div class="product-item-intro-text">
+								<p>
+									「FX趨勢線」用以反映每分鐘匯率波動程度，測量市場預期的波動程度，通常用來評估未來風險，因此波動率指數也有人稱作恐慌指數。FX趨勢線
+									指數雖然是反映波動程度，卻是以年化百分比表示，並且以常態分佈的機率出現。
+								</p>
+							</div>
+						</div>
+						<div class="game-introduction-content01">
+							<button class="Signout-button"
+								onclick="window.open('/game/vvgame2',  '_blank');">開始買賣</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="agileinfo-grap-2 margin-top-2 product-item">
+						<div class="product-item-img">
+							<img src="/img/fca_v2/game_01.jpg" alt="" class="lazy" src-hover="undefined" alt
+								width="100%" style="display: inline;">
+						</div>
+						<div class="product-item-intro">
+							<div class="product-item-intro-title">數字加密貨幣</div>
+							<div class="product-item-intro-text">
+								<p>
+									「數字加密貨幣」是最豐富的彩票平臺，各式彩種一應具全，北京賽車、幸運飛艇、時時彩與經典輪盤，並提供各式新穎的投注方式，能滿足您以小博大的快感，也有高勝率的穩定獲利。現在馬上加入，開啟您的雙贏人生。
+								</p>
+							</div>
+						</div>
+						<div class="game-introduction-content01">
+							<button class="Signout-button" onclick="location.href='/game/vvgame'">開始買賣</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="wthree-copyright">
+				<p>{web-foot}</p>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script>
+		$(function () {
+			$('.member_form').find('.submit').onClick(function (data) {
+				if (data.code) {
+					// fail
+					swal({
+						title: data.text,
+						html: true,
+						customClass: 'swalPopup'
+					});
+				} else {
+					swal({
+						title: data.text,
+						html: true,
+						customClass: 'swalPopup'
+					}, function () {
+						location.reload();
+					});
+				}
+				$(this).find('.submit').button('reset');
+			}, function () {
+				$(this).find('.submit').button('loading');
+			});
+		});
+</script>

@@ -1,0 +1,172 @@
+<body>
+	<div class="hidden" ckt-event="dynamic" ckt-url="<?php echo $SITE_URL;?>ajax/get_nav_menus/?" ckt-respond="build_nav_menus"></div>
+	<div class="hidden" ckt-event="dynamic" ckt-url="<?php echo $SITE_URL;?>ajax/get_customer_service_info_item/?" ckt-respond="get_customer_service_info_item"></div>
+	<div class="hidden" ckt-event="dynamic" ckt-url="<?php echo $SITE_URL;?>ajax/get_logined_info_item/?" ckt-respond="get_logined_info_item check_logined_contact_item"></div>
+	
+	
+	<!-- Custom CSS -->
+	<link href="../../../css/pbpb/style_membercenter.css" rel='stylesheet' type='text/css' />
+	<!-- responsive CSS -->
+	<link href="../../../css/pbpb/style-responsive.css" rel="stylesheet" />	
+	<!-- font CSS -->
+	<link href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel='stylesheet' type='text/css'>	
+
+	<script src="../../../js/pbpb/jquery.dcjqaccordion.2.7.js"></script>
+	<!--header start-->
+	<header class="header fixed-top clearfix">
+		<!--logo start-->
+		<div class="brand">
+			<div class="sidebar-toggle-box">
+				<div class="fa fa-bars"></div>
+			</div>
+			<div class="logo">
+				<a href="member_center.html" class="logo">
+					<img src="../../../img/pbpb/logo.png" alt="">
+				</a>
+			</div>
+			<div class="Signout">
+				<a href="#" ckt-event="ajax" ckt-url="<?php echo $SITE_URL;?>ajax/logout/?" ckt-respond="logout">
+					<button class="Signout-button">
+						登出
+					</button>
+				</a>
+			</div>
+		</div>
+	</header>
+	<!--header end-->
+
+	<div class="nav-section" style="display:none;">
+        <div class="login">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<form>
+							<ul class="sub-nav">
+								<span name="unlogin_info" class="hidden">
+									<li>
+										<div class="input-group">
+											<input name="account" class="dark" type="text" placeholder="<?php echo unicode_lang('account');?>" required>
+										</div>
+									</li>
+									<li>
+										<div class="input-group">
+											<input name="password" class="dark" type="password" placeholder="<?php echo unicode_lang('password');?>" required>
+										</div>
+									</li>
+									<li>
+										<div class="input-group">
+											<input name="checkcode" class="dark scode" type="text" style="text-transform:uppercase;" placeholder="<?php echo unicode_lang('checkcode');?>" required>
+											&nbsp;&nbsp;<a class="chenge_captcha_image" href="#"><img src="<?php echo $SITE_URL;?>captcha/?"/></a>
+										</div>
+									</li>
+									<li>
+										<button class="btn-send btn-orange" ckt-event="form_submit" ckt-url="<?php echo $SITE_URL;?>ajax/login/?" ckt-respond="login refresh_captcha_image"><?php echo unicode_lang('login');?></button>
+									</li>
+									<li>
+										<button class="btn-join btn-orange" onclick="javascript:location.href='register.html'"><?php echo unicode_lang('join_member');?></button>
+									</li>
+								</span>
+								<span name="logined_info" class="hidden">
+									<li>
+										<div class="nav-text"><?php echo unicode_lang('logined_wellcome_start');?><span class="nav-name" name="logined_account"></span>
+											<?php echo unicode_lang('logined_wellcome_end');?>
+										</div>
+									</li>
+									<li class="btn-block-s">
+										<button class="btn-orange" onclick="javascript:location.href='member_center.html'"><?php echo unicode_lang('member_center');?></button>
+									</li>
+									<li class="btn-block-s">
+										<a href="#" ckt-event="ajax" ckt-url="<?php echo $SITE_URL;?>ajax/logout/?" ckt-respond="logout"><button class="btn-orange"><?php echo unicode_lang('logout');?></button></a>
+									</li>
+								</span>
+							</ul>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<nav class="navbar navbar-default" role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle navbar-toggle2" data-toggle="active" data-target="#navbar-collapse-2">
+								   <i class="fa fa-user" aria-hidden="true"></i>
+							</button>
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="<?php echo $SITE_URL;?>index.html"><img src="<?php echo $SITE_LOGO;?>" alt=""/></a>
+						</div>
+						<div class="collapse navbar-collapse" id="navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right ckt-main-menus"></ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+    </div>
+    <!--在線客服-->
+    <div class="fix-left hide">
+        <div class="fix-active active">
+            <div class="fix-left-banner hidden-xs">
+                <?php if(!empty($FRONTEND_PLUGIN_OP)) {?>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <?php } else { ?>
+                <img src="../../../img/pbpb/call.png" alt="" width="100%">
+                <?php } ?>
+                <div class="fix-left-shrink"><i class="fa fa-times" aria-hidden="true"></i></div>
+            </div>
+            <div class="fix-phone-icon-title  visible-xs">
+                <div class="fix-phone-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                <div class="fix-phone-icon-text">
+                    <?php echo unicode_lang('online_service_title');?>
+                </div>
+            </div>
+            <div name="contact_info">
+				<ul class="fix-left-ul">
+					<li name="customer_service_online"></li>
+					<li><a href="contact.html" name="customer_service_online_qrcode"></a></li>
+				</ul>
+			</div>
+        </div>
+        <div class="fix-shirk-section">
+            <i class="fa fa-caret-left" aria-hidden="true"></i>
+            <?php echo unicode_lang('online_service_contact');?>
+        </div>
+	</div>
+	<script>
+		$(document).ready(function () {
+	        $('.sidebar-toggle-box .fa-bars').click(function (e) {
+
+            $(".leftside-navigation").niceScroll({
+                cursorcolor: "#1FB5AD",
+                cursorborder: "0px solid #fff",
+                cursorborderradius: "0px",
+                cursorwidth: "3px"
+            });
+
+            $('#sidebar').toggleClass('hide-left-bar');
+            if ($('#sidebar').hasClass('hide-left-bar')) {
+                $(".leftside-navigation").getNiceScroll().hide();
+            }
+            $(".leftside-navigation").getNiceScroll().show();
+            $('#main-content').toggleClass('merge-left');
+            e.stopPropagation();
+            if ($('#container').hasClass('open-right-panel')) {
+                $('#container').removeClass('open-right-panel')
+            }
+            if ($('.right-sidebar').hasClass('open-right-bar')) {
+                $('.right-sidebar').removeClass('open-right-bar')
+            }
+
+            if ($('.header').hasClass('merge-header')) {
+                $('.header').removeClass('merge-header')
+            }
+
+
+		});
+	});
+	</script>
+    <!--End在線客服-->

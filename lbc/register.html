@@ -1,0 +1,163 @@
+<link rel="stylesheet" href="../../css/lbc/stylelogin.css">
+<style>
+	@media screen and (max-width:414px) {
+		body {
+			background-repeat: no-repeat;
+			background-position-y: 10%;
+		}
+
+		.login {
+			margin-top: 5%;
+		}
+	}
+
+	html {
+		background-image: unset;
+	}
+
+	#header {
+		display: none;
+	}
+
+	#company {
+		display: none;
+	}
+
+	#footer {
+		display: none;
+	}
+
+	input[type="text"],
+	input[type="password"] {
+		min-width: 200px;
+		margin: 15px auto;
+	}
+
+
+	.w3layouts-main .btn-next {
+		margin: 27px auto 31px;
+		width: 40%;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"] {
+		margin: 14px auto;
+
+	}
+
+	input[type="password"] {
+		background: rgba(0, 0, 0, 0.55) url(../../img/lbc/lock.png) no-repeat 10px 10px;
+		background-size: 26px;
+	}
+
+	input[type="checkbox"] {
+		-webkit-appearance: checkbox !important;
+		-moz-appearance: checkbox !important;
+		-ms-appearance: checkbox !important;
+		-o-appearance: checkbox !important;
+		appearance: checkbox !important;
+	}
+</style>
+
+<div class="login">
+	<div class="main-w3l" style="margin-top:1%;">
+		<h1><a class="logo-w3" href="index.html"><img src="../../img/lbc/logo.png" style="margin:2%;"></a></h1>
+
+		<div class="w3layouts-main">
+			<h2><span>開戶</span></h2>
+			<form class="register_form" method="post" action="/ajax/register">
+				<input placeholder="姓名" name="name" type="text" required="" maxlength="16">
+				<input placeholder="手機號碼" name="phone" type="text" required="" maxlength="11"
+					style="background-image: url(../../img/lbc/phone-01.png);">
+				<input placeholder="帳號名稱" autocomplete="off" name="account" type="text" required="" maxlength="12">
+				<input placeholder="輸入密碼" autocomplete="off" name="password" type="password" required="" maxlength="40">
+				<input placeholder="再次輸入密碼" 　autocomplete="off" name="password_confirm" type="password" required=""
+					maxlength="40">
+				<input name=" line" type="text" maxlength="30" placeholder="填入 LINE ID" style="background-image: unset;">
+				<input name="wechat" type="text" maxlength="30" placeholder="或填入 WECHAT ID"
+					style="background-image: unset;">
+				<div class="captcha" style="cursor: pointer;margin-bottom: 5px;">
+					<img src="" alt="驗證碼讀取中" style="vertical-align: top;">
+					<div class="glyphicon glyphicon-refresh" style="margin:4px 0 0 10px; font-size:1.5rem;"></div>
+				</div>
+				<input placeholder="請填入驗證碼" name="captcha" type="text" style="background-image: unset;">
+				<tr>
+					<td>
+						<label
+							style="margin-bottom: 10px;color:white;font-size: 12px;">
+							<input type="checkbox" checked style="width:20px;opacity:1; margin-right: 0rem">
+							確認本人已滿18歲且在此網站的所有活動，並沒有抵觸本人所身在的國家所管轄的法律。本人也接受在此項申請下有關的所有
+							<a href="policy" target="_blank" style="color:#ff5722;">規則與條例以及隱私權聲明。</a>
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div>
+							<label style="font-size: 12px;">
+								為了維護您的權利，開戶姓名/身分證/帳戶 須為同一人。請使用本人手機號碼且可接收簡訊。禁止利用多重身分申請大量帳號，造成會員資料重疊或點數遺失，後果自負。
+							</label>
+						</div>
+					</td>
+				</tr>
+
+				<button style="margin-bottom:5%;color: #fff !important;" type="button" class="submit btn-next"
+					data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 處理中...">
+					立即開戶
+				</button>
+			</form>
+			<h6>
+				<a href="/login">會員登入</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">回到首頁</a>
+			</h6>
+		</div>
+
+		<div class="clear"></div>
+		<div class="inner">
+			<p style="margin-bottom:5%;">&copy; 2019 mgi ASIA CORP All rights reserved.</p>
+		</div>
+		<!-- //main -->
+
+
+	</div>
+</div>
+
+<script>
+		$(function () {
+			$('.inner p').html($('.copyright').html());
+			var win_width = $(window).width();
+	
+			$('.register_form').find('.submit').onClick(function (data) {
+				if (data.code) {
+					// fail
+					swal({
+						title: data.text,
+						html: true,
+						customClass: 'swalPopup'
+					});
+					// reload
+					$('.captcha').trigger('click');
+	
+				} else {
+					swal({
+						title: data.text,
+						html: true,
+						customClass: 'swalPopup'
+					}, function () {
+						location.reload();
+					});
+				}
+				$(this).button('reset');
+			}, function () {
+				$(this).button('loading');
+			});
+	
+			$('.captcha').click(function () {
+				$(this).find('img').attr('src', 'captcha/?rand=' + Math.random());
+			});
+			setTimeout(function () {
+				$('.captcha').click();
+			}, 2000);
+	
+		});
+	</script>

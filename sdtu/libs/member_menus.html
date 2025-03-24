@@ -1,0 +1,133 @@
+<!--sidebar start-->
+<aside>
+    <div id="sidebar" class="nav-collapse">
+        <!-- sidebar menu start-->
+        <div class="leftside-navigation">
+            <ul class="sidebar-menu" id="nav-accordion">
+                <li>
+                    <a href="<?php echo site_url('member_center');?>">
+                        <img src="./images/user.png" alt="" class="sidebar-icon">
+                        <span><?php echo unicode_lang('member_center');?></span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <img src="./images/id.png" alt="" class="sidebar-icon">
+                        <span><?php echo unicode_lang('member_account_manager');?></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="<?php echo site_url('member_info_modify');?>"><?php echo unicode_lang('member_info_modify');?></a></li>
+                    <?php if(empty($DENIED_WITHDRAW_OP)) {?>
+                        <!-- <li><a href="<?php echo site_url('member_paycode');?>"><?php echo unicode_lang('member_paycode');?></a></li> -->
+                        <li><a href="<?php echo site_url('member_bank_info');?>"><?php echo unicode_lang('member_bank_info');?></a></li>
+                    <?php }?>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="<?php echo site_url('news_center');?>">
+                        <img src="./images/promotion.png" alt="" class="sidebar-icon">
+                        <span>公告中心</span>
+                    </a>
+                    <?php /*
+                    <a href="javascript:;">
+                        <img src="./images/promotion.png" alt="" class="sidebar-icon">
+                        <span style="display: none;"><?php echo unicode_lang('member_offer_manager');?></span>
+                        <span>公告中心</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="<?php echo site_url('member_propose_info');?>"><?php echo unicode_lang('member_propose_info');?></a></li>
+                        <li><a href="<?php echo site_url('member_feedback_apply');?>"><?php echo unicode_lang('member_feedback_apply');?></a></li>
+                        <li><a href="<?php echo site_url('member_feedback_record');?>"><?php echo unicode_lang('member_feedback_record');?></a></li>
+                    </ul>
+                    */?>
+                </li>
+                <li class="sub-menu">
+                    <a href="<?php echo site_url('member_deposit_online_pay');?>">
+                        <img src="./images/ccd.png" alt="" class="sidebar-icon">
+                        <span>存入資金</span>
+                    </a>
+                    <?php /*
+                    <a href="javascript:;">
+                        <img src="./images/ccd.png" alt="" class="sidebar-icon">
+                        <span style="display: none;"><?php echo unicode_lang('member_deposit_manager');?></span>
+                        <span>存入資金</span>
+                    </a>
+                    <ul class="sub"> 
+                    <?php if(!empty($ONLINE_DEPOSIT_OP)) {?>
+                        <li><a href="<?php echo site_url('member_deposit_online_pay');?>"><?php echo unicode_lang('member_deposit_online_pay');?></a></li>
+                    <?php }?>
+                        <li><a href="<?php echo site_url('member_deposit_apply');?>"><?php echo unicode_lang('member_deposit_apply');?></a></li>
+                    </ul>*/?>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <img src="./images/game.png" alt="" class="sidebar-icon">
+                        <span style="display: none;"><?php echo unicode_lang('member_game_manager');?></span>
+                        <span>資產轉移</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="<?php echo site_url('member_game_center');?>">資產中心<?php //echo unicode_lang('member_game_center');?></a></li>
+                        <li><a href="<?php echo site_url('member_game_record');?>">交易紀錄<?php //echo unicode_lang('member_game_record');?></a></li>
+                        <li><a href="<?php echo site_url('member_transfrom_input_record');?>"><?php echo unicode_lang('member_transfrom_input_record');?></a></li>
+                        <li><a href="<?php echo site_url('member_transfrom_output_record');?>"><?php echo unicode_lang('member_transfrom_output_record');?></a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="<?php echo site_url('member_withdraw_apply');?>">
+                        <img src="./images/treasure.png" alt="" class="sidebar-icon">
+                        <span>提取資金</span>
+                    </a>
+                </li>
+                <?php /* if(empty($DENIED_WITHDRAW_OP)) {?>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <img src="./images/treasure.png" alt="" class="sidebar-icon">
+                        <span style="display: none;"><?php echo unicode_lang('member_withdraw_manager');?></span>
+                        <span>提取資金</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="<?php echo site_url('member_withdraw_apply');?>"><?php echo unicode_lang('member_withdraw_apply');?></a></li>
+                    </ul>
+                </li>
+                <?php } */?>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <img src="./images/Record.png" alt="" class="sidebar-icon">
+                        <span>交易紀錄</span>
+                    </a>
+                    <ul class="sub">
+                        <!-- <li><a href="<?php echo site_url('member_deposit_record');?>"><?php echo unicode_lang('member_deposit_record');?></a></li>
+                        <?php if(empty($DENIED_WITHDRAW_OP)) {?> -->
+                        <li><a href="<?php echo site_url('member_withdraw_record');?>"><?php echo unicode_lang('member_withdraw_record');?></a></li>
+                        <?php }?>
+                    </ul>
+                </li>
+                <li>
+                    <a href="<?php echo site_url('contact');?>">
+                        <img src="./images/user.png" alt="" class="sidebar-icon">
+                        <span><?php echo unicode_lang('contact');?></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- sidebar menu end-->
+    </div>
+</aside>
+<script>
+$(document).ready(function () {
+        /*==Left Navigation Accordion ==*/
+        if ($.fn.dcAccordion) {
+            $('#nav-accordion').dcAccordion({
+                eventType: 'click',
+                autoClose: true,
+                saveState: true,
+                disableLink: true,
+                speed: 'slow',
+                showCount: false,
+                autoExpand: true,
+                classExpand: 'dcjq-current-parent'
+            });
+        }
+});
+</script>
+<!--sidebar end-->

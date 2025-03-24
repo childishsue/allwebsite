@@ -1,0 +1,37 @@
+.navbar-brand > img {
+	max-height: 105px;
+	max-width: 350px;
+	height: 100%;
+}
+
+.btn-orange[disabled] {
+	color: #ccc;
+	background: none;
+    background-color: #777;
+}
+
+.ckt-footer-menus li{
+	padding: 10px;
+}
+
+@media (max-width:767px) {
+	.navbar-brand > img {
+		max-height: 105px;
+		/* max-width: 150px; */
+	}
+	.owl-banner .item{
+		padding-bottom: 0;
+		height: 100%;
+	}
+	.owl-idnex .item img, .owl-banner .item img{
+		position: relative;
+		left: 0%;
+		-webkit-transform: translate(0 , 0);
+		-moz-transform: translate(0 , 0);
+		-ms-transform: translate(0 , 0);
+		-o-transform: translate(0 , 0);
+		transform: translate(0 , 0);
+		max-height: 100%;
+		overflow: initial;
+	}
+}

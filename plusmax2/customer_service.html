@@ -1,0 +1,89 @@
+<head>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<script src="../js/mgi/slideToggle.js"></script>
+</head>
+
+<section id="secHeader">
+	<a href="/index" class="goBack"><img src="../img/logo-white.png"></a>
+	<li class="{auth}"><a href="/member_center"><img src="../img/icon-13.png" alt="about">用戶中心</a></li>
+	<li class="{auth}"><a href="/member"><img src="../img/icon-11.png" alt="editfile">用戶資料</a></li>
+	<li class="{auth} "><a href="/store"><img src="../img/icon-07.png" alt="verify">買進資產</a></li>
+	<li class="{auth}"><a href="/transfer"><img src="../img/icon-08.png" alt="transfer">資產轉移</a></li>
+	<li class="{auth} "><a href="/withdraw"><img src="../img/icon-09.png" alt="withdraw">賣出資產</a></li>
+	<li class="{auth}"><a href="/record_store"><img src="../img/icon-10.png" alt="account">交易紀錄</a></li>
+	<li class="active {auth}">
+		<span class="top"></span>
+		<span class="bottom"></span>
+		<a href="/customer_service"><img src="../img/icon-12.png" alt="message">客服中心</a>
+	</li>
+	<a href="/logout">
+		<button class="Signout-button outline-btn">
+			登出
+		</button>
+	</a>
+</section>
+
+<section id="mobileSecHeader">
+	<li class="{auth}"><a href="/member_center"><img src="../img/icon-13.png" alt="about"></a></li>
+	<li class="{auth}"><a href="/member"><img src="../img/icon-11.png" alt="editfile"></a></li>
+	<li class="{auth} "><a href="/store"><img src="../img/icon-07.png" alt="verify"></a></li>
+	<li class="{auth}"><a href="/transfer"><img src="../img/icon-08.png" alt="transfer"></a></li>
+	<li class="{auth} "><a href="/withdraw"><img src="../img/icon-09.png" alt="withdraw"></a></li>
+	<li class="{auth}"><a href="/record_store"><img src="../img/icon-10.png" alt="account"></a></li>
+	<li class="active {auth}"><a href="{url-chat}"><img src="../img/icon-12.png" alt="message"></a>
+	</li>
+</section>
+<section id="mainWrap" class="wrapper style2">
+	<div class="secWrap-1">
+		<!-- 上半部 -->
+		<div id="memTitle">
+			<div class="title">
+				<img src="../img/icon-12.png" alt="">
+				<h1>客服中心</h1>
+			</div>
+			<div class="Signout">
+				<a href="/logout">
+					<button class="Signout-button outline-btn">
+						登出
+					</button>
+				</a>
+			</div>
+		</div>
+		<!-- 下半部 -->
+		<div id="editList">
+			<div class="col-md-12 margin-top-bottom-15px">
+				<div class="agileinfo-grap-2 background-white ">
+					<div class="col-md-12">
+						<div id="content1">
+							<h3>歡迎來到客服中心</h3>
+							<hr>
+							<p class="contact-txt">官方線上客服：<sapn>
+									<a href="{url-chat}">{url-chat}</a></span></p>
+							<!-- @qrcode-item -->
+							<img src="{src}" />
+							<!-- @qrcode-item -->
+							<p>
+								<sapn>
+									<a href="{background-color}" class="contact-link">{background-color}</a>
+								</sapn>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="wthree-copyright">
+				<p>{web-foot}</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	#editList img {
+		width: 100%;
+		max-width: 300px;
+	}
+</style>

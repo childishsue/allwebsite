@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- Head -->
+
+<head>
+
+	<title>{web-title}</title>
+
+	<!-- Meta-Tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+		var isIndex = false;
+	</script>
+	<!-- //Meta-Tags -->
+
+	<link href="/img/eumax/favicon.png" rel="icon" type="image/x-icon">
+
+	<link rel="stylesheet" href="/css/eumax/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="/css/eumax/aos.css">
+	<link rel="stylesheet" href="/css/eumax/jquery.timepicker.css">
+	<link href="/css/sweetalert.css" rel="stylesheet">
+
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/_common.js?20190117"></script>
+	<script src="/js/sweetalert.min.js"></script>
+	<script src="/js/aos.js"></script>
+	<script src="/js/eumax/jquery.stellar.min.js"></script>
+	<script src="/js/eumax/scrollax.min.js"></script>
+	<script src="/js/eumax/bootstrap-datepicker.js"></script>
+	<script src="/js/eumax/jquery.timepicker.min.js"></script>
+
+	<link rel="preload" as="image" href="/img/eumax/member-image.png">
+
+	<style media="screen">
+		.swalPopup {
+			-webkit-border-radius: 0;
+			background-color: #fff;
+			box-shadow: 0px 1px 10px black;
+			border-radius: 8px;
+		}
+
+		.swalPopup .sa-button-container button.confirm {
+			background-color: #0885c1 !important;
+			-webkit-border-radius: 0;
+			border-radius: 5px;
+			padding: 10px 30px 10px 30px;
+			line-height: 1.5;
+		}
+
+		.swalPopup .sa-button-container button.confirm:hover,
+		.swalPopup .sa-button-container button.confirm:active {
+			background-color: #1fadee !important;
+		}
+
+		.sweet-alert {
+			margin-top: 0 !important;
+			background-color: white;
+			font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			width: 478px;
+			padding: 17px;
+			border-radius: 5px;
+			text-align: center;
+			position: fixed;
+			left: calc(50% - 239px);
+			top: 30%;
+			overflow: hidden;
+			display: none;
+			z-index: 99999;
+			margin-left: unset;
+		}
+
+		.swalPopup.sweet-alert h2 {
+			color: #202020 !important;
+			font-size: 18px;
+		}
+
+		body {
+			background-color: #0f0f0f;
+		}
+
+		.sweet-alert p {
+			color: #202020;
+		}
+	</style>
+</head>
+<!-- //Head -->
+
+<!-- Body -->
+
+<body>
+	<input id="auth" type="hidden" value="{user-auth}">
+
+
+
+	<!-- //Navigation -->
+	<!-- @frame -->
+	<main class="main">
+		{html}
+	</main>
+	<!-- @frame -->
+
+
+	<!-- Footer -->
+	<section id="footer">
+
+		<div class="copyright">
+			<!-- {web-foot} -->
+		</div>
+		</div>
+	</section>
+
+
+
+	<!-- Bootstrap-JavaScript -->
+	<script type="text/javascript" src="/js/eumax/bootstrap.min.js"></script>
+
+	<!-- Tab-JavaScript -->
+	<script src="/js/eumax/cbpFWTabs.js"></script>
+	<script>
+		(function () {
+			[].slice.call(document.querySelectorAll('.tabs')).forEach(function (el) {
+				new CBPFWTabs(el);
+			});
+		})();
+	</script>
+	<!-- //Tab-JavaScript -->
+
+
+	<!-- Stats-Number-Scroller-Animation-JavaScript -->
+	<script src="/js/eumax/counterup.min.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$('.counter').counterUp({
+				delay: 10,
+				time: 1000
+			});
+		});
+	</script>
+	<!-- //Stats-Number-Scroller-Animation-JavaScript -->
+
+
+	<!-- Smooth-Scrolling-JavaScript -->
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+
+		if (!isIndex) {
+			$(".scroll").click(function () {
+				location.href = '/';
+			});
+		}
+
+		// 簡單又明瞭的重新命名
+		$(document).ready(function () {
+			gName = {
+				1: "電子錢包",
+				33: "世界彩票",
+				34: "現貨指標"
+			};
+			var options = $('.transfer_form [name="src_id"] option, .transfer_form [name="tar_id"] option, .withdraw_form [name="src_id"] option');
+			$(options).each(function (index) {
+				$(this).text(gName[$(this).val()]);
+			});
+
+			var bNames = $('b[att-id]');
+			$(bNames).each(function (index) {
+				$(this).html(gName[$(this).attr("att-id")]);
+			});
+
+		});
+
+	</script>
+	<!-- //Smooth-Scrolling-JavaScript -->
+
+	<script src="/js/eumax/jquery.dropotron.min.js"></script>
+	<script src="/js/eumax/jquery.scrollex.min.js"></script>
+	<script src="/js/eumax/browser.min.js"></script>
+	<script src="/js/eumax/breakpoints.min.js"></script>
+	<script src="/js/eumax/util.js"></script>
+	<script src="/js/eumax/main.js"></script>
+
+
+</body>
+<!-- //Body -->
+
+{web-script}
+
+
+</html>

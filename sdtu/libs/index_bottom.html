@@ -1,0 +1,83 @@
+<?php if(in_array(CURRENCY_TYPE, array('NTD', 'CNY'))) {?>
+<script>
+	if($){
+		$(window).load(function() {
+		
+			Bscroll = 0;
+			
+			$(window).scroll(function(){
+				var offset = $(".index-section3").offset().top -  $(window).scrollTop();
+				var height = $(window).height()/2;
+				if(( offset - height < 100 ) && ( Bscroll == 0 )){
+					$(".index-section3").addClass("active");
+					Bscroll = 1;
+				}
+			});
+			
+			$("#section3").click(function() {
+				if ($(".index-section3").hasClass("active")) {
+					$(".index-section3").removeClass("active");
+				} else {
+					$(".index-section3").addClass("active");
+				}
+			})
+		});
+	}
+</script>
+<?php } else {?>
+<script src="js/youtube.js"></script>
+<script>
+	if($){
+		$(window).load(function() {
+
+			/*******YOUTUBE API*************/
+			var player = new YT.Player('YouTubePlayer', {
+				videoId: '_LJx4usmOSk',
+				playerVars: {
+					autoplay: 1, // 在讀取時自動播放影片
+					controls: 1, // 在播放器顯示暫停／播放按鈕
+					showinfo: 0, // 隱藏影片標題
+					modestbranding: 0, // 隱藏YouTube Logo
+					loop: 1, // 讓影片循環播放
+					fs: 0, // 隱藏全螢幕按鈕
+					cc_load_policty: 0, // 隱藏字幕
+					iv_load_policy: 3, // 隱藏影片註解
+					autohide: 0 // 當播放影片時隱藏影片控制列
+				},
+				events: {
+					onReady: function(e) {
+						//e.target.mute();
+					}
+				}
+			}),
+			Bscroll = 0;
+
+			$(window).scroll(function() {
+				var offset = $(".index-section3").offset().top - $(window).scrollTop();
+				var height = $(window).height() / 2;
+				if ((offset - height < 100) && (Bscroll == 0)) {
+					$(".index-section3").addClass("active");
+					Bscroll = 1;
+					if (typeof player.playVideo == 'function') {
+
+						player.playVideo();
+					}
+				}
+			});
+
+			$("#section3").click(function() {
+				if ($(".index-section3").hasClass("active")) {
+					$(".index-section3").removeClass("active");
+					//player.playVideo();
+				} else {
+					$(".index-section3").addClass("active");
+					if (typeof player.stopVideo == 'function') {
+
+						player.stopVideo();
+					}
+				}
+			})
+		});
+	}
+</script>
+<?php }?>

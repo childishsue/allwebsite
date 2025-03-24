@@ -1,0 +1,177 @@
+<!-- fontawesome -->
+<script src="/js/6603bd9dd4.js"></script>
+<!-- 會員中心使用CSS -->
+<link rel="stylesheet" href="/css/fca_v2/style_membercenter.css">
+
+
+<body>
+	<nav>
+		<div class="content">
+			<div class="mobile-menu">
+				<i class="fas fa-bars"></i>
+			</div>
+			<div class="web-user-icon">
+				<i class="fas fa-user-circle fa-2x"></i>
+				<i class="fas fa-angle-down"></i>
+			</div>
+			<div class="web-pagination-block">
+				<a href="/member_center">會員中心</a>
+				<a href="/member">修改資料</a>
+				<a href="/store">存入資金</a>
+				<a href="/transfer">資產轉移</a>
+				<a href="/withdraw" class="active">賣出資產</a>
+				<a href="/record_store">交易紀錄</a>
+				<a href="/customer_service">客服中心</a>
+				<a href="/logout">登出</a>
+			</div>
+			<a href="/index" class="logo">
+				<img src="/img/fca_v2/logo.png" alt="">
+			</a>
+		</div>
+	</nav>
+
+	<div class="mobile-link-block">
+		<div class="close-icon">
+			<i class="fas fa-times"></i>
+		</div>
+		<div class="link-block">
+			<img src="/img/fca_v2/logo.png" class="mobile-logo">
+			<a href="/member_center">會員中心</a>
+			<a href="/member">修改資料</a>
+			<a href="/store">存入資金</a>
+			<a href="/transfer">資產轉移</a>
+			<a href="/withdraw">賣出資產</a>
+			<a href="/record_store">交易紀錄</a>
+			<a href="/customer_service">客服中心</a>
+			<a href="/logout" class="Signout-button btn-costom"><span></span>登出</a>
+		</div>
+	</div>
+
+
+
+	<!-- 主要區域 -->
+	<div class="redditList">
+		<div class="content">
+
+			<div class="main-block">
+				<div class="block">
+					<div class="title-block">
+						<p>新增銀行帳戶</p>
+					</div>
+					<form class="bank_form " method="post" action="/ajax/bank">
+						<div id="bankName" class="input-group">
+							<label>銀行名稱 :</label>
+							<select name="bank_id">
+								<!-- @bank-item -->
+								<option value="{id}">{bank}</option>
+								<!-- @bank-item -->
+							</select>
+						</div>
+						<div id="bankAccount" class="input-group">
+							<label>帳號 :</label>
+							<input name="account_no" type="text">
+						</div>
+						<div id="accountName" class="input-group">
+							<label>戶名 :</label>
+							<input name="account_name" type="text">
+						</div>
+						<div class="input-group">
+							<label>上傳檔案 :</label>
+							<input class="fileup" id="file" name="pic" type="hidden">
+							<span class="notice">請拍照上傳正確的帳戶資料，以免影響您的個人權益。</span>
+						</div>
+
+
+						<div class="input-group {need-withdraw-password}">
+							<label>提款密碼 :</label>
+							<input name="password" type="password" maxlength="4">
+						</div>
+
+						<!-- <div class="input-group">
+							<label>幣安帳號 :</label>
+							<input name="total" maxlength="7" type="text" placeholder="(選填)">
+						</div> -->
+
+						<div id="saveChange">
+							<button type="button" class="submit btn-store Signout-button btn-costom"
+								data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 處理中...">
+								<span></span>
+								送出
+							</button>
+						</div>
+					</form>
+
+					<div id="warning">
+						<h4>新增銀行帳戶範例:</h4>
+						<img src="/img/fca_v2/bank.png" alt="" class="bank-img">
+
+						<h4>新增帳戶注意事項:</h4>
+						<p>
+							會員首次填寫帳號後，即永久綁定，恕不任意變更。<br>
+							為防止有心人士利用本站作為詐騙工具：申請前請確認自己的帳戶資料，才可提出申請。<br>
+							如有必要原因需更改資料，請洽線上客服人員。<br>
+							如利用本平臺進行任何洗錢詐騙行為，本公司有權利審核會員帳戶或永久終止會員服務，不另行通知。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p>{web-foot}</p>
+	</div>
+</body>
+
+<style type="text/css">
+	.bank_form [type="file"] {
+		background: transparent;
+	}
+
+	.icon-set {
+		bottom: 0px;
+		font-size: 15px;
+	}
+</style>
+<script>
+	$(function () {
+		$('#file').uploadfile({
+			url: '/ajax/upload'
+		});
+		$('.bank_form').find('.submit').onClick(function (data) {
+			if (data.code) {
+				// fail
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				});
+			} else {
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				}, function () {
+					location.reload();
+				});
+			}
+			$(this).find('.submit').button('reset');
+		}, function () {
+			$(this).find('.submit').button('loading');
+		});
+	});
+</script>
+<script>
+	$(function () {
+		setTimeout(function () {
+			swal({
+				title: '請先新增一組銀行帳戶',
+				customClass: 'swalPopup'
+			})
+		}, 1000);
+		$('[type="file"]').attr("style", "background: transparent;");
+	});
+</script>
+
+<!-- 會員中心共同使用js -->
+<script src="/js/fca_v2/all.js"></script>

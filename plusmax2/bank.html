@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="BASE_URL" content="<?php echo $BASE_URL;?>">
+    <meta name="SITE_URL" content="<?php echo $SITE_URL;?>">
+    <meta name="AJAX_URL" content="<?php echo $AJAX_URL;?>">
+    <meta name="RESOURCE_URL" content="<?php echo $RESOURCE_URL;?>">
+    <meta name="CONTROLLER" content="<?php echo $CONTROLLER;?>">
+    <meta name="ACTION" content="<?php echo $ACTION;?>">
+	<meta name="CLIENT_DEVICE" content="<?php echo $CLIENT_DEVICE;?>">
+    <meta name="keywords" content="<?php echo $SITE_KEYWORDS;?>" />
+    <meta name="hotkeywords" content="<?php echo $SITE_HOT_KEYWORDS;?>" />
+    <meta name="description" content="<?php echo $SITE_DESC;?>" />
+    <title><?php echo $SITE_TITLE;?></title>
+
+    <!-- System init CSS -->
+    <?php echo $HEADER_CSS;?>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.5.4/css/fileinput.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="./css/style_membercenter.css" rel="stylesheet">
+    <link href="./css/style1.css" rel="stylesheet">
+
+    <!-- System init JS -->
+    <?php echo $HEADER_JS;?>
+    <script src="./js/bootstrap.min.js"></script>
+	<script src="../../../../resource/plugins/bootstrap-fileinput/v4.3.2/js/fileinput.js"></script>
+	<script src="../../../../resource/plugins/owl-carousel/v2.2.1/js/owl.carousel.js"></script>
+	<script src="../../../../resource/plugins/jquery.lazy/v1.7.9/jquery.lazy.min.js"></script>
+	<!-- <script src="js/CKT.custom.js"></script> -->
+    <script src="../../../js/pbpb/page-loader.js"></script>
+
+	<script src="../../../js/pbpb/jquery.nicescroll.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+    <link rel="icon" href="./img/pbpb/favicon.ico" type="image/ico" />
+</head>
+<body>
+	<div class="hidden" ckt-event="dynamic" ckt-url="<?php echo $SITE_URL;?>ajax/get_nav_menus/?" ckt-respond="build_nav_menus"></div>
+	<div class="hidden" ckt-event="dynamic" ckt-url="<?php echo $SITE_URL;?>ajax/get_customer_service_info_item/?" ckt-respond="get_customer_service_info_item"></div>
+	<div class="hidden" ckt-event="dynamic" ckt-url="<?php echo $SITE_URL;?>ajax/get_logined_info_item/?" ckt-respond="get_logined_info_item check_logined_contact_item"></div>
+
+	<!-- Custom CSS -->
+	<link href="./css/style_membercenter.css" rel='stylesheet' type='text/css' />
+	<!-- responsive CSS -->
+	<link href="./css/style-responsive.css" rel="stylesheet" />
+	<!-- font CSS -->
+	<link href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel='stylesheet' type='text/css'>
+	<!--header start-->
+	<header class="header fixed-top clearfix">
+		<!--logo start-->
+		<div class="brand">
+			<div class="sidebar-toggle-box">
+				<div class="fa fa-bars"></div>
+			</div>
+			<div class="logo">
+				<a href="member_center.html" class="logo">
+					<img src="./img/pbpb/logo.png" alt="">
+				</a>
+			</div>
+			<div class="Signout">
+				<a href="#" ckt-event="ajax" ckt-url="<?php echo $SITE_URL;?>ajax/logout/?" ckt-respond="logout">
+					<button class="Signout-button">
+						登出
+					</button>
+				</a>
+			</div>
+		</div>
+	</header>
+	<!--header end-->
+
+	<div class="nav-section" style="display:none;">
+        <div class="login">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<form>
+							<ul class="sub-nav">
+								<span name="unlogin_info" class="hidden">
+									<li>
+										<div class="input-group">
+											<input name="account" class="dark" type="text" placeholder="<?php echo unicode_lang('account');?>" required>
+										</div>
+									</li>
+									<li>
+										<div class="input-group">
+											<input name="password" class="dark" type="password" placeholder="<?php echo unicode_lang('password');?>" required>
+										</div>
+									</li>
+									<li>
+										<div class="input-group">
+											<input name="checkcode" class="dark scode" type="text" style="text-transform:uppercase;" placeholder="<?php echo unicode_lang('checkcode');?>" required>
+											&nbsp;&nbsp;<a class="chenge_captcha_image" href="#"><img src="<?php echo $SITE_URL;?>captcha/?"/></a>
+										</div>
+									</li>
+									<li>
+										<button class="btn-send btn-orange" ckt-event="form_submit" ckt-url="<?php echo $SITE_URL;?>ajax/login/?" ckt-respond="login refresh_captcha_image"><?php echo unicode_lang('login');?></button>
+									</li>
+									<li>
+										<button class="btn-join btn-orange" onclick="javascript:location.href='register.html'"><?php echo unicode_lang('join_member');?></button>
+									</li>
+								</span>
+								<span name="logined_info" class="hidden">
+									<li>
+										<div class="nav-text"><?php echo unicode_lang('logined_wellcome_start');?><span class="nav-name" name="logined_account"></span>
+											<?php echo unicode_lang('logined_wellcome_end');?>
+										</div>
+									</li>
+									<li class="btn-block-s">
+										<button class="btn-orange" onclick="javascript:location.href='member_center.html'"><?php echo unicode_lang('member_center');?></button>
+									</li>
+									<li class="btn-block-s">
+										<a href="#" ckt-event="ajax" ckt-url="<?php echo $SITE_URL;?>ajax/logout/?" ckt-respond="logout"><button class="btn-orange"><?php echo unicode_lang('logout');?></button></a>
+									</li>
+								</span>
+							</ul>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<nav class="navbar navbar-default" role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle navbar-toggle2" data-toggle="active" data-target="#navbar-collapse-2">
+								   <i class="fa fa-user" aria-hidden="true"></i>
+							</button>
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="<?php echo $SITE_URL;?>index.html"><img src="<?php echo $SITE_LOGO;?>" alt=""/></a>
+						</div>
+						<div class="collapse navbar-collapse" id="navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right ckt-main-menus"></ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+    </div>
+    <!--在線客服-->
+    <div class="fix-left hide">
+        <div class="fix-active active">
+            <div class="fix-left-banner hidden-xs">
+                <?php if(!empty($FRONTEND_PLUGIN_OP)) {?>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <?php } else { ?>
+                <img src="../../../img/pbpb/call.png" alt="" width="100%">
+                <?php } ?>
+                <div class="fix-left-shrink"><i class="fa fa-times" aria-hidden="true"></i></div>
+            </div>
+            <div class="fix-phone-icon-title  visible-xs">
+                <div class="fix-phone-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                <div class="fix-phone-icon-text">
+                    <?php echo unicode_lang('online_service_title');?>
+                </div>
+            </div>
+            <div name="contact_info">
+				<ul class="fix-left-ul">
+					<li name="customer_service_online"></li>
+					<li><a href="contact.html" name="customer_service_online_qrcode"></a></li>
+				</ul>
+			</div>
+        </div>
+        <div class="fix-shirk-section">
+            <i class="fa fa-caret-left" aria-hidden="true"></i>
+            <?php echo unicode_lang('online_service_contact');?>
+        </div>
+	</div>
+	<script>
+		$(document).ready(function () {
+	        $('.sidebar-toggle-box .fa-bars').click(function (e) {
+
+            $(".leftside-navigation").niceScroll({
+                cursorcolor: "#1FB5AD",
+                cursorborder: "0px solid #fff",
+                cursorborderradius: "0px",
+                cursorwidth: "3px"
+            });
+
+            $('#sidebar').toggleClass('hide-left-bar');
+            if ($('#sidebar').hasClass('hide-left-bar')) {
+                $(".leftside-navigation").getNiceScroll().hide();
+            }
+            $(".leftside-navigation").getNiceScroll().show();
+            $('#main-content').toggleClass('merge-left');
+            e.stopPropagation();
+            if ($('#container').hasClass('open-right-panel')) {
+                $('#container').removeClass('open-right-panel')
+            }
+            if ($('.right-sidebar').hasClass('open-right-bar')) {
+                $('.right-sidebar').removeClass('open-right-bar')
+            }
+
+            if ($('.header').hasClass('merge-header')) {
+                $('.header').removeClass('merge-header')
+            }
+
+
+		});
+	});
+	</script>
+    <!--End在線客服-->
+<section id="secHeader">
+	<a href="/index" class="goBack"><img src="./img/logo-white.png"></a>
+	<li class="{auth}"><a href="/member_center"><img src="./img/icon-13.png" alt="about">用戶中心</a></li>
+	<li class="{auth}"><a href="/member"><img src="./img/icon-11.png" alt="editfile">用戶資料</a></li>
+	<li class="{auth} "><a href="/store"><img src="./img/icon-07.png" alt="verify">買進資產</a></li>
+	<li class="{auth}"><a href="/transfer"><img src="./img/icon-08.png" alt="transfer">資產轉移</a></li>
+	<li class="active {auth} ">
+		<span class="top"></span>
+		<span class="bottom"></span>
+		<a href="/withdraw"><img src="./img/icon-09.png" alt="withdraw">賣出資產</a>
+	</li>
+	<li class="{auth}"><a href="/record_store"><img src="./img/icon-10.png" alt="account">交易紀錄</a></li>
+	<li class="{auth}"><a href="{url-chat}" target="_blank"><img src="./img/icon-12.png" alt="message">客服中心</a></li>
+	<a href="/logout">
+		<button class="Signout-button outline-btn">
+			登出
+		</button>
+	</a>
+</section>
+
+<section id="mobileSecHeader">
+	<li class="{auth}"><a href="/member_center"><img src="./img/icon-13.png" alt="about"></a></li>
+	<li class="{auth}"><a href="/member"><img src="./img/icon-11.png" alt="editfile"></a></li>
+	<li class="{auth} "><a href="/store"><img src="./img/icon-07.png" alt="verify"></a></li>
+	<li class="{auth}"><a href="/transfer"><img src="./img/icon-08.png" alt="transfer"></a></li>
+	<li class="active {auth} "><a href="/withdraw"><img src="./img/icon-09.png" alt="withdraw"></a></li>
+	<li class="{auth}"><a href="/record_store"><img src="./img/icon-10.png" alt="account"></a></li>
+	<li class="{auth}"><a href="{url-chat}" target="_blank"><img src="./img/icon-12.png" alt="message"></a></li>
+</section>
+<section id="mainWrap" class="wrapper style2">
+	<div class="secWrap-1">
+		<!-- 上半部 -->
+		<div id="memTitle">
+			<div class="title">
+				<img src="./img/icon-09.png" alt="">
+				<h1>賣出資產</h1>
+			</div>
+			<div class="Signout">
+				<a href="/logout">
+					<button class="Signout-button outline-btn">
+						登出
+					</button>
+				</a>
+			</div>
+		</div>
+		<!-- 下半部 -->
+		<div id="editList">
+			<div class="col-md-12">
+				<div class="agileinfo-grap-2 background-white ">
+					<div class="col-md-7">
+						<div id="withdrawList">
+							<form class="bank_form " method="post" action="/ajax/bank">
+								<div id="bankName" class="input-group">
+									<h2>銀行名稱 :</h2>
+									<select name="bank_id">
+										<!-- @bank-item -->
+										<option value="{id}">{bank}</option>
+										<!-- @bank-item -->
+									</select>
+								</div>
+								<div id="bankAccount" class="input-group">
+									<h2>帳　　號:</h2>
+									<input name="account_no" style="color:black;" type="text">
+								</div>
+								<div id="accountName" class="input-group">
+									<h2>戶　　名:</h2>
+									<input name="account_name" style="color:black;" type="text">
+								</div>
+								<div class="input-group-1">
+									<h2>上傳照片 :</h2>
+									<input class="fileup" id="file" name="pic" type="hidden">
+								</div>
+								<p class="notice">請拍照上傳正確帳戶資訊，以免影響您的個人權益。</p>
+
+								<div class="input-group {need-withdraw-password}">
+									<h2>提款密碼 :</h2>
+									<input name="password" style="color:black;" type="password" maxlength="8">
+								</div>
+								<p class="notice">請設定一組提款密碼，以防止平台帳號被盜用。</p>
+								<tr>
+									<th>
+										<h2></h2>
+									</th>
+									<td>
+										<!-- <button type="button" class="submit btn-send" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 处理中...">
+													送出
+												</button> -->
+									</td>
+								</tr>
+
+								<div id="saveChange">
+									<button type="button" class="submit btn-store Signout-button"
+										data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 处理中...">
+										送出
+									</button>
+								</div>
+							</form>
+
+							<div id="warning">
+								<h3>注意事項:</h3>
+								<strong>
+									用戶首次填寫帳號後，即永久綁定，恕不任意變更。 <br>
+									為防止有心人士利用本站作為詐騙工具：申請前請確認自己的帳戶資訊，才可提出申請。 <br>
+									如有必要原因需更改資訊，請洽在線客服人員。 <br>
+									如利用本平台進行任何洗錢詐騙行為，本公司有權利審核用戶帳戶或永久終止用戶服務，不另行通知。
+								</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="wthree-copyright">
+				<p>{web-foot}</p>
+			</div>
+		</div>
+	</div>
+</section>
+<footer>
+  <!-- <section class="section-cooperation">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="index-bigtitle index-bigtitle-footer"><?php echo unicode_lang('game-provider-partner');?></div>
+              </div>
+    <span ckt-event="dynamic" ckt-url="<?php echo $SITE_URL;?>ajax/get_game_provider_logo_list/?" ckt-respond="get_game_provider_logo_list"></span>
+          </div>
+  <div class="row text-center">
+              <div class="col-md-12">
+      <ul class="list-inline ckt-footer-menus"></ul>
+              </div>
+          </div>
+      </div>
+  </section> -->
+  <div class="container width-100vw">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="footer-text">&copy; 2019 <?php echo html_unicode($SITE_TITLE);?> All rights reserved.<?//php echo unicode_lang('footer_info');?></div>
+          </div>
+      </div>
+  </div>
+</footer>
+<script src="../../../js/pbpb/scripts.js"></script>
+<?php echo $FOOTER_JS;?>
+
+<script src="../../../js/pbpb/CKT.custom.js"></script>
+
+</body>
+</html>
+
+<style type="text/css">
+	.bank_form [type="file"] {
+		background: transparent;
+		font-size: 13px;
+		color: transparent;
+	}
+
+	.icon-set {
+		bottom: 0px;
+		font-size: 15px;
+	}
+</style>
+<script>
+	$(function () {
+		$('#file').uploadfile({
+			url: '/ajax/upload'
+		});
+		$('.bank_form').find('.submit').onClick(function (data) {
+			if (data.code) {
+				// fail
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				});
+			} else {
+				swal({
+					title: data.text,
+					html: true,
+					customClass: 'swalPopup'
+				}, function () {
+					location.reload();
+				});
+			}
+			$(this).find('.submit').button('reset');
+		}, function () {
+			$(this).find('.submit').button('loading');
+		});
+	});
+</script>
+<script>
+	$(function () {
+		setTimeout(function () {
+			swal({
+				title: '請添加一組銀行帳戶',
+				customClass: 'swalPopup'
+			})
+		}, 1000);
+		$('[type="file"]').attr("style", "background: transparent;");
+	});
+</script>

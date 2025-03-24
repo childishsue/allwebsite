@@ -1,0 +1,242 @@
+<!-- fontawesome -->
+<script src="/js/6603bd9dd4.js"></script>
+<!-- 會員中心使用CSS -->
+<link rel="stylesheet" href="/css/fca_v2/style_membercenter.css">
+
+
+<body>
+  <nav>
+    <div class="content">
+      <div class="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="web-user-icon">
+        <i class="fas fa-user-circle fa-2x"></i>
+        <i class="fas fa-angle-down"></i>
+      </div>
+      <div class="web-pagination-block">
+        <a href="/member_center">會員中心</a>
+        <a href="/member">修改資料</a>
+        <a href="/store" class="active">存入資金</a>
+        <a href="/transfer">資產轉移</a>
+        <a href="/withdraw">賣出資產</a>
+        <a href="/record_store">交易紀錄</a>
+        <a href="/customer_service">客服中心</a>
+        <a href="/logout">登出</a>
+      </div>
+      <a href="/index" class="logo">
+        <img src="/img/fca_v2/logo.png" alt="">
+      </a>
+    </div>
+  </nav>
+
+  <div class="mobile-link-block">
+    <div class="close-icon">
+      <i class="fas fa-times"></i>
+    </div>
+    <div class="link-block">
+      <img src="/img/fca_v2/logo.png" class="mobile-logo">
+      <a href="/member_center">會員中心</a>
+      <a href="/member">修改資料</a>
+      <a href="/store">存入資金</a>
+      <a href="/transfer">資產轉移</a>
+      <a href="/withdraw">賣出資產</a>
+      <a href="/record_store">交易紀錄</a>
+      <a href="/customer_service">客服中心</a>
+      <a href="/logout" class="Signout-button btn-costom"><span></span>登出</a>
+    </div>
+  </div>
+
+
+
+  <!-- 主要區域 -->
+  <div class="redditList">
+    <div class="content">
+
+      <div class="main-block">
+        <div class="block">
+          <div class="title-block">
+            <p>存入資金</p>
+          </div>
+
+          <form class="member_form" action="/ajax/edit" method="POST">
+            <div id="typeAccount" class="input-group">
+              <label>登入帳號 :</label>
+              <input type="text" disabled value="{user-account}">
+            </div>
+            <div id=" " class="input-group">
+              <label>電子錢包 :</label>
+              <input type="text" disabled value="{user-wallet}">
+            </div>
+          </form>
+          <form action="/ajax/store" method="POST" class="store_form">
+            <div id="choosesolu">
+              <div class="input-group">
+                <div class="sumitonly">
+                  <div class="title-block-1">選擇儲值方式</div>
+                  <!-- <p>儲值方式</p> -->
+                  <label>
+                    <!-- @payment-item2 -->
+                    {text} <span style="color:red; font-weight:bold;font-size: .9em;">{note}</span><BR>
+                    <!-- @payment-item2 -->
+                    <!-- <span>ATM</span><span style="color:red; font-weight:bold;font-size: .9em;">1000~100000</span> -->
+                    <!-- <span>超商</span><span style="color:red; font-weight:bold;font-size: .9em;">1000~20000</span> -->
+                  </label>
+                  <select id="store-options" name="src_id">
+                    <!-- @payment-item -->
+                    <option value="{id}">{text}</option>
+                    <!-- <input type="radio" name="src_id" value="{id}" data-target="{percent}" data-note="{note}" -->
+                    <!-- style="width:20px;">{text} -->
+                    <!-- @payment-item -->
+                  </select>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label>儲值目標</label>
+                <input type="hidden" name="tar_id" value="1">
+                <select id="store-where">
+                  <option value="1" name="tar_id" type="">電子錢包</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label>輸入金額</label>
+                <input type="text" id="amount" name="total" valuex="1001">
+              </div>
+
+              <div id="saveChange">
+                <button type="button" class="submit btn-costom Signout-button">
+                  <span></span>
+                  儲值
+                </button>
+                <span class="hidden">維護中</span>
+              </div>
+            </div>
+          </form>
+
+          <div id="warning">
+            <h4>注意事項:</h4>
+            <p>
+              <!-- <p>同一帳戶/家庭/戶籍地址/電話/IP地址/共享電腦/網路環境，視為同一會員，若查詢到多個帳號、同一IP，且交代不清者，一律視為詐騙帳號停權處分。</p> -->
+            <p>秉持維持對客戶最高服務品質，以及風險控管，每位會員交易綁定唯一銀行帳戶，若有使用第2組以上帳號進行儲值皆須提供證明。</p>
+            <p>申請點數需１０００點以上，請務必確認填寫之帳號，若提供的帳號錯誤，恕本公司無法負責。</p>
+            <p>會員首次填寫帳號後，即永久綁定，恕不任意變更。</p>
+            <p>有效投注不包含雙邊互押等情形，本公司風險控管部門皆會審核，請勿違反規定，各別活動提領規定。</p>
+            <p>如利用本平臺進行任何洗錢詐騙行為，本公司有權利審核會員帳戶或永久終止會員服務，不另行通知。</p>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>{web-foot}</p>
+  </div>
+</body>
+
+<script>
+  $(function () {
+    $('.store_form').find('.submit').onClick(function (data) {
+      if (data.code) {
+        // fail
+        swal({
+          title: data.text,
+          html: true,
+          customClass: 'swalPopup'
+        });
+      } else {
+        swal({
+          title: data.text,
+          html: true,
+          customClass: 'swalPopup'
+        }, function () {
+          if (data.html) {
+            // credit card redirect
+            window.open('/raw/' + data.html, '_blank');
+          } else {
+            window.location = 'record_store';
+          }
+        });
+      }
+      $(this).button('reset');
+    }, function () {
+      $(this).button('loading');
+    });
+  });
+</script>
+<script>
+  jQuery.fn.extend({
+    feeTest: function () {
+
+      $(this).each(function () {
+        var m_div = $('<div style="color: white;">' +
+          '<span style="font-size: 20px;font-weight: :bold;">可得點數: </span>' +
+          '<span style="font-size: 20px;font-weight:bold;color: #ffde00;margin-right: 10px;"></span>' +
+          '<span>服務費$ </span>' +
+          '<span></span>' +
+          '</div>');
+        var form = $(this).closest('form');
+        var div = $(this).closest('tr').clone();
+        $(div).find('th').text('可得點數');
+        $(div).find('td').text('');
+        $(div).find('td').append(
+          '<input type="text" readonly="readonly" style="width: 100px;padding-left:5px;" value=""/>  服務費$ <span></span>'
+        );
+
+        $(form).find('[name=src_id]').on('click', function () {
+          $(form).find('[name=total]').trigger('input');
+        })
+
+        $(this).on('input', function () {
+          var srid = $(this).closest('form').find('[name=src_id]');
+          var type = srid.prop('nodeName');
+
+          if (type == 'SELECT') {
+            var percent = srid.find('option:selected').attr('data-target');
+          } else {
+            percent = srid.filter(':checked').attr('data-target');
+          }
+          if (parseInt(percent)) {
+            var a = $(this).val();
+            var b = Math.ceil(a * percent / 100);
+            var c = a - b;
+            if (type == 'SELECT') {
+              $(m_div).find('span').eq(1).text(c);
+              $(m_div).find('span').eq(3).text(b);
+              $(this).after(m_div);
+              $(m_div).show();
+              $(div).hide();
+            } else {
+              $(div).find('input').val(c);
+              $(div).find('span').text(b);
+              $(this).closest('tr').after(div);
+              $(div).show();
+              $(m_div).hide();
+            }
+          } else {
+            $(div).hide();
+            $(m_div).hide();
+          }
+        }).trigger('input');
+      });
+    }
+  });
+  $('[name=total]').feeTest();
+  $('label').find('[name=src_id]').on('click', function () {
+    note = $(this).attr('data-note');
+    $(this).closest('span').find('p').text(note).prepend(($(this).val() == 5) ?
+      '<a class="label label-warning small" style="left: 15px" href="/card"><i class="fa fa-plus-circle" aria-hidden="true"></i> 綁定信用卡</a> ' :
+      '').show();
+  }).eq(0).trigger('click');
+  $('select[name=src_id]').change(function () {
+    note = $(this).find('option:selected').attr('data-note');
+    $(this).closest('.c_store').find('p').text(note).prepend(($(this).val() == 5) ?
+      '<a class="label label-warning small" style="left: 15px" href="/card"><i class="fa fa-plus-circle" aria-hidden="true"></i> 綁定信用卡</a> ' :
+      '').show();
+  }).trigger('change');
+</script>
+
+<!-- 會員中心共同使用js -->
+<script src="/js/fca_v2/all.js"></script>

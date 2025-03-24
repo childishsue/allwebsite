@@ -1,0 +1,202 @@
+<style>
+  .hidden {
+	display: none
+  }
+
+  .sumitonly {
+	display: block !important
+  }
+
+  /* .maintainonly{} */
+</style>
+<section id="secHeader">
+  <a href="/index" class="goBack"><img src="../img//logo-white.png"></a>
+  <li class="{auth}"><a href="/member_center"><img src="../img//icon-13.png" alt="about">用戶中心</a></li>
+  <li class="{auth}"><a href="/member"><img src="../img//icon-11.png" alt="editfile">用戶資料</a></li>
+  <li class="active {auth}">
+	<span class="top"></span>
+	<span class="bottom"></span>
+	<a href="/store"><img src="../img//icon-07.png" alt="verify">買進資產</a>
+  </li>
+  <li class="{auth}"><a href="/transfer"><img src="../img//icon-08.png" alt="transfer">資產轉移</a></li>
+  <li class="{auth} "><a href="/withdraw"><img src="../img//icon-09.png" alt="withdraw">賣出資產</a></li>
+  <li class="{auth}"><a href="/record_store"><img src="../img//icon-10.png" alt="account">交易紀錄</a></li>
+  <li class="{auth}"><a href="{url-chat}" target="_blank"><img src="../img//icon-12.png" alt="message">客服中心</a></li>
+  <a href="/logout">
+	<button class="Signout-button outline-btn">
+	  登出
+	</button>
+  </a>
+</section>
+
+<section id="mobileSecHeader">
+  <li class="{auth}"><a href="/member_center"><img src="../img//icon-13.png" alt="about"></a></li>
+  <li class="{auth}"><a href="/member"><img src="../img//icon-11.png" alt="editfile"></a></li>
+  <li class="active {auth}"><a href="/store"><img src="../img//icon-07.png" alt="verify"></a></li>
+  <li class="{auth}"><a href="/transfer"><img src="../img//icon-08.png" alt="transfer"></a></li>
+  <li class="{auth} "><a href="/withdraw"><img src="../img//icon-09.png" alt="withdraw"></a></li>
+  <li class="{auth}"><a href="/record_store"><img src="../img//icon-10.png" alt="account"></a></li>
+  <li class="{auth}"><a href="{url-chat}" target="_blank"><img src="../img//icon-12.png" alt="message"></a></li>
+</section>
+
+<section id="mainWrap" class="wrapper style2">
+  <div class="secWrap">
+	<!-- 上半部 -->
+	<div id="memTitle">
+	  <div class="title">
+		<img src="../img//icon-07.png" alt="">
+		<h1>買進資產</h1>
+	  </div>
+	  <div class="Signout">
+		<a href="index.html">
+		  <button class="Signout-button outline-btn">
+			登出
+		  </button>
+		</a>
+	  </div>
+	</div>
+	<!-- 下半部 -->
+	<div id="editList">
+	  <div class="col-md-12 margin-top-bottom-15px">
+		<div class="agileinfo-grap-2 background-white ">
+		  <div class="col-md-7">
+			  <div id="typeAccount" class="input-group-1 input-group-2">
+				<h2 class="style-2">登入帳號 :</h2>
+				<input type="text" style="color:black; border-color:transparent;" required="" disabled
+				  value="{user-account}" class="input-2">
+			  </div>
+			  <div id=" " class="input-group input-group-2">
+				<h2 class="style-2">電子錢包 :</h2>
+				<input type="text" style="color:black; border-color:transparent;" required="" disabled
+				  value="{user-wallet}" class="input-2">
+			  </div>
+			<div style="color:white;">
+				<h3>存款方式為以下兩種：</h3>
+					<ol>
+						<li>超商方式存款</li>
+						<li>ATM方式存款</li>
+						<p>兩種方式最低額為1000，請至下面線上客服申請超商代碼或是專款帳戶</p>
+						<a class="Signout-button outline-btn" href="{url-chat}" style="padding: 10px;">連結客服</a>
+					</ol>
+			</div>
+		  <div id="warning">
+			<h3>注意事項:</h3>
+			<strong>
+			  同一帳戶/家庭/戶籍地址/電話號碼/IP地址/共享電腦/網絡環境，視為同一用戶，若查找到多個帳號、同一IP，且交代不清者，一律視為詐騙帳號停權處分。 <br>
+			  有效交易不包含雙邊互押等情形，本公司風險控管部門皆會審核，請勿違反規定。各別活動提款規定。 <br>
+			  如利用本平台進行任何洗錢詐騙行為，本公司有權利審核用戶帳戶或永久終止用戶服務，不另行通知。 <br>
+			</strong>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<div class="footer">
+	  <div class="wthree-copyright">
+		<p>{web-foot}</p>
+	  </div>
+	</div>
+  </div>
+
+</section>
+
+<script>
+  $(function () {
+	$('.store_form').find('.submit').onClick(function (data) {
+	  if (data.code) {
+		// fail
+		swal({
+		  title: data.text,
+		  html: true,
+		  customClass: 'swalPopup'
+		});
+	  } else {
+		swal({
+		  title: data.text,
+		  html: true,
+		  customClass: 'swalPopup'
+		}, function () {
+		  if (data.html) {
+			// credit card redirect
+			window.open('/raw/' + data.html, '_blank');
+		  } else {
+			window.location = 'record_store';
+		  }
+		});
+	  }
+	  $(this).button('reset');
+	}, function () {
+	  $(this).button('loading');
+	});
+  });
+</script>
+<script>
+  jQuery.fn.extend({
+	feeTest: function () {
+
+	  $(this).each(function () {
+		var m_div = $('<div style="color: white;">' +
+		  '<span style="font-size: 20px;font-weight: :bold;">可得点数: </span>' +
+		  '<span style="font-size: 20px;font-weight:bold;color: #ffde00;margin-right: 10px;"></span>' +
+		  '<span>服务费$ </span>' +
+		  '<span></span>' +
+		  '</div>');
+		var form = $(this).closest('form');
+		var div = $(this).closest('tr').clone();
+		$(div).find('th').text('可得点数');
+		$(div).find('td').text('');
+		$(div).find('td').append(
+		  '<input type="text" readonly="readonly" style="width: 100px;padding-left:5px;" value=""/>  服务费$ <span></span>'
+		);
+
+		$(form).find('[name=src_id]').on('click', function () {
+		  $(form).find('[name=total]').trigger('input');
+		})
+
+		$(this).on('input', function () {
+		  var srid = $(this).closest('form').find('[name=src_id]');
+		  var type = srid.prop('nodeName');
+
+		  if (type == 'SELECT') {
+			var percent = srid.find('option:selected').attr('data-target');
+		  } else {
+			percent = srid.filter(':checked').attr('data-target');
+		  }
+		  if (parseInt(percent)) {
+			var a = $(this).val();
+			var b = Math.ceil(a * percent / 100);
+			var c = a - b;
+			if (type == 'SELECT') {
+			  $(m_div).find('span').eq(1).text(c);
+			  $(m_div).find('span').eq(3).text(b);
+			  $(this).after(m_div);
+			  $(m_div).show();
+			  $(div).hide();
+			} else {
+			  $(div).find('input').val(c);
+			  $(div).find('span').text(b);
+			  $(this).closest('tr').after(div);
+			  $(div).show();
+			  $(m_div).hide();
+			}
+		  } else {
+			$(div).hide();
+			$(m_div).hide();
+		  }
+		}).trigger('input');
+	  });
+	}
+  });
+  $('[name=total]').feeTest();
+  $('label').find('[name=src_id]').on('click', function () {
+	note = $(this).attr('data-note');
+	$(this).closest('span').find('p').text(note).prepend(($(this).val() == 5) ?
+	  '<a class="label label-warning small" style="left: 15px" href="/card"><i class="fa fa-plus-circle" aria-hidden="true"></i> 绑定信用卡</a> ' :
+	  '').show();
+  }).eq(0).trigger('click');
+  $('select[name=src_id]').change(function () {
+	note = $(this).find('option:selected').attr('data-note');
+	$(this).closest('.c_store').find('p').text(note).prepend(($(this).val() == 5) ?
+	  '<a class="label label-warning small" style="left: 15px" href="/card"><i class="fa fa-plus-circle" aria-hidden="true"></i> 绑定信用卡</a> ' :
+	  '').show();
+  }).trigger('change');
+</script>

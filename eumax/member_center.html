@@ -1,0 +1,481 @@
+<script>
+	// 移除首页使用的CSS
+	$('link[rel=stylesheet][href~="css/eumax.scss?20190114"]').remove();
+</script>
+<!-- fontawesome -->
+<script src="/js/6603bd9dd4.js"></script>
+<!-- 会员中心使用CSS -->
+<link rel="stylesheet" href="/css/eumax/style_membercenter.css">
+
+
+
+<body>
+	<!-- static style -->
+	<nav class="nav-custom">
+		<div class="wrapper">
+			<div class="nav-content">
+				<a class="navbar-brand" href="index.html">
+					<img src="/img/eumax/logo.png" alt="" class="logo">
+				</a>
+				<div class="menuToggle">
+					<input type="checkbox" name="menu" id="menu">
+					<span></span>
+					<span></span>
+					<span></span>
+					<div class="menuGroup">
+						<ul class="navbar-list">
+							<li class="nav-item {unauth} "><a href="/register" class="nav-link">交易服務</a></li>
+							<li class="nav-item {unauth} "><a href="https://hk.investing.com" target="888"
+									class="nav-link">媒體報導</a>
+							</li>
+							<li class="nav-item {unauth} "><a href="/login" class="nav-link">近期活動</a></li>
+							<li class="nav-item {unauth} "><a href="/page-aboutus" class="nav-link">關於我們</a></li>
+							<li class="nav-item {unauth} "><a href="/policy" class="nav-link">法律聲明</a></li>
+							<!-- login state-->
+							<li class="nav-item {auth} "><a href="/game/vvgame2" class="nav-link">交易服務</a></li>
+							<li class="nav-item {auth} "><a href="https://hk.investing.com" target="888"
+									class="nav-link">媒體報導</a>
+							</li>
+							<li class="nav-item {auth} "><a href="/bulletin" class="nav-link">近期活動</a></li>
+							<li class="nav-item {auth} "><a href="/page-aboutus" class="nav-link">關於我們</a></li>
+							<li class="nav-item {auth} "><a href="{url-chat}" target="_blank" class="nav-link">聯繫客服</a></li>
+						</ul>
+						<ul class="navbar-state">
+							<li class="nav-item {auth} "><a href="/member_center" class="nav-link btn-reg">用戶中心</a></li>
+							<li class="nav-item {auth} "><a href="/logout" class="nav-link btn-log">登出</a></li>
+							<li class="nav-item {unauth} "><a href="/login" class="nav-link btn-log">用戶登入</a></li>
+							<li class="nav-item {unauth} "><a href="/register" class="nav-link btn-reg">馬上註冊</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="webMenuGroup">
+					<ul class="navbar-list">
+						<li class="nav-item {unauth} "><a href="/register" class="nav-link">交易服務</a></li>
+						<li class="nav-item {unauth} "><a href="https://hk.investing.com" target="888"
+								class="nav-link">媒體報導</a>
+						</li>
+						<li class="nav-item {unauth} "><a href="/bulletin" class="nav-link">近期活動</a></li>
+						<li class="nav-item {unauth} "><a href="/page-aboutus" class="nav-link">關於我們</a></li>
+						<li class="nav-item {unauth} "><a href="/policy" class="nav-link">法律聲明</a></li>
+						<!-- login state-->
+						<li class="nav-item {auth} "><a href="/game/vvgame2" class="nav-link">交易服務</a></li>
+						<li class="nav-item {auth} "><a href="https://hk.investing.com" target="888"
+								class="nav-link">媒體報導</a>
+						</li>
+						<li class="nav-item {auth} "><a href="/bulletin" class="nav-link">近期活動</a></li>
+						<li class="nav-item {auth} "><a href="/page-aboutus" class="nav-link">關於我們</a></li>
+						<li class="nav-item {auth} "><a href="{url-chat}" target="_blank" class="nav-link">聯繫客服</a></li>
+					</ul>
+					<ul class="navbar-state">
+						<li class="nav-item {auth} "><a href="/member_center" class="nav-link btn-reg">用戶中心</a></li>
+						<li class="nav-item {auth} "><a href="/logout" class="nav-link btn-log">登出</a></li>
+						<li class="nav-item {unauth} "><a href="/login" class="nav-link btn-log">用戶登入</a></li>
+						<li class="nav-item {unauth} "><a href="/register" class="nav-link btn-reg">馬上註冊</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- static style -->
+
+	<!-- <nav class="sub-nav">
+		<div class="content">
+			<div class="mobile-menu">
+				<i class="fas fa-bars"></i>
+			</div>
+			<div class="web-user-icon">
+				<i class="fas fa-user-circle fa-2x"></i>
+				<i class="fas fa-angle-down"></i>
+			</div>
+			<a href="/index" class="logo">
+				<img src="/img/eumax/logo.png" alt="">
+			</a>
+			<div class="web-pagination-block">
+				<a href="/index" class="member-icon"><img src="/img/eumax/member-image.png" alt=""></a>
+				<a href="/member_center" class="active">用戶中心</a>
+				<a href="/member">修改資料</a>
+				<a href="/store">存入資金</a>
+				<a href="/transfer">資產轉移</a>
+				<a href="/withdraw">賣出資產</a>
+				<a href="/record_store">交易紀錄</a>
+				<a href="{url-chat}" target="_blank">客服中心</a>
+				<a href="/logout">登出</a>
+			</div>
+
+		</div>
+	</nav>
+
+	<div class="mobile-link-block">
+		<div class="close-icon">
+			<i class="fas fa-times"></i>
+		</div>
+		<div class="link-block">
+			<img src="/img/eumax/logo.png" style="width: 95px;
+			position: absolute;
+			left: 11px;
+			top: 11px;">
+			<a href="/member_center">用戶中心</a>
+			<a href="/member">修改資料</a>
+			<a href="/store">存入資金</a>
+			<a href="/transfer">資產轉移</a>
+			<a href="/withdraw">賣出資產</a>
+			<a href="/record_store">交易紀錄</a>
+			<a href="{url-chat}" target="_blank">客服中心</a>
+			<a href="/logout" class="Signout-button btn">登出</a>
+		</div>
+	</div> -->
+
+
+	<!-- 主要區域 -->
+	<div class="redditList">
+		<div class="content">
+
+			<div class="main-block">
+
+				<div class="form-header">
+					<nav class="sub-nav">
+						<input type="checkbox" name="menu" id="form-control">
+						<div class="sub-menuToggle">
+							<label for="form-control" class="open"><i class="fas fa-list"></i></label>
+							<ul class="sub-menuGroup">
+								<label for="form-control" class="close"><i class="fas fa-times"></i></label>
+								<li>
+									<a class="member-icon" href="index.html">
+										<img src="/img/eumax/member-image.png" alt="">
+									</a>
+								</li>
+								<li><a href="/member_center" class="active">用戶中心</a></li>
+								<li><a href="/member">修改資料</a></li>
+								<li><a href="/store">存入資金</a></li>
+								<li><a href="/transfer">資產轉移</a></li>
+								<li><a href="/withdraw">賣出資產</a></li>
+								<li><a href="/record_store">交易紀錄</a></li>
+								<!-- <li><a href="{url-chat}" target="_blank">客服中心</a></li> -->
+							</ul>
+						</div>
+						<ul class="sub-webMenuGroup">
+							<li>
+								<a class="member-icon" href="index.html">
+									<img src="/img/eumax/member-image.png" alt="">
+								</a>
+							</li>
+							<li><a href="/member_center" class="active">用戶中心</a></li>
+							<li><a href="/member">修改資料</a></li>
+							<li><a href="/store">存入資金</a></li>
+							<li><a href="/transfer">資產轉移</a></li>
+							<li><a href="/withdraw">賣出資產</a></li>
+							<li><a href="/record_store">交易紀錄</a></li>
+							<!-- <li><a href="{url-chat}" target="_blank">客服中心</a></li> -->
+						</ul>
+					</nav>
+					<div class="content-title">
+						<h1>用戶中心</h1>
+					</div>
+				</div>
+
+				<div class="block">
+					<!-- ================================================ -->
+					<!-- 指數 -->
+					<!-- TradingView Widget BEGIN -->
+					<div class="tradingview-widget-container" style="height:40px !important">
+						<div class="tradingview-widget-container__widget"></div>
+						<script type="text/javascript"
+							src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+								{
+									"symbols": [
+										{
+											"proName": "FX_IDC:EURUSD",
+											"title": "EUR/USD"
+										},
+										{
+											"proName": "BITSTAMP:BTCUSD",
+											"title": "BTC/USD"
+										},
+										{
+											"proName": "BITSTAMP:ETHUSD",
+											"title": "ETH/USD"
+										},
+										{
+											"description": "USD/JPY",
+											"proName": "KRAKEN:USDJPY"
+										},
+										{
+											"description": "CND/USD",
+											"proName": "BITFINEX:CNDUSD"
+										}
+									],
+										"showSymbolLogo": true,
+											"colorTheme": "light",
+												"isTransparent": true,
+													"displayMode": "adaptive",
+														"locale": "uk"
+								}
+							</script>
+					</div>
+
+					<div class="stats-info-agileits">
+						<div class="member-top">
+							<div class="member-image">
+								<img src="/img/eumax/icon_user_photo.png" alt="">
+							</div>
+							<div class="member-top-block">
+								<div class="member-data">
+									<p>登入帳號：</p>
+									<p>{user-account}</p>
+								</div>
+								<div class="member-data">
+									<p>姓　　名：</p>
+									<p>{user-name}</p>
+								</div>
+								<div class="member-data">
+									<p>手機號碼：</p>
+									<p>{user-phone}</p>
+								</div>
+								<!-- <div class="member-data">
+				<p>電子信箱：</p>
+				<p>test0000000001@gmail.com</p>
+				</div> -->
+							</div>
+						</div>
+						<div class="member-bottom">
+							<div class="bottom-frame">
+								<h4>電子錢包</h4>
+								<h1>${user-wallet}</h1>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- TradingView Widget END -->
+					<div class="market-updates">
+						<div class="market-update-gd">
+							<div class="market-update-block clr-block-1">
+								<div class="market-update-right">
+									<img src="/img/eumax/icon-1.png" alt="" class="icon">
+								</div>
+								<div class="market-update-left counter-section">
+									<h4>今日成交量</h4>
+									<h1 class="timer num">13500</h1>
+								</div>
+							</div>
+						</div>
+						<div class="market-update-gd">
+							<div class="market-update-block clr-block-2">
+								<div class="market-update-right">
+									<img src="/img/eumax/icon-2.png" alt="" class="icon">
+								</div>
+								<div class="market-update-left counter-section">
+									<h4>漲升指數</h4>
+									<h1 class="timer percent">30%</h1>
+								</div>
+							</div>
+						</div>
+						<div class="market-update-gd">
+							<div class="market-update-block clr-block-1">
+								<div class="market-update-right">
+									<img src="/img/eumax/icon-3.png" alt="" class="icon">
+								</div>
+								<div class="market-update-left counter-section">
+									<h4>降跌指數</h4>
+									<h1 class="timer percent">50%</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- ================================================ -->
+					<!-- 最新消息 -->
+					<div class="news-block">
+						<div class="news-left">
+							<img src="/img/eumax/promotion.png" alt="">
+							<h4>最新消息</h4>
+						</div>
+						<div class="news-right">
+							<marquee class="marquee-text">
+								<!-- @bulletin-item -->
+								<a
+									href="/bulletin">{title}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</a>
+								<!-- @bulletin-item -->
+							</marquee>
+						</div>
+					</div>
+
+					<div class="row-block">
+						<!-- ================================================ -->
+						<!-- 交易項目 -->
+						<!-- <div class="transaction-item">
+							<div class="title-block">
+								<p>交易項目</p>
+							</div>
+							<div class="transaction-block">
+								<a href="/page-game_financial" class="game-item-block">
+									<div class="img-01"></div>
+									<h4>理財項目</h4>
+								</a>
+							</div>
+						</div> -->
+
+						<!-- ================================================ -->
+						<!-- 交易中心 -->
+						<div class="trading-center">
+							<div class="trading-center-block">
+
+								<div class="trading-introduction">
+									<div class="title-block" style="width:100%">
+										<p>現貨指標</p>
+									</div>
+									<div class="introduction-content">
+										<img src="/img/eumax/image-1.jpg" alt="">
+									</div>
+									<div class="introduction-btn">
+										<!-- <button class="Signout-button btn1"
+											onclick="window.open('/game/vvgame2',  '_blank');">開始買賣</button> -->
+										<a class="Signout-button btn1" href="/game/vvgame2"
+											style="max-width: 100px;margin: 0 auto;">開始</a>
+									</div>
+								</div>
+
+								<!-- <div class="trading-introduction">
+									<div class="title-block" style="width:100%">
+										<p>世界彩票</p>
+									</div>
+									<div class="introduction-content">
+										<img src="/img/eumax/image-2.jpg" alt="">
+									</div>
+									<div class="introduction-btn">
+										
+										<a class="Signout-button btn1" href="/game/vvgame2"
+											style="max-width: 100px;margin: 0 auto;">開始</a>
+									</div>
+								</div> -->
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p>{web-foot}</p>
+	</div>
+
+</body>
+
+
+<style>
+	.title-block p,
+	.title-block-1 {
+		color: #fff;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.label-13XFthDT.bottom-21EGGcaf,
+	.tradingview-widget-copyright {
+		display: none;
+	}
+
+
+
+
+
+	@media screen and (min-width: 1024px) {
+		.market-updates {
+			margin-top: 0;
+		}
+
+		.redditList .right-block {
+			width: 100%;
+		}
+
+		.web-pagination-block a.active {
+			width: 82%;
+			background: #43a8ff;
+			color: #fff;
+			border-radius: 10px;
+		}
+
+		.tradingview-widget-container {
+			margin-top: 0;
+		}
+
+		.stats-info-agileits {
+			background: #fff;
+			/* max-width: 1200px; */
+			margin: 0px auto 15px auto;
+			padding: 15px;
+			border-radius: 10px;
+			box-shadow: 0px 3px 10px #000000a8;
+			display: flex;
+			justify-content: space-evenly;
+		}
+
+		.stats-info-agileits .member-image {
+			display: none;
+		}
+
+		.stats-info-agileits .member-top {
+			width: 46%;
+		}
+
+		.stats-info-agileits .member-bottom {
+			width: 46%;
+		}
+	}
+</style>
+
+
+
+
+
+
+
+
+<script>
+	$(function () {
+		// console.error('conter section');
+		var dd = new Date();
+		var max = 976658;
+		var floatSeed = dd.getMonth() % 3 * 100 + dd.getDate() % 7 * 89;
+		max -= floatSeed;
+		//  console.log("max : "+ max);
+		var now = (dd.getHours() * 60 * 60 + dd.getMinutes() * 60 + dd.getSeconds()) / 86400;
+
+		$(".timer.num").text(Math.floor(max * now).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','));
+
+
+		$($(".timer.percent")[0]).text(Math.floor(Math.random() * 21 + 60) + "%");
+		$($(".timer.percent")[1]).text(Math.floor(Math.random() * 21 + 20) + "%");
+		// upper 30-80 % down 20-60 %
+		$('.timer').each(function () {
+			var $this = $(this);
+			$({
+				Counter: 0
+			}).animate({
+				Counter: $this.text().replace(",", "").replace("%", "")
+			}, {
+				duration: 6000,
+				easing: 'swing',
+				step: function () {
+					$this.text(Math.ceil(this.Counter));
+					if ($this.hasClass('num')) {
+						// console.log("num");
+						// var parts = $this.text().function toString() { [native code] }().split('.');
+						$this.text($this.text().replace(/\B(?=(\d{3})+(?!\d))/g, ','));
+					}
+					if ($this.hasClass('percent')) {
+
+						$this.text($this.text() + "%");
+					}
+
+				}
+			});
+		});
+	});
+</script>
+
+
+<!-- 会员中心共同使用js -->
+<script src="/js/eumax/all.js"></script>

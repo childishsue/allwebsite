@@ -1,0 +1,343 @@
+<!-- fontawesome -->
+<script src="/js/6603bd9dd4.js"></script>
+<!-- 會員中心使用CSS -->
+<link rel="stylesheet" href="/css/sdtu/style_membercenter.css">
+
+
+<style>
+  /* .VVGame {
+    display: none !important;
+  } */
+</style>
+
+<body>
+  <nav>
+    <div class="content">
+      <div class="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="web-user-icon">
+        <i class="fas fa-user-circle fa-2x"></i>
+        <i class="fas fa-angle-down"></i>
+      </div>
+      <a href="/index" class="logo">
+        <img src="/img/sdtu/logo.png" alt="">
+      </a>
+      <div class="web-pagination-block">
+        <a href="/member_center">會員中心</a>
+        <a href="/member">修改資料</a>
+        <a href="/store">存入資金</a>
+        <a href="/transfer" class="active">資產轉移</a>
+        <a href="/withdraw">賣出資產</a>
+        <a href="/record_store">交易紀錄</a>
+        <a href="/customer_service">客服中心</a>
+        <a href="/logout">登出</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="mobile-link-block">
+    <div class="close-icon">
+      <i class="fas fa-times"></i>
+    </div>
+    <div class="link-block">
+      <img src="/img/sdtu/logo.png" style="width: 150px;
+			position: absolute;
+			left: 11px;
+			top: 11px;">
+      <a href="/member_center">會員中心</a>
+      <a href="/member">修改資料</a>
+      <a href="/store">存入資金</a>
+      <a href="/transfer">資產轉移</a>
+      <a href="/withdraw">賣出資產</a>
+      <a href="/record_store">交易紀錄</a>
+      <a href="/customer_service">客服中心</a>
+      <a href="/logout" class="Signout-button btn">登出</a>
+    </div>
+  </div>
+
+  <div class="web-link-block">
+    <div class="link-block">
+      <a href="/member">修改資料</a>
+      <a href="/customer_service">客服中心</a>
+      <a href="/logout" class="Signout-button btn">登出</a>
+    </div>
+  </div>
+
+  <!-- 主要區域 -->
+  <div class="redditList">
+    <div class="content">
+
+      <div class="main-block">
+        <div class="block">
+          <div class="title-block">
+            <p>資產轉移</p>
+          </div>
+          <!-- 按鈕區 -->
+          <div class="button-group">
+            <button class="submit btn-store Signout-button btn3" href="#transdferlb"
+              onclick="$($(this).attr('href')).attr('style','opacity:1;top:0;position:fixed;height:100%;left:0;')">轉移資產</button>
+            <div class="right-button-group">
+              <button class="submit btn-store Signout-button-1 fresh-btn btn3">刷新餘額</button>
+            </div>
+          </div>
+          <!-- 電子錢包顯示 -->
+          <div class="col-md-7 show-money">
+            <form class="member_form" action="/ajax/edit" method="POST">
+              <div id="typeAccount" class="input-group-1 input-group-2">
+                <p class="style-2">登入帳號 :</p>
+                <input type="text"  disabled
+                  value="{user-account}" class="input-2">
+              </div>
+              <div id=" " class="input-group input-group-2">
+                <p class="style-2">電子錢包 :</p>
+                <input type="text"  disabled
+                  value="{user-wallet}" class="input-2">
+              </div>
+            </form>
+          </div>
+
+          <!-- 表格 -->
+          <div class="member-list">
+            <ul>
+              <li class="li-title">
+                <div class="w-20">
+                  <b>交易平臺</b>
+                </div>
+                <div class="w-10">
+                  <b>幣別</b>
+                </div>
+                <div class="w-20">
+                  <b>平臺資金</b>
+                </div>
+                <div class="w-40">
+                  <b>操作</b>
+                </div>
+              </li>
+              <!-- @wgame-item2 -->
+              <li class="{game}">
+                <div field="provider_name" class="w-20">
+                  <b att-id="{id}">{name}</b>
+                </div>
+                <div field="provider_currency" class="w-10">
+                  <b>NTD</b>
+                </div>
+                <!-- @wgame-item3 -->
+                <div field="game_balance_format" class="w-20">
+                  <b name="{game}"></b>
+                </div>
+                <!-- @wgame-item3 -->
+                <div class="w-40">
+                  <button class="submit btn-store Signout-button-2 btn {game}"
+                    onclick="window.open('/game/{game}',  '_blank');">登入平臺</button>
+                </div>
+              </li>
+              <!-- @wgame-item2 -->
+
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="lightbox-target" id="transdferlb">
+    <form class="transfer_form lightcontent agileinfo-grap-2 background-white" action="/ajax/transfer" method="POST">
+      <div class="lightbox-bg">
+        <div class="title-block">
+          <p>選擇轉出方式</p>
+        </div>
+        <div class="out">
+          <span>轉出 :</span>
+          <select name="src_id" id="gameSelect">
+            <!-- @wgame-item1 -->
+            <option value="{id}">{name}</option>
+            <!-- @wgame-item1 -->
+          </select>
+        </div>
+
+        <div class="in">
+          <span>轉入 :</span>
+          <select name="tar_id" id="gameSelect">
+            <!-- @game-item -->
+            <option value="{id}">{name}</option>
+            <!-- @game-item -->
+          </select>
+        </div>
+
+        <div class="insert">
+          <form class="gameForm3">
+            <span>輸入金額 :</span>
+            <input name="total" style="color:black;padding-left: 10px;" type="text">
+          </form>
+
+
+          <div id="saveChange">
+            <button type="button" class="submit btn-store Signout-button btn1"
+              data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> 處理中...">
+              送出
+            </button>
+          </div>
+        </div>
+        <a class="lightbox-close" href="#transdferlb" onclick="$($(this).attr('href')).removeAttr('style')"></a>
+      </div>
+    </form>
+  </div>
+
+  <div class="footer">
+    <p>{web-foot}</p>
+  </div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  .lightbox-target {
+    background: rgba(0, 0, 0, .7);
+    width: 100%;
+    /* 預設透明度為 0，觸發 :target 後，利用動畫效果調整透明度 */
+    /* opacity: 0; */
+    position: fixed;
+    top: -100%;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+  }
+
+  .lightbox-target h3 {
+    font-size: 22px !important;
+  }
+
+  /* 當 :target 觸發後，index-target 的透明度為 1 */
+  /* .lightbox-target:target {
+      top: 0;
+      bottom: 0;
+      opacity: 1;
+    } */
+
+  .lightbox-close {
+    width: 30px;
+    height: 30px;
+    background: #7c7c7c;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .lightbox-close:hover,
+  .lightbox-close:active {
+    background: #9e9e9e;
+  }
+
+  /* 利用偽元素做出 \ 以及 / 的線條 */
+  .lightbox-close:after {
+    width: 20px;
+    height: 1px;
+    content: "";
+    display: block;
+    background: #fff;
+    position: absolute;
+    top: 13px;
+    left: 5px;
+    transform: rotate(45deg);
+  }
+
+  .lightbox-close:before {
+    width: 20px;
+    height: 1px;
+    content: "";
+    display: block;
+    background: #fff;
+    position: absolute;
+    top: 13px;
+    left: 5px;
+    transform: rotate(-45deg);
+  }
+
+  .lightcontent {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 60%;
+    height: 50%;
+    /* background: #000; */
+    margin: auto;
+    color: #000;
+
+    /* 預設寬高為 0，觸發 :target 後，利用動畫效果展開寬與高 */
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .lightcontent span {
+    color: #333;
+    font-size: 16px;
+  }
+
+  .lightbox-bg {
+    background-color: #fff;
+    height: 100%;
+    padding: 15px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .lightcontent {
+      width: 90%;
+    }
+  }
+
+  .Wallet {
+    display: none;
+  }
+</style>
+<script>
+  $(function () {
+    $('.transfer_form').find('.submit').onClick(function (data) {
+      console.log("ggg");
+
+      if (data.code) {
+        // fail
+        swal({
+          title: data.text,
+          html: true,
+          customClass: 'swalPopup'
+        });
+      } else {
+        swal({
+          title: data.text,
+          html: true,
+          customClass: 'swalPopup'
+        }, function () {
+          getCredit(true);
+        });
+      }
+      $(this).button('reset');
+    }, function () {
+      $(this).button('loading');
+    });
+  });
+</script>
+
+<!-- 會員中心共同使用js -->
+<script src="/js/sdtu/all.js"></script>
