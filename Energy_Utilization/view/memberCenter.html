@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Utilization</title>
+    <link rel="stylesheet" href="../assets/style/main.min.css">
+    <script src="../assets/js/vue.global.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/all.js"></script>
+  </head>
+  <body>
+    <header class="allPage"><a class="logo" href="login.html">
+        <figure><img class="for_pc" src="../assets/img/logo_horizontal_w.png"><img class="for_phone" src="../assets/img/logo_horizontal.png"></figure></a>
+      <nav class="for_pc">
+        <ul class="keyOption">
+          <li><a href="income.html">收益</a></li>
+          <li><a href="tradeIndex.html">交易</a></li>
+          <li><a href="history.html">紀錄</a></li>
+          <li><a href="memberCenter.html">個人</a></li>
+        </ul>
+      </nav>
+    </header>
+    <aside class="mobileNav for_phone">
+      <ul>
+        <li><a href="income.html">
+            <figure><img src="../assets/img/icon/income.png">
+              <figcaption>
+                <h5>收益</h5>
+              </figcaption>
+            </figure></a></li>
+        <li><a href="tradeIndex.html">
+            <figure><img src="../assets/img/icon/trade.png">
+              <figcaption>
+                <h5>交易</h5>
+              </figcaption>
+            </figure></a></li>
+        <li><a href="history.html">
+            <figure><img src="../assets/img/icon/history.png">
+              <figcaption>
+                <h5>紀錄</h5>
+              </figcaption>
+            </figure></a></li>
+        <li><a href="memberCenter.html">
+            <figure><img src="../assets/img/icon/user.png">
+              <figcaption>
+                <h5>個人</h5>
+              </figcaption>
+            </figure></a></li>
+      </ul>
+    </aside>
+    <main class="memberCenter" id="vFunction">
+      <article>
+        <h1>會員資料</h1>
+        <section class="topInfo">
+          <div>
+            <button type="button">轉換</button>
+            <button type="button">提領</button>
+          </div>
+          <figure><img src="../assets/img/people.jpg">
+            <figcaption>
+              <p>姓名</p>
+            </figcaption>
+          </figure>
+        </section>
+        <section class="chartInfo">
+          <h2>目前擁有資產</h2>
+          <p><b>1000</b>電力預估<b>200000</b>新台幣</p>
+        </section>
+        <section class="basicInfo">
+          <h2>基本資料</h2>
+          <form>
+            <p>帳號</p>
+            <div class="singleFillin">
+              <label class="icon"><img src="../assets/img/icon/userid.png"></label>
+              <input type="text" id="accountName" name="accountnName" placeholder="請填入帳號">
+            </div>
+            <p>帳號</p>
+            <div class="singleFillin">
+              <label class="icon"><img src="../assets/img/icon/password.png"></label>
+              <input type="password" id="password" name="password" placeholder="請填入密碼">
+              <button type="button" onclick="window.location.href='memberInfo.html'">修改密碼</button>
+            </div>
+            <p>驗證碼</p>
+            <div class="singleFillin">
+              <label class="icon"><img src="../assets/img/icon/mobilebinding.png"></label>
+              <input type="text" id="verify" name="verify" placeholder="請填入驗證碼">
+              <button type="button">發送驗證碼</button>
+            </div>
+            <div class="bindingArea">
+              <p>綁定銀行:</p>
+              <button type="button" onclick="window.location.href='memberInfo.html'">點此綁定</button>
+            </div>
+          </form>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

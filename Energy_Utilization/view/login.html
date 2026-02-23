@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Utilization</title>
+    <link rel="stylesheet" href="../assets/style/main.min.css">
+    <script src="../assets/js/vue.global.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/all.js"></script>
+  </head>
+  <body>
+    <main class="login" id="vFunction">
+      <article>
+        <figure class="logo"><img src="../assets/img/logo_horizontal.png">
+          <figcaption>
+            <h2>綠源再生 電力超商</h2>
+          </figcaption>
+        </figure>
+      </article>
+      <article class="keyBlock">
+        <form>
+          <div class="singleFillin">
+            <label class="icon"><img src="../assets/img/icon/userid.png"></label>
+            <input type="text" id="accountName" name="accountnName" placeholder="請填入帳號">
+          </div>
+          <div class="singleFillin">
+            <label class="icon"><img src="../assets/img/icon/password.png"></label>
+            <input type="password" id="password" name="password" ref="passwordField1" placeholder="請填入密碼">
+            <label class="icon passwordSwitch" @click="togglePwd1"><img :src="passwordIcon1"></label>
+          </div>
+          <div class="btnGroup">
+            <button type="submit">登入</button>
+            <button class="cancel" type="button">詢問客服</button>
+          </div>
+        </form>
+      </article>
+    </main>
+  </body>
+</html>

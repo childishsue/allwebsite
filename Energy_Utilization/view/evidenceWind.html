@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Utilization</title>
+    <link rel="stylesheet" href="../assets/style/main.min.css">
+    <script src="../assets/js/vue.global.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/all.js"></script>
+  </head>
+  <body>
+    <header class="allPage"><a class="logo" href="login.html">
+        <figure><img class="for_pc" src="../assets/img/logo_horizontal_w.png"><img class="for_phone" src="../assets/img/logo_horizontal.png"></figure></a>
+      <nav class="for_pc">
+        <ul class="keyOption">
+          <li><a href="income.html">收益</a></li>
+          <li><a href="tradeIndex.html">交易</a></li>
+          <li><a href="history.html">紀錄</a></li>
+          <li><a href="memberCenter.html">個人</a></li>
+        </ul>
+      </nav>
+    </header>
+    <aside class="mobileNav for_phone">
+      <ul>
+        <li><a href="income.html">
+            <figure><img src="../assets/img/icon/income.png">
+              <figcaption>
+                <h5>收益</h5>
+              </figcaption>
+            </figure></a></li>
+        <li><a href="tradeIndex.html">
+            <figure><img src="../assets/img/icon/trade.png">
+              <figcaption>
+                <h5>交易</h5>
+              </figcaption>
+            </figure></a></li>
+        <li><a href="history.html">
+            <figure><img src="../assets/img/icon/history.png">
+              <figcaption>
+                <h5>紀錄</h5>
+              </figcaption>
+            </figure></a></li>
+        <li><a href="memberCenter.html">
+            <figure><img src="../assets/img/icon/user.png">
+              <figcaption>
+                <h5>個人</h5>
+              </figcaption>
+            </figure></a></li>
+      </ul>
+    </aside>
+    <main class="evidenceWind">
+      <article>
+        <h1>憑證號碼</h1><a class="msgBtn" href="#">私訊老師領取</a>
+        <section>
+          <h2>憑證張數<a class="showBtn" href="#">自動顯示</a></h2>
+          <div class="ticket"><span>100,000</span><span>十年</span></div>
+        </section>
+        <section>
+          <h2>操作kwh</h2>
+          <div class="overview">
+            <p>數量:<b>500</b></p>
+            <p>預估收益kwh:<b>1000000</b></p>
+          </div>
+          <div class="progressBar">
+            <p>進度條</p><span class="colorRun"></span>
+          </div>
+          <ul class="matchList">
+            <li>
+              <p>人工匹配中...</p>
+            </li>
+            <li>
+              <p class="lost">人工匹配失敗</p>
+            </li>
+            <li>
+              <p class="match">人工匹配成功</p>
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
